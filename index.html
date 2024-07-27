@@ -39,7 +39,46 @@
 		<div class="loader"></div>
 	</div>
 
-	
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none"></span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#research-publications">Research</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skill-new">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact-me">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+	<script src="script.js"></script>
+
+
+
 
 <!-- Hero section start -->
 	<section class="hero-section spad">
@@ -82,27 +121,13 @@
 	<!-- Hero section end -->
 
 	<!-- about me section start-->
-	<section class = "about-me-section spad pb-0">
+	<section id = "about" class = "about-me-section spad pb-0">
 		<div class = "container-fluid">
 			<div class = "row">
 				<div class = "col-xl-8, offset-xl-2">
 					<h2>
 						About me
-					</h2>
-					<style>
-						@keyframes appear{
-			from{
-				opacity: 0;
-				scale: 0.5;
-			}
-			to{
-				opacity: 1;
-				scale: 1;
-			}
-		}
-
-					</style>
-				
+					</h2>				
 					<p>
 						Hey I am going to explain everything in here
 					</p>
@@ -119,7 +144,7 @@
 
 
 	<!--Work Experience section start -->
-	<section class="resume-section spad">
+	<section id = "experience" class="resume-section spad">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xl-8 offset-xl-2">
@@ -130,39 +155,33 @@
 						<li>
 							<p2>May 21, 2024 – June 21, 2024</p2>
 							<h3>Field Enumerator </h3>
-							<h4><a href = "https://sias-southasia.org/">
+							<h4><b><a href = "https://sias-southasia.org/">
 								SouthAsia Institute of Advanced Studies
-							</a>|<b> Kathmandu, Nepal</b> </h4>
+							</a>| Lamjung, Nepal</b> </h4>
 							<p> 
-								We went to Lamjung, one of the districts in the Mid-Hill of Nepal
-								as a part of the study under the project named by "CliMig", funded by 
-								"Swedish Research Council." The study was conducted parallely in four countries:
-								Peru, Etheopia, Bhutan and Nepal. <br> <br>
-								I worked as a field enumerator and conducted the survey. I got a chance to meet
-								people from diverse background, divese knowledged and experience. ... 
-								<a href="home2.html"> Read More </a>
+								- Performed a month long field enumeration at Lamjung.
+								<br>
+								- Enhanced skills in effective communication and rapport building. 
+								<br>
+								- Closely studied multiple aspects of forest, human livelihood, and climate change. 
+								 <br>
+								
 							</p>
 						</li>
 						<li>
 							<p2>February, 2024 – April, 2024</p2>
 							<h3>Research Assistant</h3>
-							<h4><a href = "https://conbio.org.np/">
+							<h4><b></bb><a href = "https://conbio.org.np/">
 								Society for Conservation Biology Nepal-SCB Nepal
-							</a>| <b>Kathmandu, Nepal</b></h4>
+							</a>| Kathmandu, Nepal</b></h4>
 							<p>
-								<a href = "html_files/research_assistant.html">Read More</a>
-								It was a fruitful experience where I got to work as a research 
-								assistant in one of the chapter of "Society for Conservation Biology."
-								One of the key stuffs I learnt there was Ecological and Social Safeguarding (ESS).
-								ESS is the process by wcich biodiversity and social aspects of people are safeguarded 
-								from the impacts that might arise during project construction and implementation.
-								I extensively reviewed literatures related to biodiversity safeguarding. As a forestry
-								student, I used to think that conservation is harmful for our biodiversity. But after studying
-								about biodiversity safeguarding, I realized that construction and development is possible
-								along with the construction and development work....... Read more
-
-
-
+								- Digitized and developed maps. 
+								<br>
+								- Reviewed Literatures related to bodiversity safeguarding. 
+								<br>
+								- Studied the impacts of COVID-19 biodiversity conservation.
+								<br>
+								- Learnt Bayesian Modeling. 
 							</p>
 						</li>
 					</ul>
@@ -173,7 +192,7 @@
 	<!-- Work Resume section end -->
 
 	<!-- Education Resume section start -->
-	<section class="resume-section with-bg spad">
+	<section id = "education" class="resume-section with-bg spad">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xl-8 offset-xl-2">
@@ -184,21 +203,26 @@
 						<li>
 							<p2>2018 - 2023</p2>
 							<h3>BS in Forestry</h3>
-							<h4> <a href = "https://hc.tu.edu.np/">Institute of Foresty, Tribhuvan University</a>
-								 | <b> Hetauda, Nepal</b></h4>
+							<h4> <b><a href = "https://hc.tu.edu.np/">Institute of Foresty, Tribhuvan University</a>
+								 | Hetauda, Nepal</b></h4>
 							<p3>
-								<b><i> Thesis</i></b>: 
+								<b>Thesis</b>: 
 								<i>Contribution of Ecotourism in Local Livelihood and Role of People in 
 									Protected Area Management in Pre COVID-19, During COVID-19 and Post COVID-19 Phase.</i>
 							</p3>
 							<br>
 							<br>
 							<p>
-								When I started my BS in Forestry, I knew nothing about natural 
-								resource management and 
-
-
-
+								<b>Major Courses</b>
+								<br>
+								<br>
+								- GIS and Remote Sensing
+								<br>
+								- Forest Mensuration and Biometrics
+								<br>
+								- Forest Management and Silviculture
+								<br>
+								- Soil and Watershed Management
 							</p>
 						</li>
 						<li>
@@ -207,18 +231,13 @@
 							<h4><a href="https://tilottama.edu.np/">Tilottama College</a>
 								
 								 | <b> Butwal, Nepal</b></h4>
-							<p2></p2>
-							<p>
-								Studied major in physics, chemistry, biology and mathematics
-							</p>
+							
 						</li>
 						<li>
 							<p2>2015</p2>
-							<h3> SLC (Secondary)</h3>
-							<h4> Kalika Aavasiya Ma Vi | Pyuthan, Nepal</h4>
-							<p>
-								Completed secondary level education.
-							</p>
+							<h3> School Leaving Certificate (Secondary)</h3>
+							<h4><b> Kalika Aavasiya Ma Vi | Pyuthan, Nepal </b></h4>
+
 						</li>
 					</ul>
 				</div>
@@ -263,7 +282,7 @@
 
 
 <!-- Research exprience 1.  -->
-	<section class="research-experience spad">
+	<section id = "research-experience" class="research-experience spad">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xl-10 offset-xl-1">
@@ -360,159 +379,58 @@
 
 
 <!-- Skills Start -->
-
-<section class="extra-section spad pb-0">
+<section id="skill-new" class="extra-section spad pb-0">
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xl-10 offset-xl-1">
-				<div>
-					<h2>Skills</h2>
+	  <div class="row">
+		<div class="col-xl-10 offset-xl-2 col-md-10 offset-md-2 col-sm-10 offset-sm-2">
+		  <div>
+			<h2>Skills</h2>
+		  </div>
+		  <div class="row">
+			<div class="col-12">
+			  <div class="row">
+				<!-- Column 1 -->
+				<div class="col-md-4">
+				  <p>RStudio</p>
+				  <p>MS Office Suite</p>
+				  <p>ArcMap (ArcGIS)</p>
 				</div>
-				<div class="row">
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress1" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>95%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>MS Office Suite</h3>
-									</div>			
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress2" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>80%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>R and RStudio</h3>
-									</div>			
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress3" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>75%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>ArcMap</h3>
-									</div>			
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress4" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>40%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>QGIS</h3>
-									</div>			
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress5" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>20%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>Python</h3>
-										<p></p>
-									</div>			
-								</div>
-							</div>
-						</div>	
-					</div>
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress6" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>20%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>Javascript</h3>
-									</div>			
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress7" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>30%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>CSS/HTML</h3>
-										<p></p>
-									</div>			
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 pt-5">
-						<div class="fact-box trans">
-							<div class="fact-content">
-								<div class="circle-progress">
-									<div id="progress8" class="prog-circle"></div>
-									<div class="progress-info">
-										<h2>70%</h2>
-									</div>
-									<div class="prog-title">
-										<h3>Keynote Speaking</h3>
-									</div>			
-								</div>
-							</div>
-						</div>
-					</div>
+				<!-- Column 2 -->
+				<div class="col-md-4">
+				  <p>Python</p>
+				  <p>Javascript</p>
+				  <p>QGIS</p>
 				</div>
+				<!-- Column 3 -->
+				<div class="col-md-4">
+				  <p>HTML/CSS</p>
+				  <p>Keynote Speaking</p>
+				  <p>Bayesian Modeling</p>
+				</div>
+			  </div>
 			</div>
+		  </div>
 		</div>
+	  </div>
 	</div>
-</section>
-
-<!-- Skills end -->
+  </section>
+  <!-- Skills end -->
+  
 
 <!-- Portfolio section start -->
-	<section class="portfolio-section-new spad">
+	<section id = "portfolio" class="portfolio-section-new spad">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xl-8 col-md-12 offset-xl-2 ">
 					<div>
 						<h2>Portfolio</h2>
-						<p> 
-							As I was scrolling through Reddit, I discovered a subreddit dedicated to data visualization. 
+
+						<p id = "portfolio-paragraph"> 
+						 <b>As I was scrolling through Reddit, I discovered a subreddit dedicated to data visualization. 
 							Exploring this subreddit made me realize that data visualization can be both aesthetic and powerful. 
 							Inspired by this, I have dedicated a significant amount of time to mastering data visualization techniques. 
 							I primarily use RStudio for creating my visualizations.
+						 </b>
 						</p>
 					</div>
 				</div>
@@ -530,6 +448,7 @@
 								Additionally, numerous smaller rivulets originate from the Chure region, a young lowland area of Nepal.
 								Koshi, Gandaki and Karnali (from east to west) are the three major river systems of Nepal. <br>
 								I downloaded the data from <a href = "https://www.hydrosheds.org/">HydroSHEDS</a> and developed the river network of Nepal. 
+								<br><br><br><br>
 							</p>
 						</div>
 					</div>
@@ -546,6 +465,7 @@
 								Unfortunately, the polygon shapefile for these regions is not readily available online. 
 								To address this, I have provided the GIS polygon shapefile of Nepal, which can be accessed through this 
 								<a href = "https://github.com/sushank-pokhrel/physiographic_zones_of_nepal">link</a>.
+								<br><br><br><br>
 							</p>
 						</div>
 					</div>
@@ -563,6 +483,7 @@
 								I am currently leading a research project focused on the suitable habitats of seven 
 								bamboo species in Nepal through ecological niche modeling. 
 								One of the species we are studying is <i>Bambusa nepalensis</i>.
+								<br><br><br><br>
 							</p>
 						</div>
 					</div>
@@ -575,6 +496,7 @@
 								These collisions often result in fatalities, with more than half of the incidents proving deadly for the birds. 
 								While such deaths might not substantially impact common bird species, 
 								they pose a serious threat to endangered or threatened bird populations.
+								<br><br><br><br>
 							</p>
 						</div>
 					</div>
@@ -587,7 +509,7 @@
 	
 
 <!-- Social links section start -->
-<div class="social-section">
+<div id = "contact-me" class="social-section">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-10 offset-xl-1">
@@ -596,7 +518,7 @@
 						<a href="https://www.linkedin.com/in/sushank-pokhrel/"><i class="fa fa-linkedin"></i></a>
 						<a href="https://www.instagram.com/_junk_ee"><i class="fa fa-instagram"></i></a>
 						<a href="https://www.facebook.com/sushank.00"><i class="fa fa-facebook"></i></a>
-						<a href="mailto:sushpokh111@gmail.com"><i class="fa fa-envelope"></i></a>
+						<a href="https://github.com/sushank-pokhrel"><i class="fa fa-github"></i></a>
 					</div>
 					<h2 class="hidden-md hidden-sm"> Connect With Me</h2>
 				</div>
@@ -615,12 +537,6 @@
 		</div>
 	</footer>
 
-
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</div>
-		</div>
-	</footer>
-	<!-- Footer section end -->
 
 
 	<!--====== Javascripts & Jquery ======-->
