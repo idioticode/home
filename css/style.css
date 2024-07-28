@@ -198,6 +198,8 @@ ol {
 	}
 }
 
+
+
 /* Site Buttons */
 .site-btn {
 	display: inline-block;
@@ -570,7 +572,7 @@ color: white
 }
 
 .resume-list p {
-	margin-bottom: 0;
+	margin-bottom: 20px;
 }
 
 
@@ -622,11 +624,11 @@ color: white
 	text-transform: uppercase;
 	color: orange;
 	margin-top: 10px;
-	margin-bottom: 45px;
+	margin-bottom: 35px;
 }
 
 .research-list p {
-	margin-bottom: 0;
+	margin-bottom: 40px;
 	color: white
 }
 
@@ -720,9 +722,16 @@ color: white
 	margin-bottom: 5px;
 }
 
+#portfolio-paragraph {
+	font-size: 20px;
+	margin-bottom: 50px;
+	color: white;
+}
+
+
 .portfolio-item p {
 	font-size: 17px;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 .portfolio-item .port-pic {
@@ -875,13 +884,14 @@ color: white
 	font-size: 100 px;
 }
 
+
 /*---------------------
 	Footer section
 -----------------------*/
 .footer-section {
 	background: white;
 	padding: -20px 10px;
-	margin; 0
+	margin: 0
 }
 
 .footer-section p{
@@ -890,6 +900,7 @@ color: white
 	color: darkslategrey;
 	line-height: normal;
 }
+
 
 /*---------------------
 	Home 2 Style
@@ -1602,9 +1613,109 @@ color: white
 
 /* small Mobile :320px. */
 @media only screen and (max-width: 479px) {
+
+
 	.hero-text h2 {
-		font-size: 50px;
+		font-size: 40px;
 	}
+
+	.hero-text p{
+		font-size: 20px;
+	}
+
+	.hero-info h2{
+		font-size:35px
+	}
+
+	.hero-info li{
+		font-size: 8px
+	}
+
+	#about h2{
+		font-size: 30px
+	}
+
+	#about p{
+		font-size: 15px
+	}
+
+/* Smaller font sizes for mobile devices */
+@media (max-width: 767px) {
+	#experience h2,
+	#education h2,
+	#research-publications h2,
+	#research-experience h2,
+	#skills h2,
+	#portfolio h2,
+	#skill-new h2{
+	  font-size: 25px; /* Adjust as needed */
+	}
+  
+	#experience h3,
+	#education h3,
+	#research-publications h3,
+	#research-experience h3,
+	#skills h3,
+	#portfolio h3,
+	#skill-new h3 {
+	  font-size: 18px; /* Adjust as needed */
+	}
+  
+	#experience h4,
+	#education h4,
+	#research-publications h4,
+	#research-experience h4,
+	#skills h4,
+	#portfolio h4,
+	#skill-new h4 {
+	  font-size: 10px; /* Adjust as needed */
+	}
+  
+	#experience p,
+	#education p,
+	#education p3,
+	#research-publications p,
+	#research-experience p,
+	#skills p,
+	#portfolio p,
+	#research-publications p4,
+	#skill-new p{
+	  font-size: 13px; /* Adjust as needed */
+	}
+  
+	#experience p2,
+	#education p2,
+	#research-publications p2,
+	#research-experience p2,
+	#skills p2,
+	#portfolio p2 {
+	  font-size: 10px; /* Adjust as needed */
+	  margin-bottom: 30px
+	}
+  
+	#experience li,
+	#education li,
+	#education li,
+	#research-publications li,
+	#research-experience li,
+	#skills li,
+	#portfolio li,
+	#research-publications li {
+	  margin-bottom: 30px; /* Adjust as needed */
+	}
+	
+}
+
+ 
+
+
+
+
+
+
+
+
+
 	.hero-info ul li {
 		font-size: 18px;
 	}
@@ -1632,6 +1743,10 @@ color: white
 	.home-four-style .main-left-area {
 		padding-top: 250px;
 	}
+
+
+
+	
 }
 
 /
