@@ -1,10 +1,3 @@
-/* =================================
-------------------------------------
-  Civic - CV Resume
-  Version: 1.0
- ------------------------------------ 
- ====================================*/
-
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
@@ -438,6 +431,13 @@ ol {
 	margin-top: 15px;
 }
 
+/*----------------
+ Navbar
+ --------*/
+
+ #sideNav {
+	color: black;
+ }
 
 
 /*---------------------
@@ -451,27 +451,24 @@ ol {
 /*---------------------
  Research Publications
 -----------------------*/
-.research-publications {
-	background:#000
+.research-publications .spad{
+	background:#000,
+
 }
 
 
 
 .research-publications p{
-	color: white
+	color: white,
+	
 }
-
-.research-publications .p2{
-	color: #6affff
-}
-
 
 /*---------------------
 	Portfolio section
 ----------------------*/
 
-.portfolio-section{
-	background: #141415
+#portfolio{
+	background: #000
 }
 
 .portfolio-section-new{
@@ -536,6 +533,7 @@ ol {
 .social-section {
 	background: #020100;
 	padding: 80px 0;
+	margin: 0px
 }
 
 .social-section .social-links {
@@ -557,7 +555,6 @@ ol {
 
 .social-section .social-link-warp h2 {
 	display: inline-block;
-	float: right;
 	font-weight: 400;
 	padding-left: 30px;
 	background: #020100;
@@ -575,6 +572,27 @@ ol {
 	margin-top: 1px;
 	background: #cbcbcb;
 }
+
+
+
+/*---------------------
+ Research Publications
+-----------------------*/
+.research-publications {
+	background:#000
+}
+
+
+
+.research-publications p{
+	color: white
+}
+
+.research-publications .p2{
+	color: #6affff
+}
+
+
 
 
 /*---------------------
@@ -1230,6 +1248,17 @@ ol {
 	.hero-info ul li span {
 		display: block;
 	}
+
+	.research-publications p{
+		font-size: 22px;
+
+	}
+
+	.research-publications h2{
+		font-size: 40px;
+	}
+
+
 }
 
 /* Large Mobile :480px. */
@@ -1300,6 +1329,18 @@ ol {
 	.info-section .hero-info ul li span {
 		color: #9c9b9b;
 	}
+
+	.research-publications {
+		font-size: 18px;
+	}
+
+	
+
+	.research-publications h2{
+		font-size: 35px;
+	}
+
+
 }
 
 /* small Mobile :320px. */
@@ -1334,4 +1375,14 @@ ol {
 	.home-four-style .main-left-area {
 		padding-top: 250px;
 	}
+
+	.research-publications p{
+		font-size: 15px;
+
+	}
+
+	.research-publications h2{
+		font-size: 30px;
+	}
+
 }
