@@ -653,12 +653,22 @@ color: white
 }
 
 
+/*------------------------
+ Grants and Scholarships 
+ ----------------------*/
+
+ #grants{
+	background-color: #000000;
+ }
+
+
+
 /* --------------------------
 # Skills Section 
 ----------------------*/
 
 .extra-section{
-	background-color: #000000;
+	background-color: #141415;
 }
 
 .research-new {
@@ -705,11 +715,11 @@ color: white
 ----------------------*/
 
 .portfolio-section{
-	background: #141415
+	background: #000
 }
 
 .portfolio-section-new{
-	background-color: #0A0A0A;
+	background-color: #000;
 }
 
 
@@ -775,13 +785,13 @@ color: white
 	Social section
 -----------------------*/
 .social-section {
-	background: #020100;
+	background: #141415;
 	padding: 80px 0;
 }
 
 .social-section .social-links {
 	display: inline-block;
-	background: #020100;
+	background: #141415;
 	position: relative;
 	z-index: 5;
 }
