@@ -1645,6 +1645,7 @@ color: white
 	#education h2,
 	#research-publications h2,
 	#research-experience h2,
+	#grants h2,
 	#skills h2,
 	#portfolio h2,
 	#skill-new h2{
@@ -1655,6 +1656,7 @@ color: white
 	#education h3,
 	#research-publications h3,
 	#research-experience h3,
+	#grants h3,
 	#skills h3,
 	#portfolio h3,
 	#skill-new h3 {
@@ -1665,6 +1667,7 @@ color: white
 	#education h4,
 	#research-publications h4,
 	#research-experience h4,
+	#grants h4,
 	#skills h4,
 	#portfolio h4,
 	#skill-new h4 {
@@ -1676,6 +1679,7 @@ color: white
 	#education p3,
 	#research-publications p,
 	#research-experience p,
+	#grants p,
 	#skills p,
 	#portfolio p,
 	#research-publications p4,
@@ -1687,6 +1691,7 @@ color: white
 	#education p2,
 	#research-publications p2,
 	#research-experience p2,
+	#grants p2,
 	#skills p2,
 	#portfolio p2 {
 	  font-size: 10px; /* Adjust as needed */
@@ -1698,12 +1703,12 @@ color: white
 	#education li,
 	#research-publications li,
 	#research-experience li,
+	#grants li,
 	#skills li,
 	#portfolio li,
 	#research-publications li {
 	  margin-bottom: 30px; /* Adjust as needed */
 	}
-	
 }
 
  
