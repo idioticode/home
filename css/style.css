@@ -661,8 +661,6 @@ color: white
 	background-color: #000000;
  }
 
-
-
 /* --------------------------
 # Skills Section 
 ----------------------*/
@@ -719,7 +717,7 @@ color: white
 }
 
 .portfolio-section-new{
-	background-color: #000;
+	background-color: #0A0A0A;
 }
 
 
@@ -785,13 +783,14 @@ color: white
 	Social section
 -----------------------*/
 .social-section {
-	background: #141415;
+	background: #000000;
 	padding: 80px 0;
 }
 
+
 .social-section .social-links {
 	display: inline-block;
-	background: #141415;
+	background: #000000;
 	position: relative;
 	z-index: 5;
 }
@@ -827,17 +826,28 @@ color: white
 	background: #cbcbcb;
 }
 
+/*---------------------
+	Books and Novels
+-----------------------*/
 
 
-
+#books-novels {
+	background: #0A0A0A;
+}
 
 /*---------------------
 	Contact section
 -----------------------*/
 
-.contact-section{
-	background-color: #0A0A0A;
+#contact-me {
+	background-color: #000000;
 }
+
+.contact-section{
+	background-color: #000000;
+}
+
+
 
 .contact-form {
 	display: block;
@@ -1657,9 +1667,13 @@ color: white
 	#research-experience h2,
 	#grants h2,
 	#skills h2,
-	#portfolio h2,
 	#skill-new h2{
 	  font-size: 25px; /* Adjust as needed */
+	}
+
+	#portfolio h2,
+	#books-novels h2 {
+		font-size: 18px;
 	}
   
 	#experience h3,
@@ -1669,6 +1683,7 @@ color: white
 	#grants h3,
 	#skills h3,
 	#portfolio h3,
+	#books-novels h3,
 	#skill-new h3 {
 	  font-size: 18px; /* Adjust as needed */
 	}
@@ -1680,6 +1695,7 @@ color: white
 	#grants h4,
 	#skills h4,
 	#portfolio h4,
+	#books-novels h4,
 	#skill-new h4 {
 	  font-size: 10px; /* Adjust as needed */
 	}
@@ -1692,6 +1708,7 @@ color: white
 	#grants p,
 	#skills p,
 	#portfolio p,
+	#books-novels p,
 	#research-publications p4,
 	#skill-new p{
 	  font-size: 13px; /* Adjust as needed */
@@ -1703,7 +1720,8 @@ color: white
 	#research-experience p2,
 	#grants p2,
 	#skills p2,
-	#portfolio p2 {
+	#portfolio p2,
+	#skill-new p2 {
 	  font-size: 10px; /* Adjust as needed */
 	  margin-bottom: 30px
 	}
@@ -1715,10 +1733,13 @@ color: white
 	#research-experience li,
 	#grants li,
 	#skills li,
+	#skill-new li,
 	#portfolio li,
+	#books-novels li,
 	#research-publications li {
 	  margin-bottom: 30px; /* Adjust as needed */
 	}
+	
 }
 
  
@@ -1763,5 +1784,3 @@ color: white
 
 	
 }
-
-/
