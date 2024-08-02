@@ -101,6 +101,6 @@
 <text x='364.83' y='114.55' style='font-size: 12.00px; font-weight: bold;fill: #FFFFFF; font-family: "Candara";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>Tarai</text>
 <text x='34.37' y='16.86' style='font-size: 15.60px; font-weight: bold;fill: #FFFFFF; font-family: "Segoe Print";' textLength='290.46px' lengthAdjust='spacingAndGlyphs'>PHYSIOGRAPHIC ZONES OF NEPAL</text>
 <text x='458.77' y='298.26' text-anchor='end' style='font-size: 10.00px; font-weight: bold;fill: #FFFFFF; font-family: "Candara";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
-<text x='458.77' y='309.06' text-anchor='end' style='font-size: 10.00px; font-weight: bold;fill: #FFFFFF; font-family: "Candara";' textLength='392.38px' lengthAdjust='spacingAndGlyphs'>Link to GIS Polygon ShapeFile: https://github.com/idioticode/physiographic_zones_of_nepal</text>
+<text x='458.77' y='309.06' text-anchor='end' style='font-size: 10.00px; font-weight: bold;fill: #FFFFFF; font-family: "Candara";' textLength='392.38px' lengthAdjust='spacingAndGlyphs'>Link to GIS Polygon ShapeFile: https://github.com/sushank-pokhrel/physiographic_zones_of_nepal</text>
 </g>
 </svg>
