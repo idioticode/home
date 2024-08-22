@@ -355,9 +355,14 @@ ol {
 }
 
 /* Progress dots */
+
+#language {
+	background: black;
+}
 .language-progress {
 	max-width: 280px;
 	list-style: none;
+	background-color: black;
 }
 
 .language-progress li {
@@ -365,12 +370,14 @@ ol {
 	position: relative;
 	padding-right: 150px;
 	margin-bottom: 30px;
+	background-color: black;
 }
 
 .language-progress .lan-prog {
 	position: absolute;
 	right: 0;
 	top: 0;
+	background-color: black;
 }
 
 .language-progress .lan-prog span {
@@ -379,11 +386,11 @@ ol {
 	display: inline-block;
 	margin-right: 18px;
 	border-radius: 12px;
-	background: #40424a;
+	background: white;
 }
 
 .language-progress .lan-prog span.fade-ele {
-	background: #cacaca;
+	background: #161414;
 }
 
 /* Icon Box */
@@ -1667,6 +1674,7 @@ color: white
 	#research-experience h2,
 	#grants h2,
 	#skills h2,
+	#language h2,
 	#skill-new h2{
 	  font-size: 25px; /* Adjust as needed */
 	}
@@ -1683,6 +1691,7 @@ color: white
 	#grants h3,
 	#skills h3,
 	#portfolio h3,
+	#language h3,
 	#books-novels h3,
 	#skill-new h3 {
 	  font-size: 18px; /* Adjust as needed */
@@ -1694,6 +1703,7 @@ color: white
 	#research-experience h4,
 	#grants h4,
 	#skills h4,
+	#language h4,
 	#portfolio h4,
 	#books-novels h4,
 	#skill-new h4 {
@@ -1705,6 +1715,7 @@ color: white
 	#education p3,
 	#research-publications p,
 	#research-experience p,
+	#language p,
 	#grants p,
 	#skills p,
 	#portfolio p,
@@ -1718,6 +1729,7 @@ color: white
 	#education p2,
 	#research-publications p2,
 	#research-experience p2,
+	#language p2,
 	#grants p2,
 	#skills p2,
 	#portfolio p2,
@@ -1731,6 +1743,7 @@ color: white
 	#education li,
 	#research-publications li,
 	#research-experience li,
+	#language li,
 	#grants li,
 	#skills li,
 	#skill-new li,
@@ -1738,6 +1751,11 @@ color: white
 	#books-novels li,
 	#research-publications li {
 	  margin-bottom: 30px; /* Adjust as needed */
+	  font-size: 10px;
+	}
+
+	#language ul{
+		font-size: 10px
 	}
 	
 }
