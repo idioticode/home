@@ -1687,14 +1687,12 @@ color: white
 	#grants h2,
 	#skills h2,
 	#language h2,
-	#skill-new h2{
+	#skill-new h2,
+	#portfolio h2,
+	#books-novels h2 {
 	  font-size: 25px; /* Adjust as needed */
 	}
 
-	#portfolio h2,
-	#books-novels h2 {
-		font-size: 25px;
-	}
   
 	#experience h3,
 	#education h3,
