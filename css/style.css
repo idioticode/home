@@ -500,11 +500,23 @@ ol {
 	margin-bottom: 0;
 }
 
+
+/* -----------------
+  Horizontal line
+--------------------*/
+
+#custom-hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 0px 0;
+}
+
+
 /*---------------------
  About Me
 -----------------------*/
 .about-me-section {
-	background: #0A0A0B;
+	background: #000000;
 
 	transition: all 0.3s ease-in-out 1s;
 }
@@ -517,14 +529,14 @@ ol {
 	Resume section
 ----------------------*/
 .resume-section{
-	background-color: #000;
+	background-color: #000000;
 	color: white;
 
 	transition: all 0.3s ease-in-out 1s;
 }
 
 .resume-section.with-bg {
-	background-color:#0A0A0A ;
+	background-color:#000000 ;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -607,7 +619,7 @@ color: white
 -------------------*/
 
 .research-experience {
-	background-color: #0A0A0A;
+	background-color: #000000;
   }
 
 
@@ -673,7 +685,7 @@ color: white
 ----------------------*/
 
 .extra-section{
-	background-color: #141415;
+	background-color: #000000;
 }
 
 .research-new {
@@ -724,7 +736,7 @@ color: white
 }
 
 .portfolio-section-new{
-	background-color: #0A0A0A;
+	background-color: #000000;
 }
 
 
@@ -839,7 +851,7 @@ color: white
 
 
 #books-novels {
-	background: #0A0A0A;
+	background: #000000;
 }
 
 /*---------------------
