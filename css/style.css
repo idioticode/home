@@ -444,6 +444,14 @@ ol {
 	margin-top: 15px;
 }
 
+#scroll
+{
+	
+	align-content: flex-end;
+	background-color: #000;
+
+
+}
 /*---------------------
 	Hero section
 -----------------------*/
@@ -517,12 +525,26 @@ ol {
 -----------------------*/
 .about-me-section {
 	background: #000000;
-
-	transition: all 0.3s ease-in-out 1s;
+	
 }
 
 
+/*----------------
+  Up arrow
+  ------------------*/
 
+  .up-arrow-button {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 35px;
+    right: 40px;  /* Adjusted to the bottom-right corner */
+    z-index: 1000;
+}
+
+.up-arrow-button svg {
+    fill: white; /* Color of the arrow */
+}
 
 
 /*---------------------
