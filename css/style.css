@@ -635,8 +635,8 @@ color: white
 /* Container for the circular image */
 #img-circle {
     display: inline-block; /* Allows the container to shrink to fit the image */
-    width: 250px; /* Adjust size as needed */
-    height: 250px; /* Adjust size as needed */
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
     border-radius: 50%; /* Makes the container circular */
     overflow: hidden; /* Ensures image is clipped to the circular container */
     margin: 0 auto; /* Centers the container */
