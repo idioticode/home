@@ -77,10 +77,32 @@ img {
 }
 
 /* Smooth scroll */
-:root {
-	scroll-behavior: smooth;
-  }
+#container{
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
 
+* {
+    scroll-behavior: smooth;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  scroll-behavior: smooth;
+}
+
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
 
 /* --------------
 ## Main Image
@@ -614,6 +636,29 @@ color: white
 
 .resume-list p {
 	margin-bottom: 20px;
+}
+
+
+/*---------------------
+ Hero Image
+-----------------------*/
+
+
+/* Container for the circular image */
+.image-circle {
+    display: inline-block; /* Allows the container to shrink to fit the image */
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Ensures image is clipped to the circular container */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Style for the image inside the circular container */
+.image-circle img {
+    width: 100%; /* Ensures the image covers the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes space below the image */
 }
 
 
