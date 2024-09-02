@@ -633,7 +633,8 @@ color: white
  Hero Image
 -----------------------*/
 /* Container for the circular image */
-#img-circle {
+#img-circle,
+.image-circle {
     display: inline-block; /* Allows the container to shrink to fit the image */
     width: 200px; /* Adjust size as needed */
     height: 200px; /* Adjust size as needed */
