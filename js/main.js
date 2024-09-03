@@ -36,6 +36,7 @@ $(window).on('load', function() {
 		items: 1,
 		autoplay: true,
 		autoplayTimeout: 12000, // Time in milliseconds for each slide (5 seconds in this example)
+		smartSpeed: 1000, // 1s. 
 	});
 	
 

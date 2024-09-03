@@ -872,7 +872,7 @@ color: white
 .review-slider .owl-dots {
 	position: absolute;
 	left: 0px;
-	top: 5px;
+	top: 10px;
 }
 
 .review-slider .owl-dots .owl-dot {
@@ -893,6 +893,9 @@ color: white
 	font-size: 17px;
 }
 
+.single-review h3 {
+	margin-top: 10px;
+}
 
 /* ------------------*/
 
