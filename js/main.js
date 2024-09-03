@@ -34,10 +34,10 @@ $(window).on('load', function() {
 		nav: false,
 		dots: true,
 		items: 1,
-		autoplay: true
+		autoplay: true,
+		autoplayTimeout: 12000, // Time in milliseconds for each slide (5 seconds in this example)
 	});
-
-
+	
 
 	$('.progress-bar-style').each(function() {
 		var progress = $(this).data("progress");

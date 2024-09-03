@@ -807,7 +807,7 @@ color: white
 }
 
 #portfolio-paragraph {
-	font-size: 20px;
+	font-size: 18px;
 	margin-bottom: 50px;
 	color: white;
 }
@@ -852,6 +852,73 @@ color: white
 	width: 100%;
 	top: 0;
 }
+
+
+
+/*---------------------
+	Review section
+-----------------------*/
+
+.review-slider {
+	padding-left: 50px;
+	
+
+}
+
+.review-slider p{
+	font-size: 12px;
+}
+
+.review-slider .owl-dots {
+	position: absolute;
+	left: 0px;
+	top: 5px;
+}
+
+.review-slider .owl-dots .owl-dot {
+	width: 15px;
+	height: 15px;
+	border: 2px solid #ffffff;
+	border-radius: 50px;
+	background: #000000;
+	margin-bottom: 15px;
+}
+
+.review-slider .owl-dots .owl-dot.active {
+	background: #ffffff;
+
+}
+.single-review p {
+	margin-bottom: 80px;
+	font-size: 17px;
+}
+
+
+/* ------------------*/
+
+/* Add this to your existing CSS */
+.review-slider {
+    /* Other styles */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    position: relative;
+}
+
+.review-slider .owl-item {
+    /* Set the width of each slide */
+    width: 100%;
+    display: inline-block; /* Ensure slides line up horizontally */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.review-slider .owl-wrapper {
+    display: flex;
+    animation: slide 100s linear infinite; /* Adjust 10s to your preferred timing */
+}
+
 
 
 
