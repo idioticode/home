@@ -440,6 +440,46 @@ ol {
  }
 
 
+
+ /*  -------------------
+Cursor
+------------------ */
+body .cursor {
+	pointer-events: none;
+  }
+  body .cursor__ball {
+	position: fixed;
+	top: 0;
+	left: 0;
+	mix-blend-mode: difference;
+	z-index: 1000;
+  }
+  body .cursor__ball circle {
+	fill: #f7f8fa;
+  }
+
+  body .cursor__ball--small {
+  transform-origin: center center;
+}
+
+
+body, * {
+    cursor: none; /* Hide the default cursor */
+}
+
+/* Ensure cursor is on top of other elements */
+.cursor__ball--small {
+	position: fixed;
+	z-index: 1050; /* High z-index value */
+  }
+  
+  /* Ensure navbar is below the cursor */
+  .navbar {
+	position: fixed;
+	z-index: 1000; /* Lower z-index value */
+  }
+  
+
 /*---------------------
   Home Page
 -----------------------*/

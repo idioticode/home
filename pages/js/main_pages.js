@@ -77,120 +77,31 @@ $(window).on('load', function() {
 		removalDelay: 500,
 	});
 
+// Mouse and cursor
+const $bigBall = document.querySelector('.cursor__ball--big');
+const $smallBall = document.querySelector('.cursor__ball--small');
+const $hoverables = document.querySelectorAll('.hoverable');
 
-
-
-if($().circleProgress){
-
-	//Set progress circle 1
-	$("#progress1").circleProgress({
-		value: 0.95,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "#000000"
-	});
-	
-	//Set progress circle 2
-	$("#progress2").circleProgress({
-		value: 0.8,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-	//Set progress circle 3
-	$("#progress3").circleProgress({
-		value: 0.75,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-	//Set progress circle 4
-	$("#progress4").circleProgress({
-		value: 0.40,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-
-	//Set progress circle 5
-	$("#progress5").circleProgress({
-		value: 0.20,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-	//Set progress circle white
-	$("#progress6").circleProgress({
-		value: 0.2,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-	//Set progress circle white
-	$("#progress7").circleProgress({
-		value: 0.3,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-
-	//Set progress circle skyblue
-	$("#progress8").circleProgress({
-		value: 0.7,
-		size: 175,
-		thickness: 2,
-		fill: "#00ffff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-	//Set progress circle skyblue
-	$("#progress9").circleProgress({
-		value: 0.83,
-		size: 175,
-		thickness: 2,
-		fill: "#009fff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-	//Set progress circle skyblue
-	$("#progress10").circleProgress({
-		value: 0.83,
-		size: 175,
-		thickness: 2,
-		fill: "#009fff",
-		emptyFill: "rgba(0, 0, 0, 0)"
-	});
-
-	// Save the scroll position before the page unloads
-    window.addEventListener('beforeunload', () => {
-		localStorage.setItem('scrollPosition', window.scrollY);
-	  });
-  
-	  // Restore the scroll position when the page loads
-	  window.addEventListener('load', () => {
-		const scrollPosition = localStorage.getItem('scrollPosition');
-		if (scrollPosition) {
-		  window.scrollTo(0, parseInt(scrollPosition, 10));
-		}
-	  })
-
-
-	  
-
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+  $hoverables[i].addEventListener('mouseenter', onMouseHover);
+  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
 }
+
+// Move the cursor
+function onMouseMove(e) {
+  TweenMax.to($bigBall, .4, {
+	x: e.pageX - 15,
+	y: e.pageY - 15
+  });
+
+TweenMax.to($smallBall, .1, {
+x: e.pageX - 3,
+y: e.pageY - 8
+});
+}
+
 
 })(jQuery);
 
