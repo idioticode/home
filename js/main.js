@@ -90,6 +90,7 @@ $(window).on('load', function() {
 
 	// Move the cursor
 	function onMouseMove(e) {
+		// Adjust positioning based on the actual dimensions of your cursor elements // if this doesn.t work please seek the code from other format. 
   	TweenMax.to($bigBall, .4, {
     	x: e.pageX - 15,
     	y: e.pageY - 15
@@ -100,6 +101,45 @@ $(window).on('load', function() {
     y: e.pageY - 8
   });
 }
+
+
+// Function to handle hover effect
+function onMouseHover() {
+	TweenMax.to($smallBall, .1, {
+	  scale: 2, // Adjust scale factor as needed
+	  fill: 'cyan' // Change color to cyan
+	});
+  }
+  
+  // Function to handle hover out effect
+  function onMouseHoverOut() {
+	TweenMax.to($smallBall, .1, {
+	  scale: 1, // Revert to original size
+	  fill: '#f7f8fa' // Revert color to original
+	});
+  }
+
+
+  
+document.addEventListener('DOMContentLoaded', function() {
+	const links = document.querySelectorAll('a[href^="#"]');
+
+	links.forEach(link => {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+
+			const targetId = this.getAttribute('href').substring(1);
+			const targetElement = document.getElementById(targetId);
+
+			if (targetElement) {
+				targetElement.scrollIntoView({
+					behavior: 'smooth'
+				});
+			}
+		});
+	});
+});
+
 
 })(jQuery);
 

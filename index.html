@@ -42,53 +42,113 @@
 	</div>
 
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none"></span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about" style="color: white;">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience" style="color: white;">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skill-new" style="color: white;">Skills</a>
-         </li>
-		  <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#research-publications" style="color: white;">Research</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education" style="color: white;">Education</a>
-          </li>
-		<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#grants" style="color: white;">Grants</a>
-        </li>
-		
-		<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio" style="color: white;">Portfolio</a>
-        </li>
-
-		<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#books-novels" style="color: white;">Literatures</a>
-        </li>
-		
-        <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact-me" style="color: white;">Contact</a>
-        </li>
-        </ul>
-      </div>
-    </nav>
-
-
+	<nav>
+		<div class="vertical-nav">
+			<div class="nav-background"></div>
+			<div class="line"></div>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#about" class="node">
+					<span class="link-label">About</span>
+				 </a>
+				</li>
+				<li class="nav-item">
+					<a href="#experience" class="node">
+					<span class="link-label">Experience</span>
+				 </a>
+				</li>
+				<li class="nav-item">
+					<a href="#skill-new" class="node">
+					<span class="link-label">Skills</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="#research-publications" class="node">
+					<span class="link-label">Research</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="#education" class="node">
+					<span class="link-label">Education</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="#grants" class="node">
+					<span class="link-label">Grants</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="#portfolio" class="node">
+					<span class="link-label">Portfolio</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="#books-novels" class="node">
+					<span class="link-label">Literatures</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="#contact-me" class="node">
+					<span class="link-label">Contact</span></a>
+				</li>
+			</ul>
+		</div>
+		<!-- Mobile hamburger menu -->
+		<div class="mobile-nav">
+			<div class="hamburger" onclick="toggleMenu()">☰</div>
+			<ul class="mobile-menu">
+				<li class="nav-item">
+					<a href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="#experience">Experience</a>
+				</li>
+				<li class="nav-item">
+					<a href="#skill-new">Skills</a>
+				</li>
+				<li class="nav-item">
+					<a href="#research-publications">Research</a>
+				</li>
+				<li class="nav-item">
+					<a href="#education">Education</a>
+				</li>
+				<li class="nav-item">
+					<a href="#grants">Grants</a>
+				</li>
+				<li class="nav-item">
+					<a href="#portfolio">Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a href="#books-novels">Literatures</a>
+				</li>
+				<li class="nav-item">
+					<a href="#contact-me">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	  
+	
+	<script>
+		function toggleMenu() {
+			var menu = document.querySelector('.mobile-menu');
+			if (menu.style.display === 'block') {
+				menu.style.display = 'none';
+			} else {
+				menu.style.display = 'block';
+			}
+		}
+	
+		 // Function to close the menu
+		 function closeMenu() {
+			var menu = document.querySelector('.mobile-menu');
+			menu.style.display = 'none';
+		}
+	
+		// Add event listeners to anchor links inside the mobile menu
+		document.addEventListener('DOMContentLoaded', function() {
+			var links = document.querySelectorAll('.mobile-menu .nav-item a');
+			links.forEach(function(link) {
+				link.addEventListener('click', closeMenu);
+			});
+		});
+	</script>
+	
+	
 	<script src="script.js"></script>
 
 	<!-- Hero section start -->
