@@ -249,6 +249,17 @@ body, * {
   }
   
 
+
+
+/* Hide custom cursor on screens smaller than 768px (tablets and mobile) */
+@media (max-width: 768px) {
+	.cursor__ball--small,
+	.cursor__ball--big {
+	  display: none; /* Hide the cursor */
+	}
+  }
+
+
 /* Site Buttons */
 .site-btn {
 	display: inline-block;
@@ -798,6 +809,10 @@ color: white
 
 .portfolio-warp {
 	padding: 60px 60px;
+}
+
+.portfolio-item {
+	cursor:pointer;
 }
 
 .portfolio-item h2 {
