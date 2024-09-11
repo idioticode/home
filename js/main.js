@@ -119,27 +119,19 @@ function onMouseHover() {
 	});
   }
 
+ // Function to close the menu
+ function closeMenu() {
+	var menu = document.querySelector('.mobile-menu');
+	menu.style.display = 'none';
+}
 
-  
+// Add event listeners to anchor links inside the mobile menu
 document.addEventListener('DOMContentLoaded', function() {
-	const links = document.querySelectorAll('a[href^="#"]');
-
-	links.forEach(link => {
-		link.addEventListener('click', function(e) {
-			e.preventDefault();
-
-			const targetId = this.getAttribute('href').substring(1);
-			const targetElement = document.getElementById(targetId);
-
-			if (targetElement) {
-				targetElement.scrollIntoView({
-					behavior: 'smooth'
-				});
-			}
-		});
+	var links = document.querySelectorAll('.mobile-menu .nav-item a');
+	links.forEach(function(link) {
+		link.addEventListener('click', closeMenu);
 	});
 });
-
 
 })(jQuery);
 
