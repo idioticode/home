@@ -76,46 +76,49 @@ $(window).on('load', function() {
 		removalDelay: 500,
 	});
 
-// Mouse and cursor
-	const $bigBall = document.querySelector('.cursor__ball--big');
-	const $smallBall = document.querySelector('.cursor__ball--small');
-	const $hoverables = document.querySelectorAll('.hoverable');
 
-	// Listeners
-	document.body.addEventListener('mousemove', onMouseMove);
-	for (let i = 0; i < $hoverables.length; i++) {
-  	$hoverables[i].addEventListener('mouseenter', onMouseHover);
-  	$hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-	}
+// Mouse and cursor
+const $bigBall = document.querySelector('.cursor__ball--big');
+const $smallBall = document.querySelector('.cursor__ball--small');
+const $hoverables = document.querySelectorAll('a'); // Ensure this selector matches your hoverable elements
+
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+  $hoverables[i].addEventListener('mouseenter', onMouseHover);
+  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+}
 
 	// Move the cursor
 	function onMouseMove(e) {
 		// Adjust positioning based on the actual dimensions of your cursor elements // if this doesn.t work please seek the code from other format. 
   	TweenMax.to($bigBall, .4, {
-    	x: e.pageX - 15,
-    	y: e.pageY - 15
+    	x: e.clientX - 15,
+    	y: e.clientY - 15
   	});
 
   TweenMax.to($smallBall, .1, {
-    x: e.pageX - 3,
-    y: e.pageY - 8
+    x: e.clientX - 3,
+    y: e.clientY - 8
   });
 }
 
 
 // Function to handle hover effect
 function onMouseHover() {
-	TweenMax.to($smallBall, .1, {
+	TweenMax.to($bigBall, .1, {
 	  scale: 2, // Adjust scale factor as needed
-	  fill: 'cyan' // Change color to cyan
+	  transformOrigin: "center center", // Ensure scaling from center
+	  ease: Power2.easeOut // Smooth scaling
 	});
   }
   
   // Function to handle hover out effect
   function onMouseHoverOut() {
-	TweenMax.to($smallBall, .1, {
+	TweenMax.to($bigBall, .1, {
 	  scale: 1, // Revert to original size
-	  fill: '#f7f8fa' // Revert color to original
+	  transformOrigin: "center center", // Ensure scaling from center
+	  ease: Power2.easeOut // Smooth scaling
 	});
   }
 
