@@ -104,11 +104,13 @@ for (let i = 0; i < $hoverables.length; i++) {
 }
 
 
+
+
 // Function to handle hover effect
 function onMouseHover() {
 	TweenMax.to($bigBall, .1, {
 	  scale: 2, // Adjust scale factor as needed
-	  transformOrigin: "center center", // Ensure scaling from center
+	  transformOrigin: "center center", 
 	  ease: Power2.easeOut // Smooth scaling
 	});
   }
@@ -117,8 +119,7 @@ function onMouseHover() {
   function onMouseHoverOut() {
 	TweenMax.to($bigBall, .1, {
 	  scale: 1, // Revert to original size
-	  transformOrigin: "center center", // Ensure scaling from center
-	  ease: Power2.easeOut // Smooth scaling
+	  	  ease: Power2.easeOut // Smooth scaling
 	});
   }
 
