@@ -40,247 +40,291 @@
 	<div class="loader"></div>
 </div>
 
+       
+
+
+
 <!--Navigation Item-->
 <nav>
-	<div class="vertical-nav">
-		<div class="nav-background"></div>
-		<div class="line"></div>
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a href="index.html" class="node">
-				<span class="link-label">Home</span>
-			 </a>
-			</li>
-			<li class="nav-item">
-				<a href="work_education.html" class="node">
-				<span class="link-label">Work &<br>Education </span>
-			 </a>
-			</li>
-		   <li class="nav-item">
-				<a href="research.html" class="node">
-				<span class="link-label">Research</span></a>
-			</li>
-			<li class="nav-item">
-				<a href="portfolio.html" class="node">
-				<span class="link-label">Portfolio</span></a>
-			</li>
-			<li class="nav-item">
-				<a href="novels.html" class="node">
-				<span class="link-label">Novels</span></a>
-			</li>
-		</ul>
-	</div>
+    <div class="vertical-nav">
+        <div class="nav-background"></div>
+        <div class="line"></div>
 
-	<!-- Mobile hamburger menu -->
-	<div class="mobile-nav">
-		<div class="hamburger" onclick="toggleMenu()">☰</div>
-		<ul class="mobile-menu">
-			<li class="nav-item">
-				<a href="index.html">Home</a>
-			</li>
-			<li class="nav-item">
-				<a href="work_education.html">Work & <br> Education</a>
-			</li>
-			<li class="nav-item">
-				<a href="research.html">Research</a>
-			</li>
-			<li class="nav-item">
-				<a href="portfolio.html">Portfolio</a>
-			</li>
-			<li class="nav-item">
-				<a href="novels.html">Novels</a>
-			</li>
-		</ul>
-	</div>
+
+		 <!-- Rotating arrow and text -->
+		 <div class="explore-container">
+			<svg class="arrow" width="100" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+				<!-- Vertical line -->
+				<line x1="25" y1="0" x2="25" y2="35" stroke="white" stroke-width="3" />
+			
+				 <!-- Larger and bolder arrowhead -->
+				 <polygon points="25,35 32,30 25,40 18,30" fill="white" stroke="white" stroke-width="2" />
+			</svg>
+			<div class="explore-text">EXPLORE ME</div>
+		</div>
+
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="node">
+                    <span class="link-label">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="work_education.html" class="node">
+                    <span class="link-label">Work &<br>Education</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="research.html" class="node">
+                    <span class="link-label">Research</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="portfolio.html" class="node">
+                    <span class="link-label">Portfolio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="novels.html" class="node">
+                    <span class="link-label">Novels</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Mobile hamburger menu -->
+    <div class="mobile-nav">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="mobile-menu">
+            <li class="nav-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="work_education.html">Work & <br> Education</a>
+            </li>
+            <li class="nav-item">
+                <a href="research.html">Research</a>
+            </li>
+            <li class="nav-item">
+                <a href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a href="novels.html">Novels</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
-  <!--Navigation Item End-->
-	<script>
-		function toggleMenu() {
-			var menu = document.querySelector('.mobile-menu');
-			if (menu.style.display === 'block') {
-				menu.style.display = 'none';
-			} else {
-				menu.style.display = 'block';
-			}
-		}
-	
-	</script>
-	
-		
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector('.mobile-menu');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+</script>
+
 <style>
-	/*---------------------
-	Navigation
------------------------*/
+    /*---------------------
+    Navigation
+    -----------------------*/
 
-
-
-/* Vertical navigation container */
-.vertical-nav {
-    position: fixed;
-    left: 80px;
-    top: 140px; /* position from top */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000;
-}
-
-
-/* Vertical line */
-.line {
-    position: absolute;
-    left: 50%;
-    width: 1px;
-    height: 365px;
-    background-color: blue;
-}
-
-/* Nav links list */
-.nav-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Individual nav items */
-.nav-item {
-    position: relative;
-}
-
-/* Circular node (anchor link) with two outlines */
-.node {
-    display: block;
-    width: 12px;
-    height: 12px;
-    background-color: black;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-    z-index: 1001;
-    border: 1px solid white; /* Color of inner outline */
-    box-shadow: 0 0 0 6px black; /* gap between the node and the background line */
-    margin-bottom: 75px; /* gap between the nodes */
-}
-
-/* Hover effect for nodes */
-.node:hover {
-    background-color: #007bff;
-}
-
-
-/* Hidden anchor label */
-.link-label {
-    position: absolute;
-    left: 30px;
-    top: -10%;
-    padding: 5px 10px;
-    background-color:transparent;
-    color: white;
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1001;
-}
-
-/* Show the background when hovering near the nodes */
-.nav-background {
-    position: absolute;
-    left: calc(10px + 5px); /* Adjusting left position to add more space */
-    width: calc(150px); /* Adjust width using calc() */
-    height: calc(100%); /* Height adjustment remains the same */
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
-	opacity: 0;
-    z-index: 999;
-    top: -20px;
-}
-
-/* Show the background when hovering near the nodes */
-.vertical-nav:hover .nav-background {
-    opacity: 1;
-	background-color: rgba(0, 0, 0, 0); /* Darker color on hover, adjust as needed */
-}
-
-
-/* Show label on hover */
-.nav-item:hover .link-label {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Show all link labels when hovering over the line */
-.vertical-nav:hover .link-label {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Mobile navigation styles */
-.mobile-nav {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 10px;
-    right: 10px; /* Positioned in the top-right corner */
-    z-index: 1000;
-}
-
-.mobile-menu {
-    display: none; /* Hidden by default */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: rgba(0, 0, 0, 1);
-    border-radius: 5px;
-}
-
-.mobile-menu .nav-item {
-    margin: 0;
-}
-
-.mobile-menu .nav-item a {
-    color: white;
-    padding: 10px;
-    display: block;
-}
-
-/* Hamburger menu styles */
-.hamburger {
-    display: block; /* Show hamburger menu by default on small screens */
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    background: black; /* Optional: Add background for better visibility */
-    padding: 10px; /* Optional: Add padding for better click area */
-    border-radius: 5px; /* Optional: Rounded corners */
-}
-
-/* Media query for mobile devices */
-@media (max-width: 1200px) {
+    /* Vertical navigation container */
     .vertical-nav {
-        display: none; /* Hide vertical nav on mobile */
+        position: fixed;
+        left: 80px;
+        top: 140px; /* position from top */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
     }
-    
-    .mobile-nav {
-        display: block; /* Show mobile nav on mobile */
+
+    /* Vertical line */
+    .line {
+        position: absolute;
+        left: 50%;
+        width: 1px;
+        height: 365px;
+        background-color: blue;
     }
+
+    /* Rotating arrow container */
+    .explore-container {
+        position: absolute;
+        top: -50px; /* Adjust this value to position above the line */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* Text style */
+	.explore-text {
+    margin-top: -90px; /* Spacing between arrow and text */
+    color: white;
+    font-weight: bold;
+    font-size: 14px; /* Adjust text size */
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 5px 10px; /* Add padding inside the box */
+    border: 2px solid white; /* Box border */
+    background-color: #007bff; /* Transparent white background */
+    border-radius: 5px; /* Rounded corners for the box */
+    transform: translateX(10px); /* Optional: Move the box a bit to the right */
+	
+}
+
 }
 
 
-/* Media query for small mobile devices */
-@media (max-width: 1200px) {
+    /* Nav links list */
+    .nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Individual nav items */
+    .nav-item {
+        position: relative;
+    }
+
+    /* Circular node (anchor link) with two outlines */
+    .node {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: black;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+        z-index: 1001;
+        border: 1px solid white; /* Color of inner outline */
+        box-shadow: 0 0 0 6px black; /* gap between the node and the background line */
+        margin-bottom: 75px; /* gap between the nodes */
+    }
+
+    /* Hover effect for nodes */
+    .node:hover {
+        background-color: #007bff;
+    }
+
+    /* Hidden anchor label */
+    .link-label {
+        position: absolute;
+        left: 30px;
+        top: -10%;
+        padding: 5px 10px;
+        background-color: transparent;
+        color: white;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1001;
+    }
+
+    /* Show the background when hovering near the nodes */
+    .nav-background {
+        position: absolute;
+        left: calc(10px + 5px); /* Adjusting left position to add more space */
+        width: calc(150px); /* Adjust width using calc() */
+        height: calc(100%); /* Height adjustment remains the same */
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        z-index: 999;
+        top: -20px;
+    }
+
+    /* Show the background when hovering near the nodes */
+    .vertical-nav:hover .nav-background {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0); /* Darker color on hover, adjust as needed */
+    }
+
+    /* Show label on hover */
+    .nav-item:hover .link-label {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Show all link labels when hovering over the line */
+    .vertical-nav:hover .link-label {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Mobile navigation styles */
     .mobile-nav {
+        display: none; /* Hidden by default */
+        position: fixed;
         top: 10px;
-        right: 10px;
+        right: 10px; /* Positioned in the top-right corner */
+        z-index: 1000;
     }
 
     .mobile-menu {
+        display: none; /* Hidden by default */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
         top: 40px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 1);
+        border-radius: 5px;
     }
-}
+
+    .mobile-menu .nav-item {
+        margin: 0;
+    }
+
+    .mobile-menu .nav-item a {
+        color: white;
+        padding: 10px;
+        display: block;
+    }
+
+    /* Hamburger menu styles */
+    .hamburger {
+        display: block; /* Show hamburger menu by default on small screens */
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        background: black; /* Optional: Add background for better visibility */
+        padding: 10px; /* Optional: Add padding for better click area */
+        border-radius: 5px; /* Optional: Rounded corners */
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 1200px) {
+        .vertical-nav {
+            display: none; /* Hide vertical nav on mobile */
+        }
+
+        .mobile-nav {
+            display: block; /* Show mobile nav on mobile */
+        }
+    }
+
+    /* Media query for small mobile devices */
+    @media (max-width: 1200px) {
+        .mobile-nav {
+            top: 10px;
+            right: 10px;
+        }
+
+        .mobile-menu {
+            top: 40px;
+        }
+    }
 </style>
+
 
 
 	<!-- Hero section start -->
