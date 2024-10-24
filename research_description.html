@@ -296,57 +296,48 @@
 						<h2>
 							Habitat Suitability Modeling of Bamboo
 						</h2>
-						<p>
-							I am leading a research project to determine the current and future 
-							(2050, 2070, and 2090) suitable habitats for seven bamboo species in Nepal. 
-							Our study utilizes nineteen bioclimatic variables and three topographical 
-										variables downloaded from <a href = "https://www.worldclim.org">Worldclim</a>,
-										along with soil data from <a href = "https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/faounesco-soil-map-of-the-world/en/">FAO/UNESCO</a>.
-										
-		
-										<br><br>
-										
-		
-										Initially, I performed habitat modeling using the MaxEnt model with the 'dismo' package in R. 
-										Recognizing that ensemble modeling is better than a single model, 
-										I utilized the 'sdm' package for the final model building and habitat prediction. 
-										This approach integrates various models (e.g., Random Forest, MaxEnt, Support Vector Machine),
-										to enhance accuracy and reliability.
-		
-		
-										<br><br>
-										
-										The modeling phase is now complete, and we are in the process of developing the manuscript.
-								</p>
+						<p>Currently, I am leading a research project focused on determining the current and future suitable habitats for seven bamboo species in Nepal:
+							<br><br>
+							<i>Bambusa alamii</i>, 
+							<br>
+							<i>Bambusa balcooa</i>,
+							<br>
+							 <i>Bambusa nepalensis</i>,
+							 <br>
+							  <i>Bambusa nutans</i> subsp. <i>cupula</i>,
+							  <br>
+							   <i>Bambusa nutans</i> subsp. <i>Nutans</i>,
+							   <br> <i>Dendrocalamus hamiltonii</i> var. <i>hamiltonii</i> and <i>undulatus</i>,
+							   <br>
+							   <i>Dendrocalamus hookeri</i>
+							   <br> <br>  
+							   This research aims
+							  to provide critical insights into species distribution under present and future climate scenarios, contributing to conservation 
+							  planning and management strategies in the region.
+							  <br><br>
+							The modeling process requires two primary datasets: occurrence points and predictor variables. 
+							The occurrence points were generously provided by the <a href="https://frtc.gov.np/">Forest Research and Training Center</a>, 
+							while predictor variables were sourced from <a href="https://www.worldclim.org">WorldClim</a>. 
+							We utilized 22 predictor variables, including 19 bioclimatic variables and 3 topographic factors, 
+							to build robust habitat suitability models. A range of machine learning models (MaxEnt, RF, BRT, FDA, SVM, CART, MARS) 
+							and statistical models (GLM, GAM) were employed for this analysis. To ensure accuracy, only models 
+							with strong predictive power (TSS > 0.7 and ROC-AUC > 0.9) were used in the final ensemble, resulting in reliable and precise habitat predictions.
+							<br><br>
+							The modeling and visualization phases are nearing completion, and a manuscript 
+							will soon be prepared for publication. This independent study is a collaborative effort among 
+							friends from my undergraduate cohort, and we are a dedicated team of four researchers.
+							Below is one of the visualized maps showcasing species richness across different districts of Nepal.
+							<br><br>
+							</p>
+								
+							<figure>
+								<img src="img/research description/species_richness.jpeg" alt="5">
+							</figure>	
 					</div>	
 
 
 					<hr id="custom-hr">
-
-					<div id = "linear_infra" class="spad">
-						<h2>
-							Impact of Linear Infrastructure in Biodiversity Conservation in Nepal
-						</h2>
-						<p>
-							Linear infrastructures (LI) such as railways, roadways, and transmission lines 
-							significantly threaten biodiversity in Nepal. 
-							Roads, in particular, cause forest fragmentation, barriers for wildlife, 
-							and roadkill. Railways have similar negative impacts, 
-							while transmission lines pose a threat to birds due to electrocution.
-							Despite these threats, no comprehensive study has been conducted in Nepal.
-							<br><br>
-							To address this, we are planning a study using geospatial tools to assess 
-							the impact of LIs on biodiversity. Currently, we are collecting data 
-							on biodiversity and infrastructure, though this has been challenging due 
-							to limited data availability in Nepal. Once data collection is complete, 
-							we will start the analysis. My primary role in this project 
-							has been reviewing literature on the impact of infrastructures on biodiversity conservation.
-							 		
-						</p>
-					</div>
-
-
-					<hr id="custom-hr">
+				
 
 					<div id = "lcluc" class="spad">
 						<h2>
@@ -354,46 +345,86 @@
 						</h2>
 						<p>
 							Land Cover and Land Use Change (LCLUC) detection plays a crucial role in land use planning
-										and development. While numerous studies on Land Use Land Cover (LULC) 
-										have been conducted in various areas, such as specific cities and districts, 
-										LCLUC within protected areas remains underexplored. 
+							and development. While numerous studies on Land Use Land Cover (LULC) 
+							have been conducted in various areas, such as specific cities and districts, 
+							LCLUC within protected areas remains underexplored. 
+							
+							<br><br>
+							
+							A notable study by 
+							<a href = "https://bioone.org/journals/Polish-Journal-of-Ecology/volume-64/issue-3/15052249PJE2016.64.3.011/Land-Use-and-Land-Cover-Change-in-Protected-Areas/10.3161/15052249PJE2016.64.3.011.short">
+							Farshi et al. (2016)</a>  examined land cover changes to determine 
+							the suitable habitat for Brown Bear in an Iranian protected area. 
+							However, there is a lack of similar studies in other regions.
+							
+							<br><br>
+
+
+							I, therefore, am leading a research project focused on studying land cover change 
+							in the protected areas of Nepal. We are using a 30-meter resolution LULC map for the 
+							years 1990, 2000, 2010 and 2020 downloaded from 
+							the <a href="https://rds.icimod.org/Home/Index">ICIMOD</a> web portal for analysis. 
+							Our study examines LCLUC for the years 1990, 2000, 2010, and 2019.	
+							
+							<br><br>
+							
+							One of the notable findings was that there is approximately 1800% increase in 
+							built-up areas in the protected areas, which is quite concerning. While, people 
+							generally assume that protected areas do not experience Land Cover change; however, 
+							this is not always the scenario. 
+
+							<br><br>
+
+							Below is the sankey diagram illustrating the change in 30 years time period. 
+							 
 										
-										<br><br>
-										
-										A notable study by 
-										<a href = "https://bioone.org/journals/Polish-Journal-of-Ecology/volume-64/issue-3/15052249PJE2016.64.3.011/Land-Use-and-Land-Cover-Change-in-Protected-Areas/10.3161/15052249PJE2016.64.3.011.short">
-										Farshi et al. (2016)</a>  examined land cover changes to determine 
-										the suitable habitat for Brown Bear in an Iranian protected area. 
-										However, there is a lack of similar studies in other regions.
-										
-										<br><br>
-		
-		
-										I, therefore, am leading a research project focused on studying land cover change 
-										in the protected areas of Nepal. We are using a 30-meter resolution LULC map for the 
-										years 1990, 2000, 2010 and 2020 downloaded from 
-										the <a href="https://rds.icimod.org/Home/Index">ICIMOD</a> web portal for analysis. 
-										Our study examines LCLUC for the years 1990, 2000, 2010, and 2019.	
-										
-										<br><br>
-										
-										One of the notable findings was that there is approximately 1800% increase in 
-										built-up areas in the protected areas, which is quite concerning. While, people 
-										generally assume that protected areas do not experience Land Cover change; however, 
-										this is not always the scenario. 
-		
-										<br><br>
-		
-										Below is the sankey diagram illustrating the change in 30 years time period. 
-										 
 						</p>
 						<figure>
 							<img src="img/research description/lcluc_overall.jpeg" alt="5">
 						</figure>	
 					</div>
 
-
 					<hr id="custom-hr">
+
+					<div id="deforestation_modeling" class="spad">
+						<h2>
+							Deforestation Modeling.
+						</h2>
+						<p>
+							Deforestation poses a significant threat to biodiversity. 
+							Forests, as vast ecosystems, support a wide variety of flora and 
+							fauna, and their destruction leads to the 
+							loss of these species. In one of my studies, I documented approximately 
+							119 plant species within a 100-hectare area. This signifies the 
+							crucial role played by forests in maintaining biodiversity.
+							<br><br>
+							Given the importance of forests, it is essential to study deforestation
+							 in Nepal. Despite an overall increase in forest cover,
+							  understanding deforestation patterns and identifying regions prone
+							   to deforestation are crucial for effective forest and land use management.
+							<br><br>To address this, I led a study modeling deforestation 
+							in two districts of Nepal: Dang and Kapilvastu. 
+							We used Land Use Land Cover maps from 2013 and 2023 to 
+							identify deforested regions. Our model incorporated six 
+							predictor variables: land use, elevation, population 
+								density, and proximity to agricultural land, settlements, roads, and water bodies. We utilized the 'randomForest' package in RStudio for model building.
+						<br><br> This study is an initial phase of a larger project aimed
+						 at modeling deforestation across Nepal. 
+						 As we refine our methods, we plan to expand our 
+						 analysis nationwide, which will require time and continuous 
+						 learning to achieve accurate results.
+						 <br>  <br>
+						 This study primarily focuses on developing deforestation susceptibility map in the study area. 
+						 Below is the image obtained by performing the modeling, where the red colored pixels represent the regions prone to deforestation.
+						 <br><br>
+						 </p>
+						 <figure>
+							<img src="img/research description/possible_deforestation_fuzzy_dark.jpeg" alt="5">
+						</figure>	
+					</div>
+					
+					<hr id="custom-hr">
+
 
 					<div id="hornbill_sdm" class="spad">
 						<h2>
@@ -447,46 +478,6 @@
 
 					<hr id="custom-hr">
 
-					<div id="deforestation_modeling" class="spad">
-						<h2>
-							Deforestation Modeling.
-						</h2>
-						<p>
-							Deforestation poses a significant threat to biodiversity. 
-							Forests, as vast ecosystems, support a wide variety of flora and 
-							fauna, and their destruction leads to the 
-							loss of these species. In one of my studies, I documented approximately 
-							119 plant species within a 100-hectare area. This signifies the 
-							crucial role played by forests in maintaining biodiversity.
-							<br><br>
-							Given the importance of forests, it is essential to study deforestation
-							 in Nepal. Despite an overall increase in forest cover,
-							  understanding deforestation patterns and identifying regions prone
-							   to deforestation are crucial for effective forest and land use management.
-							<br><br>To address this, I led a study modeling deforestation 
-							in two districts of Nepal: Dang and Kapilvastu. 
-							We used Land Use Land Cover maps from 2013 and 2023 to 
-							identify deforested regions. Our model incorporated six 
-							predictor variables: land use, elevation, population 
-								density, and proximity to agricultural land, settlements, roads, and water bodies. We utilized the 'randomForest' package in RStudio for model building.
-						<br><br> This study is an initial phase of a larger project aimed
-						 at modeling deforestation across Nepal. 
-						 As we refine our methods, we plan to expand our 
-						 analysis nationwide, which will require time and continuous 
-						 learning to achieve accurate results.
-						 <br> Below is the image obtained by performing the modeling. 
-						 <br><br>
-						 <figure>
-							<img src="img/research description/possible_deforestation.jpeg" alt="5">
-						</figure>	
-						 <br><br>
-						 <br><br>
-					</div>
-					
-					<hr id="custom-hr">
-
-					
-
 					<div id = "covid_19" class="spad">
 						<h2>
 							Impacts of COVID-19 on Biodiversity Conservation in Nepal. 
@@ -507,10 +498,7 @@
 								multi-collinearity test. Factors such as tree felling, firewood collection, 
 								and incidents of forest fires were considered dependent variables. 
 								The changes in these dependent factors before and during the pandemic were utilized in the modeling.
-								<br><br>
-								After modeling, I drafted the first research manuscript. 
-								The draft is still under preparation and will soon be submitted to 
-								a high-impact factor journal.s
+								
 							</p>
 							
 					</div>
