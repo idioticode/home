@@ -6,6 +6,8 @@
  ====================================*/
 
  
+
+
 $(window).on('load', function() { 
 	/*------------------
 		Preloder
@@ -15,6 +17,11 @@ $(window).on('load', function() {
 
 });
 
+
+function toggleMenu() {
+    const nav = document.querySelector('.navbar-nav');
+    nav.classList.toggle('show');
+}
 
 
 
@@ -76,65 +83,33 @@ $(window).on('load', function() {
 		removalDelay: 500,
 	});
 
-
-// Mouse and cursor
-const $bigBall = document.querySelector('.cursor__ball--big');
-const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('a'); // Ensure this selector matches your hoverable elements
-
-// Listeners
-document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
-
-	// Move the cursor
-	function onMouseMove(e) {
-		// Adjust positioning based on the actual dimensions of your cursor elements // if this doesn.t work please seek the code from other format. 
-  	TweenMax.to($bigBall, .4, {
-    	x: e.clientX - 15,
-    	y: e.clientY - 15
-  	});
-
-  TweenMax.to($smallBall, .1, {
-    x: e.clientX - 3,
-    y: e.clientY - 8
-  });
-}
-
-
-
-
-// Function to handle hover effect
-function onMouseHover() {
-	TweenMax.to($bigBall, .1, {
-	  scale: 2, // Adjust scale factor as needed
-	  transformOrigin: "center center", 
-	  ease: Power2.easeOut // Smooth scaling
-	});
-  }
-  
-  // Function to handle hover out effect
-  function onMouseHoverOut() {
-	TweenMax.to($bigBall, .1, {
-	  scale: 1, // Revert to original size
-	  	  ease: Power2.easeOut // Smooth scaling
-	});
-  }
-
  // Function to close the menu
  function closeMenu() {
 	var menu = document.querySelector('.mobile-menu');
 	menu.style.display = 'none';
 }
 
-// Add event listeners to anchor links inside the mobile menu
-document.addEventListener('DOMContentLoaded', function() {
-	var links = document.querySelectorAll('.mobile-menu .nav-item a');
-	links.forEach(function(link) {
-		link.addEventListener('click', closeMenu);
-	});
+
+
+let lightmode = localStorage.getItem('lightmode');
+const themeSwitch = document.getElementById('theme-switch');
+
+const enableLightmode = () => {
+    document.body.classList.add("lightmode");
+    localStorage.setItem('lightmode', "active");
+};
+
+const disableLightmode = () => {
+    document.body.classList.remove('lightmode');
+    localStorage.setItem('lightmode', null);
+};
+
+// Check current mode and enable light mode if it was active
+if (lightmode === "active") enableLightmode();
+
+themeSwitch.addEventListener("click", () => {
+    lightmode = localStorage.getItem('lightmode'); // Retrieve the current mode
+    lightmode !== "active" ? enableLightmode() : disableLightmode();
 });
 
 })(jQuery);

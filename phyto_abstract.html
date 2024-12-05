@@ -5,7 +5,9 @@
 <!-- The first heading where we can edit anything-->
 <head>
 
-	<title>Sushank Pokhrel</title>
+	<title>
+        Diversity and Distribution of 100 Plant Species of a Community Managed Forest from the Mid- Hills of Nepal: A Phytosociological Approach
+    </title>
 	<meta charset="UTF-8">
 	<meta name="description"content="Sushank Pokhrel">
 	<meta name="keywords" content="sushank, pokhrel, Sushank Pokhrel, GIS, Remote Sensing">
@@ -13,11 +15,11 @@
 	<!-- Favicon -->   
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+	
 	<!-- Google Fonts -->
-	 <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -49,7 +51,7 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-		<div id = "theme-button" class="theme-button">
+        <div id = "theme-button" class="theme-button">
 			<button id = "theme-switch" class="theme-switch">
 				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>		
 				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
@@ -73,81 +75,65 @@
             </li>
         </ul>
     </div>
-	<hr id="custom-hr">
+    <hr id="custom-hr">
 </nav>
 
 
 <script>
-    
+    function toggleMenu() {
+    const nav = document.querySelector('.navbar-nav');
+    nav.classList.toggle('show');
+}
 </script>
 
-	<!-- Hero section start -->
-	<section class="hero-section spad" id = "hero">
-		<div class="container-fluid text-center" id = "img-center">
-			<div class ="image-circle" id = "img-circle">
-				<img src="img/hero_2-removebg-preview.png" alt="">
-			</div>
-			<div class="hero-text">
-				<h1>
-					Sushank Pokhrel
-				</h1>
-				<div class="hero-info">
-					<ul>
-					READER — WRITER — RESEARCHER 
-					</ul>
-				</div>
-			</div>
-			<div class="hero-info">
-				<ul>
-					<li><i class="fa-solid fa-location-dot"></i>  Pyuthan, Nepal</li>
-					<li><a href = "mailto:sushank771@gmail.com">sushank771@gmail.com</a></li>
-					<li><a href="img/Vita_Sushank.pdf" class="site-btn">Download CV</a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<!-- Hero section end -->
-
-
-	<hr id="custom-hr">
-
 	<!-- about me section start-->
-	<section id = "about" class = "about-me-section spad">
+	<section id = "abstract" class = "abstract-section spad pb-0">
 		<div class = "container-fluid">
 			<div class = "row">
 				<div class = "col-xl-8 offset-xl-2 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
 					<h2>
-						About me
-					</h2>				
-						<p>I am Sushank, a graduate in Forestry with honors in 2023. 
-							My hobbies include reading books and novels, watching movies 
-							and TV series, writing novels and short stories, hiking, 
-							and traveling.
-							
-							<br><br>
-							
-							Recently, I developed a strong enthusiasm for academic research 
-							and have been dedicatedly focusing on it.
-
-							I have published a research paper on vegetation analysis, 
-							and two additional manuscripts are currently under review in Q3 journals.
-							
-							<br><br>
-							
-							I am leading research on habitat suitability modeling of bamboo species, 
-							deforestation modeling, and land cover and land use change detection in 
-							protected areas of Nepal. I have also participated in multiple other studies.
-							
-							<br><br>
-							Working on these projects, I have developed skills in RStudio, ArcMap, QGIS, 
-							Statistical Modeling, Bayesian Modeling and Machine Learning. 
-							</p>
-							
+                        Diversity and Distribution of 100 Plant Species of a Community Managed Forest from the Mid- Hills of Nepal: A Phytosociological Approach
+                        <br><br>
+					</h2>
+                    <h3>
+                        Pokhrel, S. (2023)
+                        <br>
+                        <i>Forestry: Journal of Institute of Forestry, 20</i>(1), 79-94. 
+                        <br>
+                        <br>
+                    </h3>				
+                    <p>
+                        Phytosociology is the study of interrelationship among plant species which classifies the vegetation in a meaningful manner. 
+                        The aim of this study was to study diversity and distribution of plant species in Gobankholi Community Forest in the 
+                        Mid-Hills of Nepal which is dominated by <i>Pinus roxburghii</i>. Trees were enumerated in a 400 sq. m. plot, shrubs and 
+                        climber in a 100 sq. m plot and herbs in a 4 sq. m. plot. Density, frequency, abundance, and important value index of 
+                        individual species were calculated. Similarly, Simpson's diversity index, Shannon’s diversity index, and Pielou's 
+                        evenness index were also calculated, based on life form viz. herbs, shrubs and trees. 66 herbs, 8 Pteridophytes, 8 shrubs, 
+                        3 climbers and 15 trees were found, among a total of 100 species. The rare orchid, <i>Satyrium nepalense</i>, was found 
+                        at an altitude of 1275 m a.s.l. Herbs were more diverse and even than trees, shrubs and climbers. 
+                        <i>Aleuritopteris bicolor</i>, <i>Colebrookea oppositifolia</i>, and <i>Pinus roxburghii</i> were the most dominant herb, 
+                        shrub and tree respectively.
+                    </p>
+                                                
 				</div>
+                
 			</div>
 		</div>
 		
 	</section>
+
+    <section id = "paper-link" class = 'paper-link'>
+        <div class="container-fluid">
+            <div class="row">
+                <div class = "col-xl-8 offset-xl-2 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+                    <ul><a href="https://www.nepjol.info/index.php/forestry/article/view/64339/48782" target="_blank" rel="noopener noreferrer" class="site-btn">Read Full Text</a></ul>
+                    <br><br>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+
 	<!--about me section end-->
 
 	<hr id="custom-hr">
@@ -173,7 +159,6 @@
         </div>
     </section>
      
-	
 <!--Top Arrow start -->
 <a href="#hero" class="up-arrow-button">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="small-icon">
