@@ -129,7 +129,7 @@ img {
     list-style: none;
     margin: 0 auto; /* Center the menu items */
     padding: 0;
-    gap: 2rem; /* Space between links */
+    gap: 3rem; /* Space between links */
 }
 
 .nav-item {
@@ -140,11 +140,21 @@ img {
     text-decoration: none;
     color: var(--text-color);
     font-size: 1rem;
-    transition: color 0.3s ease;
+	padding: 2px 90px; /* Add padding to make it button-like */
+    transition: all 0.3s ease; /* Smooth transition */
+	border-radius: 4px;
+}
+
+
+.nav-link.active {
+	color: var(--text-color); /* Text color for the active link */
+    font-weight: bold; /* Make the font bold */
+	font-size: 1.35rem;
 }
 
 .nav-link:hover {
-    color: #ffcc00;
+    transform: scale(1.2);
+	color: var(--text-color);
 }
 
 /* Hamburger Icon */
@@ -377,7 +387,7 @@ Download cv button:
 }
 
 .hero-info .site-btn:hover {
-	color:#000;
+	color:var(--base-color);
     transform: scale(1.2); /* Increase size by 0.5% */
 }
 
@@ -505,7 +515,7 @@ Download cv button:
 }
 
 .research-publications .site-btn:hover {
-	color:#000;
+	color:var(--base-color);
     transform: scale(1.2); /* Increase size by 0.5% */
 }
 
@@ -695,7 +705,7 @@ Download cv button:
 }
 
 .paper-link .site-btn:hover {
-	color:#000;
+	color:var(--base-color);
     transform: scale(1.2); /* Increase size by 0.5% */
 }
 

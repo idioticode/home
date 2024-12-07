@@ -1,12 +1,3 @@
-/* =================================
-------------------------------------
-	Civic - CV Resume
-	Version: 1.0
- ------------------------------------ 
- ====================================*/
-
- 
-
 
 $(window).on('load', function() { 
 	/*------------------
@@ -24,6 +15,27 @@ function toggleMenu() {
 }
 
 
+// Showing which navigation link is opened
+// Select all nav links
+let links = document.querySelectorAll(".navbar-nav .nav-link");
+
+// Get the ID of the body element
+let bodyId = document.body.id;
+
+// Iterate through all nav links
+for (let link of links) {
+    // Check if the data-active attribute matches the body ID
+    if (link.parentElement.getAttribute("data-active") === bodyId) {
+        // Add the active class to the matching link
+        link.classList.add("active");
+    } else {
+        // Ensure no other link remains active
+        link.classList.remove("active");
+    }
+}
+
+
+//For Portfolio images 
 
 (function($) {
 
@@ -34,45 +46,6 @@ function toggleMenu() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
-
-
-	$('.review-slider').owlCarousel({
-		loop: true,
-		nav: false,
-		dots: true,
-		items: 1,
-		autoplay: true,
-		autoplayTimeout: 12000, // Time in milliseconds for each slide (5 seconds in this example)
-		smartSpeed: 1000, // 1s. 
-	});
-	
-
-	$('.progress-bar-style').each(function() {
-		var progress = $(this).data("progress");
-		var prog_width = progress + '%';
-		if (progress <= 100) {
-			$(this).append('<div class="bar-inner" style="width:' + prog_width + '"><span>' + prog_width + '</span></div>');
-		}
-		else {
-			$(this).append('<div class="bar-inner" style="width:100%"><span>' + prog_width + '</span></div>');
-		}
-	});
-
-
-	$('.lan-prog').each(function() {
-		var progress = $(this).data("lanprogesss");
-		var ele      = '<span></span>';
-		var ele_fade = '<span class="fade-ele"></span>';
-		
-		for (var i = 1; i <= 5; i++) {
-			if(i <= progress){
-				$(this).append(ele);
-			} else {
-				$(this).append(ele_fade);
-			}
-		}
-	});
-
 
 	/*------------------
 		Popup
@@ -90,7 +63,7 @@ function toggleMenu() {
 }
 
 
-
+//Lightmode and Darkmode theme. 
 let lightmode = localStorage.getItem('lightmode');
 const themeSwitch = document.getElementById('theme-switch');
 
