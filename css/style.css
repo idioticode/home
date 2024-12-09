@@ -10,6 +10,7 @@ body {
 	--base-color: black;
 	--text-color: white;
 	--accent-color: #222222;
+	--navbar-bg: rgba(0, 0, 0, 0.6);
 
 }
 
@@ -17,6 +18,7 @@ body {
 	--base-color: white;
 	--text-color: black;
 	--accent-color:rgb(221, 220, 220);
+	--navbar-bg: rgba(255, 255, 255, 0.6);
 	
 }
 
@@ -105,14 +107,15 @@ img {
 -----------------------*/
   /* Enhanced Navigation Bar Styling */
   .horizontal-nav {
-    background-color: var(--accent-color); /* Dark background for the navbar */
-    position: fixed; /* Keeps the navbar fixed at the top */
+    background-color: var(--navbar-bg); /* Dark background for the navbar */
+	position: fixed; /* Keeps the navbar fixed at the top */
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	margin-bottom: 0;
 	line-height: 1;
+	backdrop-filter: blur(10px); /* Apply blur to the background */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
 .nav-container {
@@ -129,6 +132,7 @@ img {
     list-style: none;
     margin: 0 auto; /* Center the menu items */
     padding: 0;
+	padding-top: 15px;
     gap: 3rem; /* Space between links */
 }
 
@@ -183,14 +187,21 @@ img {
     z-index: 999; /* Ensure it appears above other elements */
 }
 
-
 .theme-switch{
-	background-color: var(--accent-color);
+	background-color: transparent;
 	border-color: var(--accent-color);
     outline: none; /* Removes the focus outline */
 	border: none; /* Removes the border */
     box-shadow: none; /* Removes any shadow that might appear */
+	cursor: pointer;
 }
+
+
+.theme-switch:focus {
+    outline: none; /* Prevent the outline after the button is clicked */
+}
+
+
 
 #theme-switch svg:last-child{
 	display: none;
@@ -203,6 +214,22 @@ img {
 .lightmode #theme-switch svg:last-child{
 	display: block;
 }
+
+.horizontal-nav .theme-button {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: left; /* Center the menu items */
+    gap: .2rem; /* Space between links */
+}
+
+
+.horizontal-nav .theme-button .theme-text{
+	padding-top: 15px;
+	font-size: 0.8rem;
+}
+
+
 /* Mobile Responsive Menu */
 @media (max-width: 768px) {
     .nav-container {
