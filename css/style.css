@@ -5,8 +5,7 @@ body {
 	font-style: normal;
 }
 
-
-:root{
+:root {
 	--base-color: black;
 	--text-color: white;
 	--accent-color: #222222;
@@ -14,12 +13,12 @@ body {
 
 }
 
-.lightmode{
+.lightmode {
 	--base-color: white;
 	--text-color: black;
-	--accent-color:rgb(221, 220, 220);
+	--accent-color: #cecece;
 	--navbar-bg: rgba(255, 255, 255, 0.6);
-	
+
 }
 
 
@@ -29,7 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--text-color); /* the  color of each titles*/
+	color: var(--text-color);
+	/* the  color of each titles*/
 	margin: 0;
 	font-weight: 600;
 }
@@ -37,7 +37,6 @@ h6 {
 h2 {
 	font-size: 48px;
 	color: var(--text-color)
-
 }
 
 h3 {
@@ -45,8 +44,8 @@ h3 {
 	color: var(--text-color)
 }
 
-h4{
-	color: #00FFFF
+h4 {
+	color: orange;
 }
 
 p {
@@ -57,12 +56,12 @@ p {
 
 p2 {
 	font-size: 20px;
-	color:#00ff00;
+	color: #00ff00;
 	line-height: 1.4;
 }
 
-p3{
-    font-size: 20px;
+p3 {
+	font-size: 20px;
 	color: var(--text-color)
 }
 
@@ -71,12 +70,12 @@ p4 {
 	color: #00ffff;
 }
 
-ul{
+ul {
 	font-size: 18px;
 	color: var(--text-color)
 }
 
-li{
+li {
 	font-size: 18px;
 	color: var(--text-color)
 }
@@ -85,13 +84,14 @@ img {
 	max-width: 100%;
 }
 
+code {}
+
+
 /* Smooth scroll */
-#container{
-    overflow-y: auto;
-    scroll-behavior: smooth;
+#container {
+	overflow-y: auto;
+	scroll-behavior: smooth;
 }
-
-
 
 /*---------------------
 	Helper CSS
@@ -105,126 +105,152 @@ img {
 /*---------------------
 	Navigation
 -----------------------*/
-  /* Enhanced Navigation Bar Styling */
-  .horizontal-nav {
-    background-color: var(--navbar-bg); /* Dark background for the navbar */
-	position: fixed; /* Keeps the navbar fixed at the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+/* Enhanced Navigation Bar Styling */
+.horizontal-nav {
+	background-color: var(--navbar-bg);
+	/* Dark background for the navbar */
+	position: fixed;
+	/* Keeps the navbar fixed at the top */
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 	margin-bottom: 0;
 	line-height: 1;
-	backdrop-filter: blur(10px); /* Apply blur to the background */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+	backdrop-filter: blur(10px);
+	/* Apply blur to the background */
+	-webkit-backdrop-filter: blur(10px);
+	/* For Safari */
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between; /* Space between hamburger and centered items */
-    align-items: center;
-    height: 3rem; /* Explicitly set the height for consistent spacing */
+	display: flex;
+	justify-content: space-between;
+	/* Space between hamburger and centered items */
+	align-items: center;
+	height: 3rem;
+	/* Explicitly set the height for consistent spacing */
 }
 
 
 .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 0 auto; /* Center the menu items */
-    padding: 0;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: 0 auto;
+	/* Center the menu items */
+	padding: 0;
 	padding-top: 15px;
-    gap: 3rem; /* Space between links */
+	gap: 3rem;
+	/* Space between links */
 }
 
 .nav-item {
-    display: flex;
+	display: flex;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1rem;
-	padding: 2px 90px; /* Add padding to make it button-like */
-    transition: all 0.3s ease; /* Smooth transition */
+	text-decoration: none;
+	color: var(--text-color);
+	font-size: 1rem;
+	padding: 2px 90px;
+	/* Add padding to make it button-like */
+	transition: all 0.3s ease;
+	/* Smooth transition */
 	border-radius: 4px;
 }
 
 
 .nav-link.active {
-	color: var(--text-color); /* Text color for the active link */
-    font-weight: bold; /* Make the font bold */
+	color: var(--text-color);
+	/* Text color for the active link */
+	font-weight: bold;
+	/* Make the font bold */
 	font-size: 1.35rem;
 }
 
 .nav-link:hover {
-    transform: scale(1.2);
+	transform: scale(1.2);
 	color: var(--text-color);
 }
 
 /* Hamburger Icon */
 .hamburger {
-    display: none; /* Hidden on large screens */
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+	display: none;
+	/* Hidden on large screens */
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
 }
 
 .hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    transition: all 0.3s ease;
+	width: 25px;
+	height: 3px;
+	background-color: var(--text-color);
+	transition: all 0.3s ease;
 }
 
 .navbar-nav.show {
-    display: flex; /* Show the navigation when .show class is added */
-    flex-direction: column; /* Stack items vertically */
-    position: absolute;
-    top: 100%; /* Position below the navbar */
-    right: 0; /* Align to the right */
-    background-color: var(--base-color); /* Same background as navbar */
-    width: 100%; /* Full width for small screens */
-    z-index: 999; /* Ensure it appears above other elements */
+	display: flex;
+	/* Show the navigation when .show class is added */
+	flex-direction: column;
+	/* Stack items vertically */
+	position: absolute;
+	top: 100%;
+	/* Position below the navbar */
+	right: 0;
+	/* Align to the right */
+	background-color: var(--base-color);
+	/* Same background as navbar */
+	width: 100%;
+	/* Full width for small screens */
+	z-index: 999;
+	/* Ensure it appears above other elements */
 }
 
-.theme-switch{
+.theme-switch {
 	background-color: transparent;
 	border-color: var(--accent-color);
-    outline: none; /* Removes the focus outline */
-	border: none; /* Removes the border */
-    box-shadow: none; /* Removes any shadow that might appear */
+	outline: none;
+	/* Removes the focus outline */
+	border: none;
+	/* Removes the border */
+	box-shadow: none;
+	/* Removes any shadow that might appear */
 	cursor: pointer;
 }
 
 
 .theme-switch:focus {
-    outline: none; /* Prevent the outline after the button is clicked */
+	outline: none;
+	/* Prevent the outline after the button is clicked */
 }
 
 
 
-#theme-switch svg:last-child{
+#theme-switch svg:last-child {
 	display: none;
 }
 
-.lightmode #theme-switch svg:first-child{
+.lightmode #theme-switch svg:first-child {
 	display: none;
 }
 
-.lightmode #theme-switch svg:last-child{
+.lightmode #theme-switch svg:last-child {
 	display: block;
 }
 
 .horizontal-nav .theme-button {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: left; /* Center the menu items */
-    gap: .2rem; /* Space between links */
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: left;
+	/* Center the menu items */
+	gap: .2rem;
+	/* Space between links */
 }
 
 
-.horizontal-nav .theme-button .theme-text{
+.horizontal-nav .theme-button .theme-text {
 	padding-top: 15px;
 	font-size: 0.8rem;
 }
@@ -232,59 +258,74 @@ img {
 
 /* Mobile Responsive Menu */
 @media (max-width: 768px) {
-    .nav-container {
-        justify-content: space-between; /* Space between theme switcher (left) and hamburger (right) */
-        padding: 0 1rem; /* Add some padding */
-    }
+	.nav-container {
+		justify-content: space-between;
+		/* Space between theme switcher (left) and hamburger (right) */
+		padding: 0 1rem;
+		/* Add some padding */
+	}
 
-    .navbar-nav {
-        display: none; /* Hide menu by default */
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 100%; /* Below the navbar */
-        right: 0; /* Align the menu to the right */
-        width: 100%; /* Ensure the menu spans full width */
-        background-color: #333;
-        padding: 1rem;
-        text-align: right; /* Align text to the right */
-    }
+	.navbar-nav {
+		display: none;
+		/* Hide menu by default */
+		flex-direction: column;
+		gap: 1rem;
+		position: absolute;
+		top: 100%;
+		/* Below the navbar */
+		right: 0;
+		/* Align the menu to the right */
+		width: 100%;
+		/* Ensure the menu spans full width */
+		background-color: #333;
+		padding: 1rem;
+		text-align: right;
+		/* Align text to the right */
+	}
 
-    .navbar-nav.active {
-        display: flex; /* Show menu when active */
-    }
+	.navbar-nav.active {
+		display: flex;
+		/* Show menu when active */
+	}
 
-    .hamburger {
-        display: flex; /* Show hamburger on small screens */
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-    }
+	.hamburger {
+		display: flex;
+		/* Show hamburger on small screens */
+		flex-direction: column;
+		gap: 5px;
+		cursor: pointer;
+	}
 
-    .theme-button {
-        display: flex; /* Show theme switcher on small screens */
-        align-items: center; /* Vertically center the theme switcher */
-    }
+	.theme-button {
+		display: flex;
+		/* Show theme switcher on small screens */
+		align-items: center;
+		/* Vertically center the theme switcher */
+	}
 
-    /* Ensure icons in theme button are spaced and centered */
-    .theme-button svg {
-        margin-right: 10px; /* Add some space to the right of the icon */
-        cursor: pointer;
-    }
+	/* Ensure icons in theme button are spaced and centered */
+	.theme-button svg {
+		margin-right: 10px;
+		/* Add some space to the right of the icon */
+		cursor: pointer;
+	}
 
-    .nav-container {
-        flex-direction: row; /* Keep the layout horizontal */
-        align-items: center;
-    }
+	.nav-container {
+		flex-direction: row;
+		/* Keep the layout horizontal */
+		align-items: center;
+	}
 
-    .navbar-nav {
-        align-items: flex-end; /* Align items to the right */
-    }
+	.navbar-nav {
+		align-items: flex-end;
+		/* Align items to the right */
+	}
 
-    /* Place the theme button to the left */
-    .theme-button {
-        order: -1; /* Move the theme switcher to the left side */
-    }
+	/* Place the theme button to the left */
+	.theme-button {
+		order: -1;
+		/* Move the theme switcher to the left side */
+	}
 }
 
 
@@ -293,17 +334,19 @@ img {
   Up arrow
   ------------------*/
 
-  .up-arrow-button {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    bottom: 35px;
-    right: 40px;  /* Adjusted to the bottom-right corner */
-    z-index: 1000;
+.up-arrow-button {
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	bottom: 35px;
+	right: 40px;
+	/* Adjusted to the bottom-right corner */
+	z-index: 1000;
 }
 
 .up-arrow-button svg {
-    fill: var(--text-color); /* Color of the arrow */
+	fill: var(--text-color);
+	/* Color of the arrow */
 }
 
 
@@ -312,11 +355,11 @@ img {
 -----------------------*/
 
 .copyright-section {
-    background-color: var(--base-color); 
-    width: 100%;
+	background-color: var(--base-color);
+	width: 100%;
 }
 
-.copyright-section p{
+.copyright-section p {
 	font-size: 13px;
 }
 
@@ -326,9 +369,9 @@ img {
 --------------------*/
 
 #custom-hr {
-    border: none;
-    border-top: 1px solid var(--text-color);
-    margin: 0px 0;
+	border: none;
+	border-top: 1px solid var(--text-color);
+	margin: 0px 0;
 }
 
 
@@ -391,12 +434,18 @@ img {
 -----------------------*/
 /* Container for the circular image */
 #img-circle {
-    display: inline-block; /* Allows the container to shrink to fit the image */
-    width: 200px; /* Adjust size as needed */
-    height: 200px; /* Adjust size as needed */
-    border-radius: 50%; /* Makes the container circular */
-    overflow: hidden; /* Ensures image is clipped to the circular container */
-    margin: 0 auto; /* Centers the container */
+	display: inline-block;
+	/* Allows the container to shrink to fit the image */
+	width: 200px;
+	/* Adjust size as needed */
+	height: 200px;
+	/* Adjust size as needed */
+	border-radius: 50%;
+	/* Makes the container circular */
+	overflow: hidden;
+	/* Ensures image is clipped to the circular container */
+	margin: 0 auto;
+	/* Centers the container */
 }
 
 /* -----------------
@@ -404,18 +453,24 @@ Download cv button:
 ----------------- */
 
 .hero-info .site-btn {
-    color: var(--base-color); /* Make sure text is visible */
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: var(--text-color); /* Button background */
-    text-decoration: none; /* Removes underline */
-    display: inline-block; /* Ensure it behaves like a button */
-	transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+	color: var(--base-color);
+	/* Make sure text is visible */
+	font-size: 16px;
+	padding: 10px 20px;
+	background-color: var(--text-color);
+	/* Button background */
+	text-decoration: none;
+	/* Removes underline */
+	display: inline-block;
+	/* Ensure it behaves like a button */
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	/* Smooth transition for transform and background-color */
 }
 
 .hero-info .site-btn:hover {
-	color:var(--base-color);
-    transform: scale(1.2); /* Increase size by 0.5% */
+	color: var(--base-color);
+	transform: scale(1.2);
+	/* Increase size by 0.5% */
 }
 
 /*---------------------
@@ -423,22 +478,28 @@ Download cv button:
 -----------------------*/
 
 .social-section {
-    display: flex;
-    justify-content: center; /* Centers the social links container horizontally */
-    align-items: center;     /* Centers the content vertically */
-    height: 10vh;            /* Takes full viewport height */
+	display: flex;
+	justify-content: center;
+	/* Centers the social links container horizontally */
+	align-items: center;
+	/* Centers the content vertically */
+	height: 10vh;
+	/* Takes full viewport height */
 }
 
 .social-section .social-links {
-    display: flex;           /* Ensures the container uses flex */
-    gap: 20px;               /* Adds space between the icons */
+	display: flex;
+	/* Ensures the container uses flex */
+	gap: 20px;
+	/* Adds space between the icons */
 }
 
 .social-section .social-links a {
-    color: var(--text-color);            /* Social media icons */
-    font-size: 25px;         /* Change the font size of the icons */
+	color: var(--text-color);
+	/* Social media icons */
+	font-size: 25px;
+	/* Change the font size of the icons */
 }
-
 
 
 /*---------------------
@@ -457,7 +518,7 @@ Download cv button:
 	margin-bottom: 100px;
 }
 
-.footer-section p{
+.footer-section p {
 	padding-top: 10px;
 	font-size: 12px;
 	color: var(--accent-color);
@@ -519,35 +580,42 @@ Download cv button:
  Research Publications 
 -----------------------*/
 .research-publications {
-	background:var(--base-color)
+	background: var(--base-color)
 }
 
-.research-publications p{
+.research-publications p {
 	color: var(--text-color)
 }
 
-.research-publications .p2{
+.research-publications .p2 {
 	color: #6affff
 }
 
 
 .research-publications .site-btn {
-    color: var(--base-color); /* Make sure text is visible */
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: var(--text-color); /* Button background */
-    text-decoration: none; /* Removes underline */
-    display: inline-block; /* Ensure it behaves like a button */
-	transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+	color: var(--base-color);
+	/* Make sure text is visible */
+	font-size: 16px;
+	padding: 10px 20px;
+	background-color: var(--text-color);
+	/* Button background */
+	text-decoration: none;
+	/* Removes underline */
+	display: inline-block;
+	/* Ensure it behaves like a button */
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	/* Smooth transition for transform and background-color */
 }
 
 .research-publications .site-btn:hover {
-	color:var(--base-color);
-    transform: scale(1.2); /* Increase size by 0.5% */
+	color: var(--base-color);
+	transform: scale(1.2);
+	/* Increase size by 0.5% */
 }
 
 .publication-link a {
-    margin-right: 1rem; /* Add space between the buttons */
+	margin-right: 1rem;
+	/* Add space between the buttons */
 }
 
 
@@ -556,15 +624,17 @@ Download cv button:
 -----------------------*/
 .research-experience {
 	background-color: var(--base-color);
-  }
+}
 
 
 .research-list {
 	list-style: none;
 	padding-left: 0;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-	gap: 40px; /* Increased gap for better spacing */
+	grid-template-columns: repeat(2, 1fr);
+	/* Creates two columns */
+	gap: 40px;
+	/* Increased gap for better spacing */
 	position: relative;
 }
 
@@ -593,35 +663,62 @@ Download cv button:
 }
 
 
+.research-card {
+	padding: 20px;
+	border: 1.5px solid var(--text-color);
+	/* Adds an outline with a width of 2px and color from the variable */
+	clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 100%, 10% 100%, 0% 90%);
+	position: relative;
+	/* For positioning the Read More button */
+}
+
+
 .research-experience .site-btn {
-    color: var(--base-color); /* Make sure text is visible */
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: var(--text-color); /* Button background */
-    text-decoration: none; /* Removes underline */
-    display: inline-block; /* Ensure it behaves like a button */
-	transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+	color: var(--base-color);
+	/* Make sure text is visible */
+	background-color: var(--text-color);
+	/* Button background */
+	position: absolute;
+	bottom: 20px;
+	/* Distance from the bottom */
+	right: 20px;
+	/* Distance from the right */
+	text-decoration: none;
+	/* Removes underline */
+	display: inline-block;
+	/* Ensure it behaves like a button */
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	/* Smooth transition for transform and background-color */
+	clip-path: polygon(0% 0%, 85% 0%, 100% 40%, 100% 100%, 15% 100%, 0% 60%);
+	padding: 8px 16px;
 }
 
 .research-experience .site-btn:hover {
 	color: var(--base-color);
-    transform: scale(1.2); /* Increase size by 0.5% */
+	transform: scale(1.2);
+	/* Increase size by 0.5% */
 }
+
+
 
 
 
 @media screen and (max-width: 768px) {
 	.research-list {
-		grid-template-columns: 1fr; /* Stack items in one column on smaller screens */
-		gap: 20px; /* Adjust gap for smaller screens */
+		grid-template-columns: 1fr;
+		/* Stack items in one column on smaller screens */
+		gap: 20px;
+		/* Adjust gap for smaller screens */
 	}
-	
+
 	.research-list li::before {
-		display: none; /* Hide vertical lines on smaller screens */
+		display: none;
+		/* Hide vertical lines on smaller screens */
 	}
-	
+
 	.research-list li:after {
-		left: 20px; /* Adjust bullet dot position for single column view */
+		left: 20px;
+		/* Adjust bullet dot position for single column view */
 	}
 }
 
@@ -632,16 +729,16 @@ Download cv button:
 =====================	 
 ----------------------*/
 
-.portfolio-section{
+.portfolio-section {
 	background: #000
 }
 
-.portfolio-section-new{
+.portfolio-section-new {
 	background-color: var(--base-color);
 }
 
 .portfolio-item {
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .portfolio-item h2 {
@@ -667,7 +764,8 @@ Download cv button:
 	display: block;
 	height: 100%;
 	width: 100%;
-	padding-bottom: 56.25%; /* 16:9 aspect ratio for landscape */
+	padding-bottom: 56.25%;
+	/* 16:9 aspect ratio for landscape */
 	background: #333;
 	background-position: center center;
 	background-size: cover;
@@ -703,7 +801,7 @@ Download cv button:
 	Novels
 =====================	 
 ----------------------*/
-.books-novels{
+.books-novels {
 	background-color: var(--base-color);
 }
 
@@ -713,27 +811,33 @@ Download cv button:
 	Abstract
 =====================	 
 ----------------------*/
-.abstract-section{
+.abstract-section {
 	background-color: var(--base-color);
 }
 
-.paper-link{
+.paper-link {
 	background-color: var(--base-color);
 }
 
 .paper-link .site-btn {
-    color: var(--base-color); /* Make sure text is visible */
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: var(--text-color); /* Button background */
-    text-decoration: none; /* Removes underline */
-    display: inline-block; /* Ensure it behaves like a button */
-	transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+	color: var(--base-color);
+	/* Make sure text is visible */
+	font-size: 16px;
+	padding: 10px 20px;
+	background-color: var(--text-color);
+	/* Button background */
+	text-decoration: none;
+	/* Removes underline */
+	display: inline-block;
+	/* Ensure it behaves like a button */
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	/* Smooth transition for transform and background-color */
 }
 
 .paper-link .site-btn:hover {
-	color:var(--base-color);
-    transform: scale(1.2); /* Increase size by 0.5% */
+	color: var(--base-color);
+	transform: scale(1.2);
+	/* Increase size by 0.5% */
 }
 
 
@@ -747,129 +851,152 @@ Download cv button:
 /* Mobile screens (up to 600px wide) */
 @media (max-width: 600px) {
 	h2 {
-	  font-size: 25px;
-	}
-	h3 {
-	  font-size: 18px;
-	}
-	h4 {
-	  font-size: 10px;
-	}
-	p {
-	  font-size: 13px;
-	}
-	p2 {
-	  font-size: 13px;
-	  margin-bottom: 30px;
-	}
-	p3, p4 {
-	  font-size: 13px;
+		font-size: 25px;
 	}
 
-	ul{
+	h3 {
+		font-size: 18px;
+	}
+
+	h4 {
+		font-size: 10px;
+	}
+
+	p {
+		font-size: 13px;
+	}
+
+	p2 {
+		font-size: 13px;
+		margin-bottom: 30px;
+	}
+
+	p3,
+	p4 {
+		font-size: 13px;
+	}
+
+	ul {
 		font-size: 13px;
 	}
 
 	li {
-	  font-size: 13px;
-	  margin-bottom: 10px;
+		font-size: 13px;
+		margin-bottom: 10px;
 	}
-  }
-  
-  /* Tablet screens (601px to 1024px wide) */
-  @media (min-width: 601px) and (max-width: 1024px) {
+}
+
+/* Tablet screens (601px to 1024px wide) */
+@media (min-width: 601px) and (max-width: 1024px) {
 	h2 {
-	  font-size: 30px;
+		font-size: 30px;
 	}
+
 	h3 {
-	  font-size: 22px;
+		font-size: 22px;
 	}
+
 	h4 {
-	  font-size: 12px;
+		font-size: 12px;
 	}
+
 	p {
-	  font-size: 15px;
+		font-size: 15px;
 	}
+
 	p2 {
-	  font-size: 15px;
-	  margin-bottom: 25px;
+		font-size: 15px;
+		margin-bottom: 25px;
 	}
-	p3, p4 {
-	  font-size: 15px;
+
+	p3,
+	p4 {
+		font-size: 15px;
 	}
-	
-	ul{
+
+	ul {
 		font-size: 15px;
 	}
 
 	li {
-	  font-size: 15px;
-	  margin-bottom: 8px;
+		font-size: 15px;
+		margin-bottom: 8px;
 	}
-  }
-  
-  /* Desktop/computer screens (1025px to 1440px wide) */
-  @media (min-width: 1025px) and (max-width: 1440px) {
+}
+
+/* Desktop/computer screens (1025px to 1440px wide) */
+@media (min-width: 1025px) and (max-width: 1440px) {
 	h2 {
-	  font-size: 35px;
+		font-size: 35px;
 	}
+
 	h3 {
-	  font-size: 25px;
+		font-size: 25px;
 	}
+
 	h4 {
-	  font-size: 15px;
+		font-size: 15px;
 	}
+
 	p {
-	  font-size: 18px;
+		font-size: 18px;
 	}
+
 	p2 {
-	  font-size: 18px;
-	  margin-bottom: 20px;
+		font-size: 18px;
+		margin-bottom: 20px;
 	}
-	p3, p4 {
-	  font-size: 18px;
+
+	p3,
+	p4 {
+		font-size: 18px;
 	}
-	
-	ul{
+
+	ul {
 		font-size: 18px;
 	}
 
 	li {
-	  font-size: 18px;
-	  margin-bottom: 12px;
+		font-size: 18px;
+		margin-bottom: 12px;
 	}
 
-  }
-  
-  /* Larger screens (above 1440px wide) */
-  @media (min-width: 1441px) {
+}
+
+/* Larger screens (above 1440px wide) */
+@media (min-width: 1441px) {
 	h2 {
-	  font-size: 40px;
-	}
-	h3 {
-	  font-size: 30px;
-	}
-	h4 {
-	  font-size: 18px;
-	}
-	p {
-	  font-size: 20px;
-	}
-	p2 {
-	  font-size: 20px;
-	  margin-bottom: 15px;
-	}
-	p3, p4 {
-	  font-size: 20px;
+		font-size: 40px;
 	}
 
-	ul{
+	h3 {
+		font-size: 30px;
+	}
+
+	h4 {
+		font-size: 18px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	p2 {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+
+	p3,
+	p4 {
+		font-size: 20px;
+	}
+
+	ul {
 		font-size: 20px;
 	}
 
 	li {
-	  font-size: 20px;
-	  margin-bottom: 15px;
+		font-size: 20px;
+		margin-bottom: 15px;
 	}
-  }
-  
+}
