@@ -509,6 +509,113 @@ Download cv button:
 	background: var(--base-color);
 }
 
+
+
+/* ------------------
+		Skills
+-------------------*/
+
+.skills-section {
+	background-color: var(--base-color);
+}
+
+/* Icon color */
+.svg-icon {
+	color: var(--text-color);
+	width: 100%;
+	/* Make sure the SVG scales with the container size */
+	height: 100%;
+	/* Prevent cropping by ensuring full height */
+	object-fit: contain;
+	/* Ensure the SVG maintains its aspect ratio */
+}
+
+/* Container for skill icons */
+.skill-container {
+	display: grid;
+	/* Enables Grid layout */
+	grid-template-columns: repeat(3, 1fr);
+	/* 3 icons per row, evenly spaced */
+	gap: 20px;
+	/* Adds space between icons */
+	margin: 0 auto;
+	/* Centers the container */
+	justify-items: center;
+	/* Centers each icon horizontally */
+	max-width: 100%;
+	/* Ensures the grid takes full width */
+}
+
+/* Individual skill-icon styling */
+.skill-icon {
+	width: 80px;
+	/* Size of the icon container */
+	height: 80px;
+	/* Ensures enough space for the SVG */
+	display: flex;
+	/* Centers content inside each icon */
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	margin-top: 9px;
+	/* Transparent background */
+	border-radius: 10px;
+	/* Optional rounded corners */
+	overflow: hidden;
+	/* Prevents overflow of content */
+}
+
+/* Styling for the name that appears on hover */
+.skill-name {
+	margin-top: 10px;
+}
+
+
+/* Mobile screens (up to 600px wide) */
+@media (max-width: 600px) {
+
+	.skill-icon {
+		width: 30px;
+		height: 30px;
+
+	}
+
+
+}
+
+/* Tablet screens (601px to 1024px wide) */
+@media (min-width: 601px) and (max-width: 1024px) {
+	.skill-icon {
+		width: 50px;
+		height: 50px;
+
+	}
+}
+
+/* Desktop/computer screens (1025px to 1440px wide) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+	.skill-icon {
+		width: 70px;
+		height: 70px;
+
+	}
+
+}
+
+/* Larger screens (above 1440px wide) */
+@media (min-width: 1441px) {
+
+	.skill-icon {
+		width: 100px;
+		height: 100px;
+
+	}
+
+
+}
+
+
 /*---------------------
 	Footer section
 -----------------------*/
@@ -534,39 +641,253 @@ Download cv button:
 ====================
 --------------------*/
 
-.resume-section {
+
+
+
+.timeline-section {
+	background-color: black;
+}
+
+/*
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+	  border-radius: 10px;
+	  background-color: black;
+    }
+*/
+
+/* Title alignment */
+.timeline-title h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+.timeline-section {
 	background-color: var(--base-color);
 	color: var(--text-color);
 }
 
-.resume-section h4 {
+.timeline-section h4 {
 	color: var(--text-color);
 }
 
-.resume-section ul li h4 {
+.timeline-section ul li {
 	color: var(--text-color);
+	margin-bottom: 0px;
 }
 
-.resume-list {
-	list-style: none;
-	/* Removed border-left */
-}
 
-.resume-list h2 {
-	font-size: 72px;
-	margin-bottom: 10px;
-}
-
-.resume-list h4 {
+.timeline-section h4 {
 	font-size: 16px;
 	text-transform: uppercase;
-	color: var(--base-color);
+	color: orange;
 	margin-top: 10px;
 	margin-bottom: 25px;
 }
 
 .resume-list p {
 	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+
+/* Remove bullets for all lists */
+/* General styles for the timeline list */
+.timeline-entry ul {
+	list-style: none;
+	/* Remove default bullets */
+	padding: 0;
+	/* Reset padding */
+	margin: 0;
+	/* Reset margin */
+}
+
+
+/* Adjustments for right-aligned entries */
+.timeline-entry.right ul.timeline-right li {
+	text-align: left;
+	/* Align text to the left */
+	padding-left: 0;
+	/* No padding on the left */
+}
+
+
+/* center line */
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	background-color: var(--text-color);
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: 0px;
+}
+
+.timeline-entry {
+	position: relative;
+	width: 50%;
+	padding: 20px;
+	border: 2px solid var(--text-color);
+	border-radius: 10px;
+	background: var(--base-color);
+	margin-bottom: 20px;
+	z-index: 1;
+	/* Ensure the entry is above the line */
+}
+
+
+
+.timeline-entry.left {
+	left: -40px;
+	text-align: right;
+}
+
+
+/* Right-side entries */
+.timeline-entry.right {
+	left: 50%;
+	/* Start from the center line */
+	right: 0px;
+	transform: translateX(42px);
+	/* Push it slightly to the right */
+}
+
+
+/* Circle with Icon */
+.timeline-entry .icon-circle {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-color: #007bff;
+	border-radius: 50%;
+	border: 2px solid var(--text-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	/* Ensure the circle is above the line */
+}
+
+
+.timeline-entry.left .icon-circle {
+	right: -63px;
+	/* Adjust position relative to the entry */
+	top: 10px;
+}
+
+
+.timeline-entry.right .icon-circle {
+	left: -63px;
+	/* Adjust position relative to the entry */
+	top: 10px;
+}
+
+
+
+
+/* Triangles */
+.timeline-entry.left::before,
+.timeline-entry.right::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	top: 20px;
+	/* Align with the circle */
+}
+
+
+.timeline-entry.left::before {
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent var(--text-color);
+	right: -10px;
+	/* Align with box border */
+}
+
+.timeline-entry.right::before {
+	border-width: 10px 10px 10px 0;
+	border-color: transparent var(--text-color) transparent transparent;
+	left: -10px;
+	/* Align with box border */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+
+	/* Align heading title to the left */
+	.timeline-title h2 {
+		text-align: left;
+		margin-left: 20px;
+		/* Optional: Add some space from the left edge */
+	}
+
+	/* Remove vertical line */
+	.timeline::after {
+		display: none;
+	}
+
+	/* Remove the border and make timeline entries full-width */
+	.timeline-entry {
+		width: 100%;
+		/* Entries take full width */
+		margin: 10px 0;
+		/* Add margin for spacing */
+		padding: 15px;
+		border: none;
+		/* Remove border */
+	}
+
+	/* Align entries to the left and reset any transform/positioning */
+	.timeline-entry.left,
+	.timeline-entry.right {
+		left: 0;
+		/* Reset positioning */
+		right: 0;
+		/* Reset positioning */
+		transform: none;
+		/* Remove translate effect */
+		text-align: left;
+		/* Align text to the left */
+	}
+
+	/* Remove the circle icon */
+	.timeline-entry .icon-circle {
+		display: none;
+	}
+
+	/* Adjust content alignment for left-aligned entries */
+	.timeline-entry.left p2,
+	.timeline-entry.left h3,
+	.timeline-entry.left h4,
+	.timeline-entry.left ul {
+		text-align: left;
+		/* Ensure text is aligned to the left */
+	}
+
+
+
+	/* Adjust other elements' layout for mobile */
+	.timeline-entry p2,
+	.timeline-entry h3,
+	.timeline-entry h4 {
+		margin-bottom: 10px;
+	}
+
+	.timeline-entry ul {
+		margin-left: 20px;
+	}
+
+	/* Remove triangle markers */
+	.timeline-entry.left::before,
+	.timeline-entry.right::before {
+		display: none;
+		/* Remove triangles */
+	}
 }
 
 
