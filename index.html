@@ -409,6 +409,129 @@
 	<!--Top Arrow end -->
 
 
+	<style>
+		
+
+		:root {
+	--base-color: black;
+	--text-color: white;
+	--accent-color: #222222;
+	--navbar-bg: rgba(0, 0, 0, 0.6);
+
+}
+
+.lightmode {
+	--base-color: white;
+	--text-color: black;
+	--accent-color: #cecece;
+	--navbar-bg: rgba(255, 255, 255, 0.6);
+
+}
+
+
+.skills-section {
+	background-color: var(--base-color);
+}
+
+/* Icon color */
+.svg-icon {
+	color: var(--text-color);
+	width: 100%;
+	/* Make sure the SVG scales with the container size */
+	height: 100%;
+	/* Prevent cropping by ensuring full height */
+	object-fit: contain;
+	/* Ensure the SVG maintains its aspect ratio */
+}
+
+/* Container for skill icons */
+.skill-container {
+	display: grid;
+	/* Enables Grid layout */
+	grid-template-columns: repeat(3, 1fr);
+	/* 3 icons per row, evenly spaced */
+	gap: 20px;
+	/* Adds space between icons */
+	margin: 0 auto;
+	/* Centers the container */
+	justify-items: center;
+	/* Centers each icon horizontally */
+	max-width: 100%;
+	/* Ensures the grid takes full width */
+}
+
+/* Individual skill-icon styling */
+.skill-icon {
+	width: 80px;
+	/* Size of the icon container */
+	height: 80px;
+	/* Ensures enough space for the SVG */
+	display: flex;
+	/* Centers content inside each icon */
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	margin-top: 9px;
+	/* Transparent background */
+	border-radius: 10px;
+	/* Optional rounded corners */
+	overflow: hidden;
+	/* Prevents overflow of content */
+}
+
+/* Styling for the name that appears on hover */
+.skill-name {
+	margin-top: 10px;
+}
+
+
+/* Mobile screens (up to 600px wide) */
+@media (max-width: 600px) {
+
+	.skill-icon {
+		width: 30px;
+		height: 30px;
+
+	}
+
+
+}
+
+/* Tablet screens (601px to 1024px wide) */
+@media (min-width: 601px) and (max-width: 1024px) {
+	.skill-icon {
+		width: 50px;
+		height: 50px;
+
+	}
+}
+
+/* Desktop/computer screens (1025px to 1440px wide) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+	.skill-icon {
+		width: 70px;
+		height: 70px;
+
+	}
+
+}
+
+/* Larger screens (above 1440px wide) */
+@media (min-width: 1441px) {
+
+	.skill-icon {
+		width: 100px;
+		height: 100px;
+
+	}
+
+
+}
+
+	</style>
+
+
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-2.1.4.min.js"></script>
