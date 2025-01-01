@@ -62,6 +62,18 @@ for (let link of links) {
 	menu.style.display = 'none';
 }
 
+// For up arrow button. 
+
+document.addEventListener("scroll", function () {
+	const upArrowButton = document.querySelector(".up-arrow-button");
+	if (window.scrollY > 150) {
+		// Show the button when scrolled down 100px
+		upArrowButton.classList.add("visible");
+	} else {
+		// Hide the button when scrolled back up
+		upArrowButton.classList.remove("visible");
+	}
+});
 
 //Lightmode and Darkmode theme. 
 let lightmode = localStorage.getItem('lightmode');

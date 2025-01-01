@@ -140,7 +140,7 @@ code {}
 	/* Center the menu items */
 	padding: 0;
 	padding-top: 15px;
-	gap: 3rem;
+	gap: 2rem;
 	/* Space between links */
 }
 
@@ -334,21 +334,28 @@ code {}
   Up arrow
   ------------------*/
 
-.up-arrow-button {
-	width: 30px;
-	height: 30px;
-	position: fixed;
-	bottom: 35px;
-	right: 40px;
-	/* Adjusted to the bottom-right corner */
-	z-index: 1000;
+  .up-arrow-button {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 35px;
+    right: 40px; /* Adjusted to the bottom-right corner */
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    opacity: 0; /* Fully transparent */
+	visibility: hidden; /* Hide the element completely when not visible */
+    transition: opacity 3s ease-in-out, visibility 3s ease-in-out; /* Smooth fade effect */
+}
+
+.up-arrow-button.visible {
+    display: block; /* Display when visible */
+    opacity: 1; /* Fully visible */
 }
 
 .up-arrow-button svg {
 	fill: var(--text-color);
 	/* Color of the arrow */
 }
-
 
 /*---------------------
 	Copyright section
@@ -939,6 +946,10 @@ Download cv button:
 	/* Add space between the buttons */
 }
 
+.research-name {
+	padding-bottom: 10px;
+}
+
 
 /*---------------------
  Research Experience
@@ -1116,6 +1127,15 @@ Download cv button:
 	top: 0;
 }
 
+
+/*---------------------
+=====================
+	R-Tutorials
+=====================	 
+----------------------*/
+.tutorial-section{
+	background-color: var(--base-color);
+}
 
 /*---------------------
 =====================
