@@ -1137,6 +1137,127 @@ Download cv button:
 	background-color: var(--base-color);
 }
 
+
+:root {
+	--base-color: black;
+	--text-color: white;
+	--accent-color: #222222;
+	--navbar-bg: rgba(0, 0, 0, 0.6);
+
+}
+
+.lightmode {
+	--base-color: white;
+	--text-color: black;
+	--accent-color: #cecece;
+	--navbar-bg: rgba(255, 255, 255, 0.6);
+
+}
+
+
+.topics-grid {
+	display: flex;
+	flex-wrap: wrap;
+	/* Allows items to wrap onto the next row */
+	gap: 40px;
+	/* Space between cards */
+	justify-content: space-between;
+	/* Distribute cards evenly */
+}
+
+.topic-item {
+	border: 1px solid var(--text-color);
+	/* Box border */
+	border-radius: 8px;
+	/* Rounded corners */
+	padding: 20px;
+	background-color: var(--text-color);
+	/* Light background */
+	flex: 1 1 calc(48% - 10px);
+	/* Cards take half the row width minus the gap */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* Center-align the content */
+	text-decoration: none;
+	/* Remove underline from the link */
+	color: inherit;
+	/* Inherit text color */
+	transition: transform 0.3s;
+	/* Smooth hover effect */
+	min-height: 150px;
+	/* Ensures uniform height for cards */
+	box-sizing: border-box;
+	/* Prevents padding from affecting width */
+}
+
+.topic-item:hover {
+	transform: scale(1.1);
+	/* Slight zoom on hover */
+	text-decoration: none;
+	/* Ensure no underline appears on hover */
+}
+
+.topics-grid h3 {
+	color: var(--base-color);
+}
+
+.nested-card {
+	flex: 1 1 calc(48% - 10px);
+	/* Same size as other cards */
+	position: relative;
+}
+
+.nested-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	/* Arrange buttons properly */
+	gap: 10px;
+	/* Add spacing between nested buttons */
+	margin-top: 10px;
+}
+
+.nested-buttons .site-btn {
+	color: var(--text-color);
+}
+
+.nested-buttons .nested {
+	flex: 1 1 calc(45% - 10px);
+	/* Two buttons per row with spacing */
+	font-size: 12px;
+	/* Smaller nested button font */
+	text-align: center;
+	padding: 6px 10px;
+	background-color: var(--base-color);
+	/* Secondary button color */
+	border-radius: 4px;
+	transition: transform 0.3s;
+	/* Smooth hover effect */
+
+}
+
+.nested-buttons .nested:hover {
+	text-decoration: none;
+	/* Ensure no underline appears on hover */
+	transform: scale(1.15);
+	/* Slight zoom on hover */
+
+
+}
+
+@media (max-width: 768px) {
+	.topic-item {
+		flex: 1 1 calc(100% - 20px);
+		/* Stacks cards to full width on smaller screens */
+	}
+
+	.nested-buttons .nested {
+		flex: 1 1 100%;
+		/* Stacks nested buttons on smaller screens */
+	}
+}
+
+
 /*---------------------
 =====================
 	Novels
