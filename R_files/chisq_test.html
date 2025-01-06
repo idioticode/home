@@ -11,9 +11,9 @@
 
 <meta name="author" content="Sushank" />
 
-<meta name="date" content="2024-12-23" />
+<meta name="date" content="2025-01-06" />
 
-<title>Introduction to R and RStudio</title>
+<title>Chi-Squared Test &amp; Fisher’s Exact Test</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,247 +350,314 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Introduction to R and RStudio</h1>
+<h1 class="title toc-ignore">Chi-Squared Test &amp; Fisher’s Exact
+Test</h1>
 <h4 class="author"><a href="https://sushank.com.np">Sushank Pokhrel (Homepage)</a></h4>
 
 </div>
 
 
-<div id="what-is-r" class="section level2">
-<h2>What is R?</h2>
-<p>R is a programming language and software environment specifically
-designed for statistical computing, data analysis, and graphical
-representation. It is widely used by data scientists, statisticians, and
-researchers across various domains, including academia, business, and
-healthcare.</p>
-<div id="key-features-of-r" class="section level3">
-<h3>Key Features of R:</h3>
+<hr />
+<div id="section" class="section level2">
+<h2></h2>
+<p>This document provides an in-depth explanation of:</p>
 <ol style="list-style-type: decimal">
-<li>Statistical Analysis: R provides a vast array of statistical
-techniques such as regression, hypothesis testing, time-series analysis,
-and machine learning.</li>
-<li>Data Visualization: Tools like <code>ggplot2</code> and
-<code>lattice</code> allow users to create high-quality
-visualizations.</li>
-<li>Community Support: R has a large and active community that
-contributes to its extensive library of packages available on CRAN
-(Comprehensive R Archive Network).</li>
-<li>Flexibility and Extensibility: You can create custom functions,
-packages, and scripts to suit your needs.</li>
+<li>How to perform a <strong>Chi-Squared Test</strong> to evaluate the
+association between categorical variables.</li>
+<li>When to use <strong>Fisher’s Exact Test</strong> as an alternative
+for small sample sizes.</li>
+<li>Visualization techniques to interpret the results.</li>
 </ol>
-<p>R can be run on multiple operating systems, including Windows, macOS,
-and Linux, making it accessible to a wide audience.</p>
+<p>We will demonstrate this analysis using a cancer dataset that
+contains categorical variables like <strong>Cancer Status</strong> and
+<strong>Smoking Category</strong>.</p>
 <hr />
-</div>
-</div>
-<div id="what-is-rstudio" class="section level2">
-<h2>What is RStudio?</h2>
-<p>RStudio is an Integrated Development Environment (IDE) for R. It
-provides a user-friendly interface to write, debug, and execute R code
-more efficiently. RStudio makes working with R more intuitive by
-organizing various tools and features into a single workspace.</p>
-<div id="key-features-of-rstudio" class="section level3">
-<h3>Key Features of RStudio:</h3>
-<ol style="list-style-type: decimal">
-<li>Source Editor: Write, edit, and save R scripts (<code>.R</code>) or
-R Markdown files (<code>.Rmd</code>) in an organized way.</li>
-<li>Console: Interactively run R commands and view outputs.</li>
-<li>Environment/History: View and manage objects (data frames,
-variables, functions) created during your R session and access command
-history.</li>
-<li>Plots and Viewer: Visualize your data and access saved plots in one
-place.</li>
-<li>Packages Pane: Install, update, and load packages directly from the
-RStudio interface.</li>
-<li>Integration with Git: Perform version control operations for
-collaborative projects.</li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="comparing-r-and-rstudio" class="section level2">
-<h2>Comparing R and RStudio</h2>
-<table>
-<colgroup>
-<col width="23%" />
-<col width="38%" />
-<col width="38%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Aspect</th>
-<th>R</th>
-<th>RStudio</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Definition</td>
-<td>A programming language for statistical computing.</td>
-<td>An IDE for working with R.</td>
-</tr>
-<tr class="even">
-<td>Usage</td>
-<td>Can be run independently from a terminal or script.</td>
-<td>Provides a graphical interface for R.</td>
-</tr>
-<tr class="odd">
-<td>User-Friendliness</td>
-<td>Requires knowledge of command-line operations.</td>
-<td>More intuitive for beginners.</td>
-</tr>
-<tr class="even">
-<td>Additional Features</td>
-<td>Focused solely on running R code.</td>
-<td>Includes debugging, plotting, and file management.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-</div>
-<div id="why-use-r-and-rstudio" class="section level2">
-<h2>Why Use R and RStudio?</h2>
-<p>Using R alongside RStudio creates a seamless workflow for data
-analysis, visualization, and reporting. Here are some examples of how
-they work together:</p>
-<ol style="list-style-type: decimal">
-<li>Efficient Coding: Write and test code in the RStudio source editor
-while running commands interactively in the console.</li>
-<li>Data Visualization: Use R packages like <code>ggplot2</code> to
-generate visualizations and preview them in the Plots pane.</li>
-<li>Reproducible Research: Use R Markdown in RStudio to create
-reproducible reports that combine text, code, and results.</li>
-</ol>
-<hr />
-</div>
-<div id="getting-started-with-r-and-rstudio" class="section level2">
-<h2>Getting Started with R and RStudio</h2>
-<div id="step-1-installing-r" class="section level3">
-<h3>Step 1: Installing R</h3>
-<ol style="list-style-type: decimal">
-<li>Go to the official R website: <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>.</li>
-<li>Download the version of R suitable for your operating system
-(Windows, macOS, or Linux).</li>
-<li>Follow the installation prompts to set up R.</li>
-</ol>
-</div>
-<div id="step-2-installing-rstudio" class="section level3">
-<h3>Step 2: Installing RStudio</h3>
-<ol style="list-style-type: decimal">
-<li>Go to the RStudio website: <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>.</li>
-<li>Download the free RStudio Desktop version.</li>
-<li>Install RStudio after installing R (RStudio requires R to
-function).</li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="exploring-the-rstudio-interface" class="section level2">
-<h2>Exploring the RStudio Interface</h2>
-<p>Once you open RStudio, you’ll see four main panes:</p>
-<div id="source-editor-top-left" class="section level3">
-<h3>1. Source Editor (Top-Left):</h3>
-<ul>
-<li>Used for writing R scripts or R Markdown files.</li>
-<li>Features syntax highlighting and code completion.</li>
-</ul>
-</div>
-<div id="console-bottom-left" class="section level3">
-<h3>2. Console (Bottom-Left):</h3>
-<ul>
-<li>Interactively execute R commands.</li>
-<li>Displays immediate outputs, errors, and warnings.</li>
-</ul>
-</div>
-<div id="environmenthistory-top-right" class="section level3">
-<h3>3. Environment/History (Top-Right):</h3>
-<ul>
-<li>Environment Tab: Lists all objects (e.g., variables, datasets) in
-memory.</li>
-<li>History Tab: Tracks previously executed commands.</li>
-</ul>
-</div>
-<div id="filesplotspackageshelpviewer-bottom-right" class="section level3">
-<h3>4. Files/Plots/Packages/Help/Viewer (Bottom-Right):</h3>
-<ul>
-<li>Files: Manage files in your working directory.</li>
-<li>Plots: View plots created in your R session.</li>
-<li>Packages: Install, load, or update R packages.</li>
-<li>Help: Access documentation for R functions and packages.</li>
-<li>Viewer: Preview web content, such as Shiny apps or R Markdown
-outputs.</li>
-</ul>
-<hr />
-</div>
-<div id="r-packages-and-libraries." class="section level3">
-<h3>R packages and Libraries.</h3>
-<p>In R, packages and libraries are integral components that help extend
-the capabilities of the base R environment. They are both essential in
-enhancing the functionality of R, enabling users to perform complex
-tasks with ease, without having to reinvent the wheel.</p>
-</div>
-<div id="r-package." class="section level3">
-<h3>R package.</h3>
-<p>An R package is a bundled collection of pre-written R functions,
-datasets, and sometimes compiled code that is designed to extend the
-functionality of R. Packages are created to solve specific tasks or
-provide tools within certain domains, such as data visualization,
-machine learning, or statistical analysis. These packages can be shared
-with others, making it easier for users to access and utilize code
-written by others, saving time and effort.</p>
 <p><br></p>
-<p>R packages are stored in repositories such as:</p>
+<div id="data-import-and-overview" class="section level3">
+<h3>1. Data Import and Overview</h3>
+<p>First, we import the cancer dataset from an Excel file using the
+<code>readxl</code> package and examine its structure.</p>
+<pre class="r"><code># Load the readxl package for reading Excel files
+library(readxl)</code></pre>
+<pre><code>## Warning: package &#39;readxl&#39; was built under R version 4.3.3</code></pre>
+<pre class="r"><code># Import the cancer data from an Excel file
+cancer_data &lt;- readxl::read_excel(
+  &quot;D:/Drive/r_training/Datasets/cancer_dummy_data.xlsx&quot;,
+  sheet = &quot;Sheet1&quot;
+)</code></pre>
+<p><br></p>
+</div>
+<div id="exploring-the-dataset" class="section level3">
+<h3>2. Exploring the Dataset</h3>
+<pre class="r"><code># Display the structure of the dataset to understand variable types
+str(cancer_data)</code></pre>
+<pre><code>## tibble [1,000 × 3] (S3: tbl_df/tbl/data.frame)
+##  $ Respondents     : num [1:1000] 1 2 3 4 5 6 7 8 9 10 ...
+##  $ Cancer_status   : chr [1:1000] &quot;No Cancer&quot; &quot;No Cancer&quot; &quot;No Cancer&quot; &quot;No Cancer&quot; ...
+##  $ Smoking_Category: chr [1:1000] &quot;Passive Smoker&quot; &quot;Smoker&quot; &quot;Non-Smoker&quot; &quot;Passive Smoker&quot; ...</code></pre>
+<pre class="r"><code># View the first few rows of the dataset
+head(cancer_data)</code></pre>
+<pre><code>## # A tibble: 6 × 3
+##   Respondents Cancer_status Smoking_Category
+##         &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;           
+## 1           1 No Cancer     Passive Smoker  
+## 2           2 No Cancer     Smoker          
+## 3           3 No Cancer     Non-Smoker      
+## 4           4 No Cancer     Passive Smoker  
+## 5           5 No Cancer     Passive Smoker  
+## 6           6 Cancer        Smoker</code></pre>
 <ul>
-<li>CRAN (Comprehensive R Archive Network): The main repository for R
-packages, offering a vast collection of user-contributed packages.</li>
-<li>Bioconductor: A repository specializing in bioinformatics packages,
-particularly for the analysis of genomic data.</li>
-<li>GitHub: A platform where developers can share R packages (sometimes
-in development or not yet officially published to CRAN).</li>
+<li><code>str(cancer_data)</code>: Shows the data structure, including
+column names and data types.</li>
+<li><code>head(cancer_data)</code>: Displays the first few rows to
+understand the dataset.</li>
 </ul>
 <p><br></p>
-<p>Examples of Popular R Packages:</p>
-<ul>
-<li>ggplot2: A powerful package for creating complex and customizable
-data visualizations.</li>
-<li>dplyr: A popular package for data manipulation, providing an
-intuitive set of tools for transforming and summarizing data.</li>
-<li>tidyr: A package designed to help tidy and reshape data, making it
-easier to work with in R.</li>
-<li>caret: A comprehensive package for building machine learning models,
-offering tools for data preprocessing, training, and model
-evaluation.</li>
-</ul>
-<p>To access any package in, it should be installed at firs (some of the
-packages are already loaded in R, but their number is quite less) To
-install the packages, the funtion, install.packages() is used. You only
-need to install a package once on your system.</p>
-<p>To exemplify, if we want to install ggplot2 package we write it as
-install.packages(“ggplot2”) (Remove the # before installing the package
-as # converts anything written behind it into a comment. )To use a
-package in R, it first needs to be installed. While R comes with a few
-pre-installed packages, the number of these is relatively small. Most
-packages need to be installed from external repositories like CRAN,
-Bioconductor, or GitHub.</p>
-<p>To install a package, you use the install.packages() function. Here’s
-how you would install the ggplot2 package:</p>
-<pre class="r"><code>#install.packages(&quot;ggplot2&quot;)</code></pre>
 </div>
-<div id="r-libraries" class="section level3">
-<h3>R libraries</h3>
-<p>In R, a library refers to the directory or location on your computer
-where installed packages are stored. It’s where R looks to find the
-packages you want to use. When you install a package, it is saved in
-your library, and you can then load it into your R session for use.</p>
-<p>To access the functions and datasets within a package, you need to
-load it into your R environment using the library() function. For
-example:</p>
-<pre class="r"><code>library(ggplot2)</code></pre>
+<div id="chi-squared-test" class="section level3">
+<h3>3. Chi-Squared Test</h3>
+<p>The Chi-Squared Test determines if there is a significant association
+between two categorical variables. Here, we evaluate the relationship
+between Cancer Status and Smoking Category.</p>
+<p><br></p>
+<div id="creating-a-contingency-table" class="section level4">
+<h4>Creating a Contingency Table</h4>
+<p>A contingency table summarizes the frequency of occurrences for
+combinations of two categorical variables.</p>
+<pre class="r"><code># Create a contingency table for Cancer Status and Smoking Category
+cancer_table &lt;- table(cancer_data$Cancer_status, cancer_data$Smoking_Category)
+
+
+# Print the contingency table
+print(cancer_table)</code></pre>
+<pre><code>##            
+##             Non-Smoker Passive Smoker Smoker
+##   Cancer           153            178    181
+##   No Cancer        165            161    162</code></pre>
+<ul>
+<li><code>table()</code>: Generates a cross-tabulation of the two
+categorical variables.</li>
+</ul>
+<p>This table serves as input for the Chi-Squared Test.</p>
+<p><br></p>
+</div>
+<div id="performing-the-chi-squared-test-using-rstatix" class="section level4">
+<h4>Performing the Chi-Squared Test (Using rstatix)</h4>
+<p>The <code>chisq_test</code> function from the <code>rstatix</code>
+package simplifies the process of performing the Chi-Squared Test.</p>
+<pre class="r"><code># Load the rstatix package
+library(rstatix)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rstatix&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter</code></pre>
+<pre class="r"><code># Perform the Chi-Squared Test
+chisq_result &lt;- chisq_test(cancer_table)
+
+# Display the test result
+print(chisq_result)</code></pre>
+<pre><code>## # A tibble: 1 × 6
+##       n statistic     p    df method          p.signif
+## * &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;           &lt;chr&gt;   
+## 1  1000      1.78  0.41     2 Chi-square test ns</code></pre>
+<p><br></p>
+</div>
+<div id="alternative-method-direct-input-without-contingency-table" class="section level4">
+<h4>Alternative Method: Direct Input without Contingency Table</h4>
+<p>Instead of creating a contingency table, you can directly input the
+variables:</p>
+<pre class="r"><code># Perform Chi-Squared Test with direct input
+chisq_test(
+  x = cancer_data$Cancer_status,
+  y = cancer_data$Smoking_Category
+)</code></pre>
+<pre><code>## # A tibble: 1 × 6
+##       n statistic     p    df method          p.signif
+## * &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;           &lt;chr&gt;   
+## 1  1000      1.78  0.41     2 Chi-square test ns</code></pre>
+<ul>
+<li>x: First categorical variable (e.g., Cancer Status).</li>
+<li>y: Second categorical variable (e.g., Smoking Category).</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="visualizing-the-chi-squared-test-results" class="section level3">
+<h3>4. Visualizing the Chi-Squared Test Results</h3>
+<div id="to-visualize-the-data-we-first-convert-the-contingency-table-into-a-data-frame." class="section level4">
+<h4>To visualize the data, we first convert the contingency table into a
+data frame.</h4>
+<pre class="r"><code># Convert the contingency table to a data frame
+cancer_df &lt;- as.data.frame(cancer_table)
+
+# Display the data frame
+print(cancer_df)</code></pre>
+<pre><code>##        Var1           Var2 Freq
+## 1    Cancer     Non-Smoker  153
+## 2 No Cancer     Non-Smoker  165
+## 3    Cancer Passive Smoker  178
+## 4 No Cancer Passive Smoker  161
+## 5    Cancer         Smoker  181
+## 6 No Cancer         Smoker  162</code></pre>
+<p><br></p>
+</div>
+<div id="creating-a-bar-plot" class="section level4">
+<h4>Creating a Bar Plot</h4>
+<p>The bar plot helps visualize the frequency distribution across
+categories.</p>
+<pre class="r"><code># Load ggplot2 for visualization
+library(ggplot2)</code></pre>
 <pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
-<p>This command makes all of the functions and datasets from the ggplot2
-package available for use in your current session. But if you start the
-other session, you need to fetch the package again.</p>
+<pre class="r"><code># Create a bar plot for Cancer Status vs Smoking Habits
+ggplot(
+  data = cancer_df,
+  aes(
+    x = Var2,
+    y = Freq,
+    fill = Var1
+  )
+) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  theme_bw() +
+  labs(
+    title = &quot;Cancer Status vs. Smoking Habits&quot;,
+    x = &quot;Smoking Category&quot;,
+    y = &quot;Frequency&quot;,
+    fill = &quot;Cancer Status&quot;
+  )</code></pre>
+<p><img role="img" src="data:image/png;base64,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" width="672" /></p>
+<ul>
+<li><code>geom_bar()</code>: Creates the bar plot.</li>
+<li><code>aes()</code>: Maps variables to the x-axis (Var2), y-axis
+(Freq), and fill color (Var1).</li>
+<li><code>theme_bw()</code>: Applies a clean theme to the plot.</li>
+</ul>
+<p><br></p>
 </div>
+</div>
+<div id="fishers-exact-test" class="section level3">
+<h3>5. Fisher’s Exact Test</h3>
+<p>When the expected frequencies in the contingency table are too low
+(typically &lt;5), the Chi-Squared Test is not reliable. Instead, we use
+Fisher’s Exact Test.</p>
+<pre class="r"><code># Perform Fisher&#39;s Exact Test
+fisher_result &lt;- fisher.test(cancer_table)
+
+# Display the test result
+print(fisher_result)</code></pre>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  cancer_table
+## p-value = 0.4107
+## alternative hypothesis: two.sided</code></pre>
+<p>Fisher’s Exact Test calculates the exact probability of the observed
+table under the null hypothesis. Use it for small sample sizes to avoid
+unreliable results from the Chi-Squared Test.</p>
+<p><br></p>
+</div>
+<div id="chi-squared-test-with-alternative-data" class="section level3">
+<h3>6. Chi-Squared Test with Alternative Data</h3>
+<p>An alternative dataset (Sheet2) contains aggregated values for
+analysis. We import this dataset and restructure it for the test.</p>
+<div id="importing-and-exploring-the-alternative-dataset" class="section level4">
+<h4>Importing and Exploring the Alternative Dataset</h4>
+<pre class="r"><code># Import the alternative cancer dataset
+cancer_data_2 &lt;- readxl::read_excel(
+  &quot;D:/Drive/r_training/Datasets/cancer_dummy_data.xlsx&quot;,
+  sheet = &quot;Sheet2&quot;
+)
+
+# Display the first few rows and structure of the dataset
+head(cancer_data_2)</code></pre>
+<pre><code>## # A tibble: 6 × 4
+##      SN Cancer_diagnose Smoking_habit  Number
+##   &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;           &lt;dbl&gt;
+## 1     1 Cancer          Non-Smoker        153
+## 2     2 No Cancer       Non-Smoker        165
+## 3     3 Cancer          Passive Smoker    178
+## 4     4 No Cancer       Passive Smoker    161
+## 5     5 Cancer          Smoker            181
+## 6     6 No Cancer       Smoker            162</code></pre>
+<pre class="r"><code>str(cancer_data_2)</code></pre>
+<pre><code>## tibble [6 × 4] (S3: tbl_df/tbl/data.frame)
+##  $ SN             : num [1:6] 1 2 3 4 5 6
+##  $ Cancer_diagnose: chr [1:6] &quot;Cancer&quot; &quot;No Cancer&quot; &quot;Cancer&quot; &quot;No Cancer&quot; ...
+##  $ Smoking_habit  : chr [1:6] &quot;Non-Smoker&quot; &quot;Non-Smoker&quot; &quot;Passive Smoker&quot; &quot;Passive Smoker&quot; ...
+##  $ Number         : num [1:6] 153 165 178 161 181 162</code></pre>
+<p><br></p>
+</div>
+<div id="pivoting-the-data" class="section level4">
+<h4>Pivoting the Data</h4>
+<p>To create a contingency table from the aggregated data, we group and
+pivot it using dplyr and tidyr.</p>
+<pre class="r"><code># Load required packages
+library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(tidyr)
+
+# Group and pivot the data
+pivoted_data &lt;- cancer_data_2 %&gt;%
+  group_by(Cancer_diagnose, Smoking_habit) %&gt;%
+  summarise(Number = sum(Number)) %&gt;%
+  pivot_wider(
+    names_from = Smoking_habit,
+    values_from = Number,
+    values_fill = list(Number = 0)
+  )</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;Cancer_diagnose&#39;. You can override using
+## the `.groups` argument.</code></pre>
+<pre class="r"><code># Display the pivoted data
+print(pivoted_data)</code></pre>
+<pre><code>## # A tibble: 2 × 4
+## # Groups:   Cancer_diagnose [2]
+##   Cancer_diagnose `Non-Smoker` `Passive Smoker` Smoker
+##   &lt;chr&gt;                  &lt;dbl&gt;            &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Cancer                   153              178    181
+## 2 No Cancer                165              161    162</code></pre>
+<ul>
+<li><code>group_by()</code>: Groups the data by Cancer Diagnose and
+Smoking Habit.</li>
+<li><code>summarise()</code>: Aggregates the data by summing the Number
+column.</li>
+<li><code>pivot_wider()</code>: Reshapes the data into a wide format for
+the Chi-Squared Test.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="performing-the-chi-squared-test-on-pivoted-data" class="section level4">
+<h4>Performing the Chi-Squared Test on Pivoted Data</h4>
+<pre class="r"><code># Perform Chi-Squared Test on the pivoted data
+chisq_result_2 &lt;- chisq.test(as.matrix(pivoted_data[, -1]))
+
+# Display the test result
+print(chisq_result_2)</code></pre>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  as.matrix(pivoted_data[, -1])
+## X-squared = 1.7828, df = 2, p-value = 0.4101</code></pre>
+<ul>
+<li><code>as.matrix()</code>: Converts the pivoted data (excluding the
+first column) into a matrix for analysis.</li>
+</ul>
+<p>The test evaluates the relationship between smoking habits and cancer
+diagnoses in the aggregated dataset.</p>
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="section-1" class="section level1">
+<h1>…</h1>
 </div>
 
 

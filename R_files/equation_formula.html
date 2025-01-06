@@ -11,9 +11,8 @@
 
 <meta name="author" content="Sushank" />
 
-<meta name="date" content="2024-12-23" />
 
-<title>Introduction to R and RStudio</title>
+<title>Writing Equations and Formula in R</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,246 +349,398 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Introduction to R and RStudio</h1>
+<h1 class="title toc-ignore">Writing Equations and Formula in R</h1>
 <h4 class="author"><a href="https://sushank.com.np">Sushank Pokhrel (Homepage)</a></h4>
 
 </div>
 
 
-<div id="what-is-r" class="section level2">
-<h2>What is R?</h2>
-<p>R is a programming language and software environment specifically
-designed for statistical computing, data analysis, and graphical
-representation. It is widely used by data scientists, statisticians, and
-researchers across various domains, including academia, business, and
-healthcare.</p>
-<div id="key-features-of-r" class="section level3">
-<h3>Key Features of R:</h3>
-<ol style="list-style-type: decimal">
-<li>Statistical Analysis: R provides a vast array of statistical
-techniques such as regression, hypothesis testing, time-series analysis,
-and machine learning.</li>
-<li>Data Visualization: Tools like <code>ggplot2</code> and
-<code>lattice</code> allow users to create high-quality
-visualizations.</li>
-<li>Community Support: R has a large and active community that
-contributes to its extensive library of packages available on CRAN
-(Comprehensive R Archive Network).</li>
-<li>Flexibility and Extensibility: You can create custom functions,
-packages, and scripts to suit your needs.</li>
-</ol>
-<p>R can be run on multiple operating systems, including Windows, macOS,
-and Linux, making it accessible to a wide audience.</p>
 <hr />
-</div>
-</div>
-<div id="what-is-rstudio" class="section level2">
-<h2>What is RStudio?</h2>
-<p>RStudio is an Integrated Development Environment (IDE) for R. It
-provides a user-friendly interface to write, debug, and execute R code
-more efficiently. RStudio makes working with R more intuitive by
-organizing various tools and features into a single workspace.</p>
-<div id="key-features-of-rstudio" class="section level3">
-<h3>Key Features of RStudio:</h3>
-<ol style="list-style-type: decimal">
-<li>Source Editor: Write, edit, and save R scripts (<code>.R</code>) or
-R Markdown files (<code>.Rmd</code>) in an organized way.</li>
-<li>Console: Interactively run R commands and view outputs.</li>
-<li>Environment/History: View and manage objects (data frames,
-variables, functions) created during your R session and access command
-history.</li>
-<li>Plots and Viewer: Visualize your data and access saved plots in one
-place.</li>
-<li>Packages Pane: Install, update, and load packages directly from the
-RStudio interface.</li>
-<li>Integration with Git: Perform version control operations for
-collaborative projects.</li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="comparing-r-and-rstudio" class="section level2">
-<h2>Comparing R and RStudio</h2>
-<table>
-<colgroup>
-<col width="23%" />
-<col width="38%" />
-<col width="38%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Aspect</th>
-<th>R</th>
-<th>RStudio</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Definition</td>
-<td>A programming language for statistical computing.</td>
-<td>An IDE for working with R.</td>
-</tr>
-<tr class="even">
-<td>Usage</td>
-<td>Can be run independently from a terminal or script.</td>
-<td>Provides a graphical interface for R.</td>
-</tr>
-<tr class="odd">
-<td>User-Friendliness</td>
-<td>Requires knowledge of command-line operations.</td>
-<td>More intuitive for beginners.</td>
-</tr>
-<tr class="even">
-<td>Additional Features</td>
-<td>Focused solely on running R code.</td>
-<td>Includes debugging, plotting, and file management.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-</div>
-<div id="why-use-r-and-rstudio" class="section level2">
-<h2>Why Use R and RStudio?</h2>
-<p>Using R alongside RStudio creates a seamless workflow for data
-analysis, visualization, and reporting. Here are some examples of how
-they work together:</p>
-<ol style="list-style-type: decimal">
-<li>Efficient Coding: Write and test code in the RStudio source editor
-while running commands interactively in the console.</li>
-<li>Data Visualization: Use R packages like <code>ggplot2</code> to
-generate visualizations and preview them in the Plots pane.</li>
-<li>Reproducible Research: Use R Markdown in RStudio to create
-reproducible reports that combine text, code, and results.</li>
-</ol>
-<hr />
-</div>
-<div id="getting-started-with-r-and-rstudio" class="section level2">
-<h2>Getting Started with R and RStudio</h2>
-<div id="step-1-installing-r" class="section level3">
-<h3>Step 1: Installing R</h3>
-<ol style="list-style-type: decimal">
-<li>Go to the official R website: <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>.</li>
-<li>Download the version of R suitable for your operating system
-(Windows, macOS, or Linux).</li>
-<li>Follow the installation prompts to set up R.</li>
-</ol>
-</div>
-<div id="step-2-installing-rstudio" class="section level3">
-<h3>Step 2: Installing RStudio</h3>
-<ol style="list-style-type: decimal">
-<li>Go to the RStudio website: <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>.</li>
-<li>Download the free RStudio Desktop version.</li>
-<li>Install RStudio after installing R (RStudio requires R to
-function).</li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="exploring-the-rstudio-interface" class="section level2">
-<h2>Exploring the RStudio Interface</h2>
-<p>Once you open RStudio, you’ll see four main panes:</p>
-<div id="source-editor-top-left" class="section level3">
-<h3>1. Source Editor (Top-Left):</h3>
-<ul>
-<li>Used for writing R scripts or R Markdown files.</li>
-<li>Features syntax highlighting and code completion.</li>
-</ul>
-</div>
-<div id="console-bottom-left" class="section level3">
-<h3>2. Console (Bottom-Left):</h3>
-<ul>
-<li>Interactively execute R commands.</li>
-<li>Displays immediate outputs, errors, and warnings.</li>
-</ul>
-</div>
-<div id="environmenthistory-top-right" class="section level3">
-<h3>3. Environment/History (Top-Right):</h3>
-<ul>
-<li>Environment Tab: Lists all objects (e.g., variables, datasets) in
-memory.</li>
-<li>History Tab: Tracks previously executed commands.</li>
-</ul>
-</div>
-<div id="filesplotspackageshelpviewer-bottom-right" class="section level3">
-<h3>4. Files/Plots/Packages/Help/Viewer (Bottom-Right):</h3>
-<ul>
-<li>Files: Manage files in your working directory.</li>
-<li>Plots: View plots created in your R session.</li>
-<li>Packages: Install, load, or update R packages.</li>
-<li>Help: Access documentation for R functions and packages.</li>
-<li>Viewer: Preview web content, such as Shiny apps or R Markdown
-outputs.</li>
-</ul>
-<hr />
-</div>
-<div id="r-packages-and-libraries." class="section level3">
-<h3>R packages and Libraries.</h3>
-<p>In R, packages and libraries are integral components that help extend
-the capabilities of the base R environment. They are both essential in
-enhancing the functionality of R, enabling users to perform complex
-tasks with ease, without having to reinvent the wheel.</p>
-</div>
-<div id="r-package." class="section level3">
-<h3>R package.</h3>
-<p>An R package is a bundled collection of pre-written R functions,
-datasets, and sometimes compiled code that is designed to extend the
-functionality of R. Packages are created to solve specific tasks or
-provide tools within certain domains, such as data visualization,
-machine learning, or statistical analysis. These packages can be shared
-with others, making it easier for users to access and utilize code
-written by others, saving time and effort.</p>
+<p>R provides robust tools for creating equations and formulas. In this
+guide, we will explore how to create new variables (columns) based on
+mathematical equations using the <code>mtcars</code> dataset. We’ll
+cover both base R and the <code>dplyr</code> package approaches for
+adding columns with formulas. <strong>This method is similar to entering
+a formula in Excel.</strong></p>
 <p><br></p>
-<p>R packages are stored in repositories such as:</p>
+<div id="loading-the-dataset" class="section level3">
+<h3>Loading the Dataset</h3>
+<p>We will use the already available <code>mtcars</code> dataset. Let’s
+give the variable name to the dataset.</p>
+<pre class="r"><code># Load the mtcars dataset
+cars &lt;- mtcars
+
+# Display the column names of the dataset
+colnames(cars)</code></pre>
+<pre><code>##  [1] &quot;mpg&quot;  &quot;cyl&quot;  &quot;disp&quot; &quot;hp&quot;   &quot;drat&quot; &quot;wt&quot;   &quot;qsec&quot; &quot;vs&quot;   &quot;am&quot;   &quot;gear&quot;
+## [11] &quot;carb&quot;</code></pre>
+<p><code>mtcars</code> is a built-in dataset in R that contains
+information about various car models (e.g., miles per gallon, number of
+cylinders, horsepower, etc.).</p>
 <ul>
-<li>CRAN (Comprehensive R Archive Network): The main repository for R
-packages, offering a vast collection of user-contributed packages.</li>
-<li>Bioconductor: A repository specializing in bioinformatics packages,
-particularly for the analysis of genomic data.</li>
-<li>GitHub: A platform where developers can share R packages (sometimes
-in development or not yet officially published to CRAN).</li>
+<li><code>colnames(cars)</code> lists all the column names in the
+dataset, allowing us to understand the available variables.</li>
 </ul>
 <p><br></p>
-<p>Examples of Popular R Packages:</p>
-<ul>
-<li>ggplot2: A powerful package for creating complex and customizable
-data visualizations.</li>
-<li>dplyr: A popular package for data manipulation, providing an
-intuitive set of tools for transforming and summarizing data.</li>
-<li>tidyr: A package designed to help tidy and reshape data, making it
-easier to work with in R.</li>
-<li>caret: A comprehensive package for building machine learning models,
-offering tools for data preprocessing, training, and model
-evaluation.</li>
-</ul>
-<p>To access any package in, it should be installed at firs (some of the
-packages are already loaded in R, but their number is quite less) To
-install the packages, the funtion, install.packages() is used. You only
-need to install a package once on your system.</p>
-<p>To exemplify, if we want to install ggplot2 package we write it as
-install.packages(“ggplot2”) (Remove the # before installing the package
-as # converts anything written behind it into a comment. )To use a
-package in R, it first needs to be installed. While R comes with a few
-pre-installed packages, the number of these is relatively small. Most
-packages need to be installed from external repositories like CRAN,
-Bioconductor, or GitHub.</p>
-<p>To install a package, you use the install.packages() function. Here’s
-how you would install the ggplot2 package:</p>
-<pre class="r"><code>#install.packages(&quot;ggplot2&quot;)</code></pre>
 </div>
-<div id="r-libraries" class="section level3">
-<h3>R libraries</h3>
-<p>In R, a library refers to the directory or location on your computer
-where installed packages are stored. It’s where R looks to find the
-packages you want to use. When you install a package, it is saved in
-your library, and you can then load it into your R session for use.</p>
-<p>To access the functions and datasets within a package, you need to
-load it into your R environment using the library() function. For
-example:</p>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
-<p>This command makes all of the functions and datasets from the ggplot2
-package available for use in your current session. But if you start the
-other session, you need to fetch the package again.</p>
+<div id="creating-a-new-column-with-a-formula-base-r" class="section level2">
+<h2>Creating a New Column with a Formula (Base R)</h2>
+<pre class="r"><code># Add a new column using a formula
+cars$new_col &lt;- 3 * cars$mpg + cars$qsec</code></pre>
+<p><code>cars$new_col</code>: This creates a new column (new_col) in the
+cars dataset.</p>
+<blockquote>
+<p>Formula: <code>new_col = 3 * mpg + qsec</code></p>
+</blockquote>
+<ul>
+<li>mpg (Miles per gallon) is multiplied by 3.</li>
+<li>qsec (1/4 mile time) is added to the result.</li>
+</ul>
+<p><br></p>
+<div id="display-the-column-names-to-check-if-the-new-column-is-added" class="section level4">
+<h4>Display the column names to check if the new column is added</h4>
+<pre class="r"><code>colnames(cars)</code></pre>
+<pre><code>##  [1] &quot;mpg&quot;     &quot;cyl&quot;     &quot;disp&quot;    &quot;hp&quot;      &quot;drat&quot;    &quot;wt&quot;      &quot;qsec&quot;   
+##  [8] &quot;vs&quot;      &quot;am&quot;      &quot;gear&quot;    &quot;carb&quot;    &quot;new_col&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="show-the-first-10-rows-of-the-dataset" class="section level4">
+<h4>Show the first 10 rows of the dataset</h4>
+<pre class="r"><code>cars |&gt; head(n = 10)</code></pre>
+<pre><code>##                    mpg cyl  disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1   74.52
+## Duster 360        14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4   58.74
+## Merc 240D         24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2   93.20
+## Merc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2   91.30
+## Merc 280          19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4   75.90</code></pre>
+<p><code>head(n = 10)</code>: Displays the first 10 rows of the modified
+dataset to verify the new column.</p>
+<p><br></p>
+</div>
+</div>
+<div id="using-dplyr-to-add-columns" class="section level2">
+<h2>Using <code>dplyr</code> to Add Columns</h2>
+<pre class="r"><code># Load the dplyr package for data manipulation
+library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.3.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code># Add a new column using mutate() and a formula
+cars &lt;- cars %&gt;%
+  mutate(new_2 = 3 * mpg + 2 * disp)</code></pre>
+<ul>
+<li><code>library(dplyr)</code>: Loads the dplyr package for data
+manipulation.</li>
+<li><code>%&gt;%</code> (Pipe operator): Sends the output of one
+operation as input to the next. (Shortcut: <strong>Ctrl + Shift +
+M</strong>.)</li>
+</ul>
+<blockquote>
+<p>Formula: <code>new_2 = 3 * mpg + 2 * disp</code></p>
+</blockquote>
+<ul>
+<li>mpg is multiplied by 3.</li>
+<li>disp (Displacement) is multiplied by 2 and added to the result.</li>
+</ul>
+<p>Using dplyr allows chaining multiple operations together, making code
+more readable.</p>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2
+## Mazda RX4         383.0
+## Mazda RX4 Wag     383.0
+## Datsun 710        284.4
+## Hornet 4 Drive    580.2
+## Hornet Sportabout 776.1
+## Valiant           504.3</code></pre>
+<p><br></p>
+<div id="adding-conditional-columns-using-case_when" class="section level3">
+<h3>1. Adding Conditional Columns Using <code>case_when</code></h3>
+<div id="adding-forumla-result-and-zero-0" class="section level4">
+<h4>Adding forumla result and zero (0)</h4>
+<pre class="r"><code># Add a new column with conditional logic
+cars &lt;- cars %&gt;%
+  dplyr::mutate(
+    new_3 = case_when(
+      cyl == 4 ~ mpg + 4 * disp,
+      TRUE ~ 0
+    )
+  )</code></pre>
+<p><strong>case_when:</strong> Adds a column (new_3) based on
+conditions:</p>
+<ul>
+<li>If <code>cyl</code> (number of cylinders) equals 4, the formula
+<code>mpg + 4 * disp</code> is applied.</li>
+<li>For all other cases <code>(TRUE)</code>, the value is 0.</li>
+<li><code>mutate()</code>: Adds or modifies columns.</li>
+</ul>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2 new_3
+## Mazda RX4         383.0   0.0
+## Mazda RX4 Wag     383.0   0.0
+## Datsun 710        284.4 454.8
+## Hornet 4 Drive    580.2   0.0
+## Hornet Sportabout 776.1   0.0
+## Valiant           504.3   0.0</code></pre>
+<p><br></p>
+</div>
+<div id="improved-example-replacing-0-with-na" class="section level4">
+<h4>Improved Example (Replacing 0 with NA):</h4>
+<pre class="r"><code># Add a new column with NA for unmatched conditions
+cars &lt;- cars %&gt;%
+  dplyr::mutate(
+    new_3 = case_when(
+      cyl == 4 ~ mpg + 4 * disp,
+      TRUE ~ NA_real_
+    )
+  )</code></pre>
+<ul>
+<li><code>NA_real_</code>: Represents missing values for numeric
+columns.</li>
+</ul>
+<p>Here, the all other values, except for with <code>cyl</code> as 4
+will have the result <code>NA</code> in the new column
+<code>new_3</code></p>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2 new_3
+## Mazda RX4         383.0    NA
+## Mazda RX4 Wag     383.0    NA
+## Datsun 710        284.4 454.8
+## Hornet 4 Drive    580.2    NA
+## Hornet Sportabout 776.1    NA
+## Valiant           504.3    NA</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="applying-multiple-conditions" class="section level3">
+<h3>2. Applying Multiple Conditions</h3>
+<pre class="r"><code># Add a new column with multiple conditions
+cars &lt;- cars %&gt;%
+  dplyr::mutate(
+    new_3 = case_when(
+      cyl == 4 ~ mpg + 4 * disp,
+      cyl == 6 ~ 3 * mpg + 4 * disp,
+      TRUE ~ 2 * mpg + 4 * disp
+    )
+  )</code></pre>
+<p>Multiple conditions can be handled in <code>case_when</code>:</p>
+<ul>
+<li>If <code>cyl == 4</code>, apply <code>mpg + 4 * disp</code>.</li>
+<li>If <code>cyl == 6</code>, apply
+<code>3 * mpg + 4 * disp</code>.</li>
+<li>For all other cases, apply <code>2 * mpg + 4 * disp</code>.</li>
+</ul>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2  new_3
+## Mazda RX4         383.0  703.0
+## Mazda RX4 Wag     383.0  703.0
+## Datsun 710        284.4  454.8
+## Hornet 4 Drive    580.2 1096.2
+## Hornet Sportabout 776.1 1477.4
+## Valiant           504.3  954.3</code></pre>
+<p><br></p>
+</div>
+<div id="combining-multiple-columns-with-logical-conditions" class="section level3">
+<h3>3. Combining Multiple Columns with Logical Conditions</h3>
+<pre class="r"><code># Add a new column with combined conditions on &#39;cyl&#39; and &#39;gear&#39;
+cars &lt;- cars %&gt;%
+  dplyr::mutate(
+    new_4 = case_when(
+      cyl == 6 &amp; gear == 4 ~ mpg + 4 * disp,
+      cyl == 4 &amp; gear == 5 ~ 2 * mpg + 4 * disp,
+      TRUE ~ 2 * mpg + 4 * disp
+    )
+  )</code></pre>
+<p>Adds <code>new_4</code> column based on combinations of
+<code>cyl</code> and <code>gear</code> (number of gears):</p>
+<ul>
+<li>If <code>cyl == 6</code> and <code>gear == 4</code>, apply
+<code>mpg + 4 * disp</code>.</li>
+<li>If <code>cyl == 4</code> and <code>gear == 5</code>, apply
+<code>2 * mpg + 4 * disp</code>.</li>
+<li>For all other values, apply <code>2 * mpg + 4 * disp</code></li>
+</ul>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2  new_3  new_4
+## Mazda RX4         383.0  703.0  661.0
+## Mazda RX4 Wag     383.0  703.0  661.0
+## Datsun 710        284.4  454.8  477.6
+## Hornet 4 Drive    580.2 1096.2 1074.8
+## Hornet Sportabout 776.1 1477.4 1477.4
+## Valiant           504.3  954.3  936.2</code></pre>
+<p><br></p>
+</div>
+<div id="using-column-indices-instead-of-names" class="section level3">
+<h3>4. Using Column Indices Instead of Names</h3>
+<pre class="r"><code># Add a new column with conditions using column indices
+cars &lt;- cars %&gt;%
+  mutate(
+    new_5 = case_when(
+      .[2] == 6 &amp; .[10] == 4 ~ 0,
+      cyl == 4 &amp; gear == 5 ~ 2 * mpg + 4 * disp,
+      TRUE ~ 2 * mpg + 4 * disp
+    )
+  )</code></pre>
+<ul>
+<li><code>.[2]</code>: Refers to the second column
+(<code>cyl</code>).</li>
+<li><code>.[10]</code>: Refers to the tenth column
+(<code>gear</code>).</li>
+</ul>
+<p>This approach is useful when column names are not known but indices
+are.</p>
+<p><strong>The <code>dplyr</code> pipe operator (<code>%&gt;%</code>)
+must be used. The base R pipe operator (<code>|&gt;</code>) doesn’t work
+if indices are to be used.</strong></p>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2  new_3  new_4  new_5
+## Mazda RX4         383.0  703.0  661.0    0.0
+## Mazda RX4 Wag     383.0  703.0  661.0    0.0
+## Datsun 710        284.4  454.8  477.6  477.6
+## Hornet 4 Drive    580.2 1096.2 1074.8 1074.8
+## Hornet Sportabout 776.1 1477.4 1477.4 1477.4
+## Valiant           504.3  954.3  936.2  936.2</code></pre>
+<p><br></p>
+</div>
+<div id="adding-string-values-using-case_when" class="section level3">
+<h3>5. Adding String Values Using case_when</h3>
+<pre class="r"><code># Add a new column with string values
+cars &lt;- cars %&gt;%
+  mutate(
+    new_string = case_when(
+      .[2] == 6 &amp; .[10] == 4 ~ &quot;string&quot;,
+      cyl == 4 &amp; gear == 5 ~ &quot;string2&quot;,
+      TRUE ~ as.character(2 * mpg + 4 * disp)
+    )
+  )</code></pre>
+<ul>
+<li><code>new_string</code>: A column with string values.</li>
+<li>If <code>.[2] == 6</code> and <code>.[10] == 4</code>, assign
+“string”.</li>
+<li>If <code>cyl == 4 and gear == 5</code>, assign “string2”.</li>
+<li>Otherwise, calculate <code>2 * mpg + 4 * disp</code> and convert it
+to a string using <code>as.character()</code>.</li>
+</ul>
+<p><strong>All the values must be string if one of the values is
+string</strong></p>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2  new_3  new_4  new_5 new_string
+## Mazda RX4         383.0  703.0  661.0    0.0     string
+## Mazda RX4 Wag     383.0  703.0  661.0    0.0     string
+## Datsun 710        284.4  454.8  477.6  477.6      477.6
+## Hornet 4 Drive    580.2 1096.2 1074.8 1074.8     1074.8
+## Hornet Sportabout 776.1 1477.4 1477.4 1477.4     1477.4
+## Valiant           504.3  954.3  936.2  936.2      936.2</code></pre>
+<p><br></p>
+</div>
+<div id="checking-data-structure" class="section level3">
+<h3>6. Checking Data Structure</h3>
+<pre class="r"><code># Check the structure of the modified dataset
+str(cars)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    32 obs. of  17 variables:
+##  $ mpg       : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl       : num  6 6 4 6 8 6 8 4 4 6 ...
+##  $ disp      : num  160 160 108 258 360 ...
+##  $ hp        : num  110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat      : num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##  $ wt        : num  2.62 2.88 2.32 3.21 3.44 ...
+##  $ qsec      : num  16.5 17 18.6 19.4 17 ...
+##  $ vs        : num  0 0 1 1 0 1 0 1 1 1 ...
+##  $ am        : num  1 1 1 0 0 0 0 0 0 0 ...
+##  $ gear      : num  4 4 4 3 3 3 3 4 4 4 ...
+##  $ carb      : num  4 4 1 1 2 1 4 2 2 4 ...
+##  $ new_col   : num  79.5 80 87 83.6 73.1 ...
+##  $ new_2     : num  383 383 284 580 776 ...
+##  $ new_3     : num  703 703 455 1096 1477 ...
+##  $ new_4     : num  661 661 478 1075 1477 ...
+##  $ new_5     : num  0 0 478 1075 1477 ...
+##  $ new_string: chr  &quot;string&quot; &quot;string&quot; &quot;477.6&quot; &quot;1074.8&quot; ...</code></pre>
+<p><code>str()</code>: Displays the structure of the dataset, showing
+column names, data types, and a preview of values.</p>
+<p><br></p>
+<pre class="r"><code>head(cars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb new_col
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4   79.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4   80.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1   87.01
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1   83.64
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2   73.12
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1   74.52
+##                   new_2  new_3  new_4  new_5 new_string
+## Mazda RX4         383.0  703.0  661.0    0.0     string
+## Mazda RX4 Wag     383.0  703.0  661.0    0.0     string
+## Datsun 710        284.4  454.8  477.6  477.6      477.6
+## Hornet 4 Drive    580.2 1096.2 1074.8 1074.8     1074.8
+## Hornet Sportabout 776.1 1477.4 1477.4 1477.4     1477.4
+## Valiant           504.3  954.3  936.2  936.2      936.2</code></pre>
+<p><br></p>
+<p><br> <br></p>
 </div>
 </div>
 

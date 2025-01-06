@@ -11,9 +11,9 @@
 
 <meta name="author" content="Sushank" />
 
-<meta name="date" content="2024-12-23" />
+<meta name="date" content="2025-01-06" />
 
-<title>Introduction to R and RStudio</title>
+<title>Non-Parametric Tests</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,247 +350,176 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Introduction to R and RStudio</h1>
+<h1 class="title toc-ignore">Non-Parametric Tests</h1>
 <h4 class="author"><a href="https://sushank.com.np">Sushank Pokhrel (Homepage)</a></h4>
 
+
 </div>
 
 
-<div id="what-is-r" class="section level2">
-<h2>What is R?</h2>
-<p>R is a programming language and software environment specifically
-designed for statistical computing, data analysis, and graphical
-representation. It is widely used by data scientists, statisticians, and
-researchers across various domains, including academia, business, and
-healthcare.</p>
-<div id="key-features-of-r" class="section level3">
-<h3>Key Features of R:</h3>
-<ol style="list-style-type: decimal">
-<li>Statistical Analysis: R provides a vast array of statistical
-techniques such as regression, hypothesis testing, time-series analysis,
-and machine learning.</li>
-<li>Data Visualization: Tools like <code>ggplot2</code> and
-<code>lattice</code> allow users to create high-quality
-visualizations.</li>
-<li>Community Support: R has a large and active community that
-contributes to its extensive library of packages available on CRAN
-(Comprehensive R Archive Network).</li>
-<li>Flexibility and Extensibility: You can create custom functions,
-packages, and scripts to suit your needs.</li>
-</ol>
-<p>R can be run on multiple operating systems, including Windows, macOS,
-and Linux, making it accessible to a wide audience.</p>
-<hr />
-</div>
-</div>
-<div id="what-is-rstudio" class="section level2">
-<h2>What is RStudio?</h2>
-<p>RStudio is an Integrated Development Environment (IDE) for R. It
-provides a user-friendly interface to write, debug, and execute R code
-more efficiently. RStudio makes working with R more intuitive by
-organizing various tools and features into a single workspace.</p>
-<div id="key-features-of-rstudio" class="section level3">
-<h3>Key Features of RStudio:</h3>
-<ol style="list-style-type: decimal">
-<li>Source Editor: Write, edit, and save R scripts (<code>.R</code>) or
-R Markdown files (<code>.Rmd</code>) in an organized way.</li>
-<li>Console: Interactively run R commands and view outputs.</li>
-<li>Environment/History: View and manage objects (data frames,
-variables, functions) created during your R session and access command
-history.</li>
-<li>Plots and Viewer: Visualize your data and access saved plots in one
-place.</li>
-<li>Packages Pane: Install, update, and load packages directly from the
-RStudio interface.</li>
-<li>Integration with Git: Perform version control operations for
-collaborative projects.</li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="comparing-r-and-rstudio" class="section level2">
-<h2>Comparing R and RStudio</h2>
-<table>
-<colgroup>
-<col width="23%" />
-<col width="38%" />
-<col width="38%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Aspect</th>
-<th>R</th>
-<th>RStudio</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Definition</td>
-<td>A programming language for statistical computing.</td>
-<td>An IDE for working with R.</td>
-</tr>
-<tr class="even">
-<td>Usage</td>
-<td>Can be run independently from a terminal or script.</td>
-<td>Provides a graphical interface for R.</td>
-</tr>
-<tr class="odd">
-<td>User-Friendliness</td>
-<td>Requires knowledge of command-line operations.</td>
-<td>More intuitive for beginners.</td>
-</tr>
-<tr class="even">
-<td>Additional Features</td>
-<td>Focused solely on running R code.</td>
-<td>Includes debugging, plotting, and file management.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-</div>
-<div id="why-use-r-and-rstudio" class="section level2">
-<h2>Why Use R and RStudio?</h2>
-<p>Using R alongside RStudio creates a seamless workflow for data
-analysis, visualization, and reporting. Here are some examples of how
-they work together:</p>
-<ol style="list-style-type: decimal">
-<li>Efficient Coding: Write and test code in the RStudio source editor
-while running commands interactively in the console.</li>
-<li>Data Visualization: Use R packages like <code>ggplot2</code> to
-generate visualizations and preview them in the Plots pane.</li>
-<li>Reproducible Research: Use R Markdown in RStudio to create
-reproducible reports that combine text, code, and results.</li>
-</ol>
-<hr />
-</div>
-<div id="getting-started-with-r-and-rstudio" class="section level2">
-<h2>Getting Started with R and RStudio</h2>
-<div id="step-1-installing-r" class="section level3">
-<h3>Step 1: Installing R</h3>
-<ol style="list-style-type: decimal">
-<li>Go to the official R website: <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>.</li>
-<li>Download the version of R suitable for your operating system
-(Windows, macOS, or Linux).</li>
-<li>Follow the installation prompts to set up R.</li>
-</ol>
-</div>
-<div id="step-2-installing-rstudio" class="section level3">
-<h3>Step 2: Installing RStudio</h3>
-<ol style="list-style-type: decimal">
-<li>Go to the RStudio website: <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>.</li>
-<li>Download the free RStudio Desktop version.</li>
-<li>Install RStudio after installing R (RStudio requires R to
-function).</li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="exploring-the-rstudio-interface" class="section level2">
-<h2>Exploring the RStudio Interface</h2>
-<p>Once you open RStudio, you’ll see four main panes:</p>
-<div id="source-editor-top-left" class="section level3">
-<h3>1. Source Editor (Top-Left):</h3>
-<ul>
-<li>Used for writing R scripts or R Markdown files.</li>
-<li>Features syntax highlighting and code completion.</li>
-</ul>
-</div>
-<div id="console-bottom-left" class="section level3">
-<h3>2. Console (Bottom-Left):</h3>
-<ul>
-<li>Interactively execute R commands.</li>
-<li>Displays immediate outputs, errors, and warnings.</li>
-</ul>
-</div>
-<div id="environmenthistory-top-right" class="section level3">
-<h3>3. Environment/History (Top-Right):</h3>
-<ul>
-<li>Environment Tab: Lists all objects (e.g., variables, datasets) in
-memory.</li>
-<li>History Tab: Tracks previously executed commands.</li>
-</ul>
-</div>
-<div id="filesplotspackageshelpviewer-bottom-right" class="section level3">
-<h3>4. Files/Plots/Packages/Help/Viewer (Bottom-Right):</h3>
-<ul>
-<li>Files: Manage files in your working directory.</li>
-<li>Plots: View plots created in your R session.</li>
-<li>Packages: Install, load, or update R packages.</li>
-<li>Help: Access documentation for R functions and packages.</li>
-<li>Viewer: Preview web content, such as Shiny apps or R Markdown
-outputs.</li>
-</ul>
-<hr />
-</div>
-<div id="r-packages-and-libraries." class="section level3">
-<h3>R packages and Libraries.</h3>
-<p>In R, packages and libraries are integral components that help extend
-the capabilities of the base R environment. They are both essential in
-enhancing the functionality of R, enabling users to perform complex
-tasks with ease, without having to reinvent the wheel.</p>
-</div>
-<div id="r-package." class="section level3">
-<h3>R package.</h3>
-<p>An R package is a bundled collection of pre-written R functions,
-datasets, and sometimes compiled code that is designed to extend the
-functionality of R. Packages are created to solve specific tasks or
-provide tools within certain domains, such as data visualization,
-machine learning, or statistical analysis. These packages can be shared
-with others, making it easier for users to access and utilize code
-written by others, saving time and effort.</p>
+<p>The Kruskal-Wallis test is a non-parametric test used to compare the
+medians of two or more independent groups. It is often used as an
+alternative to ANOVA when the data does not follow a normal
+distribution. Kruskal Wallis Test Doesn’t assume for the normality of
+the data.</p>
+<div id="loading-and-filtering-the-dataset" class="section level3">
+<h3>1. Loading and filtering the dataset</h3>
+<div id="loading-the-dataset" class="section level4">
+<h4>Loading the dataset</h4>
+<pre class="r"><code>electricity &lt;- readxl::read_excel(
+  &quot;D:/Drive/r_training/Datasets/electricity_utility_rates.xlsx&quot;,
+  sheet = &quot;sheet1&quot;
+)
+
+# Inspect the structure of the dataset
+str(electricity)</code></pre>
+<pre><code>## tibble [52,177 × 9] (S3: tbl_df/tbl/data.frame)
+##  $ zip         : num [1:52177] 85321 36560 36513 36280 35473 ...
+##  $ eiaid       : num [1:52177] 176 195 195 195 195 195 195 195 195 195 ...
+##  $ utility_name: chr [1:52177] &quot;Ajo Improvement Co&quot; &quot;Alabama Power Co&quot; &quot;Alabama Power Co&quot; &quot;Alabama Power Co&quot; ...
+##  $ state       : chr [1:52177] &quot;AZ&quot; &quot;AL&quot; &quot;AL&quot; &quot;AL&quot; ...
+##  $ service_type: chr [1:52177] &quot;Bundled&quot; &quot;Bundled&quot; &quot;Bundled&quot; &quot;Bundled&quot; ...
+##  $ ownership   : chr [1:52177] &quot;Investor Owned&quot; &quot;Investor Owned&quot; &quot;Investor Owned&quot; &quot;Investor Owned&quot; ...
+##  $ comm_rate   : num [1:52177] 0.0879 0.1219 0.1219 0.1219 0.1219 ...
+##  $ ind_rate    : num [1:52177] 0 0.0637 0.0637 0.0637 0.0637 ...
+##  $ res_rate    : num [1:52177] 0.0939 0.1351 0.1351 0.1351 0.1351 ...</code></pre>
 <p><br></p>
-<p>R packages are stored in repositories such as:</p>
+</div>
+<div id="viewing-the-unique-values-of-the-column-state-from-data-electricity" class="section level4">
+<h4>Viewing the unique values of the column <code>state</code> from data
+<code>electricity</code></h4>
+<pre class="r"><code>unique(electricity$state)</code></pre>
+<pre><code>##  [1] &quot;AZ&quot; &quot;AL&quot; &quot;AK&quot; &quot;MI&quot; &quot;IA&quot; &quot;VA&quot; &quot;WV&quot; &quot;AR&quot; &quot;TN&quot; &quot;NJ&quot; &quot;MD&quot; &quot;ME&quot; &quot;NC&quot; &quot;SC&quot; &quot;NY&quot;
+## [16] &quot;LA&quot; &quot;WY&quot; &quot;OH&quot; &quot;PA&quot; &quot;IL&quot; &quot;CT&quot; &quot;WI&quot; &quot;DE&quot; &quot;NM&quot; &quot;TX&quot; &quot;KS&quot; &quot;MO&quot; &quot;OK&quot; &quot;MA&quot; &quot;FL&quot;
+## [31] &quot;GA&quot; &quot;VT&quot; &quot;HI&quot; &quot;ID&quot; &quot;OR&quot; &quot;IN&quot; &quot;KY&quot; &quot;MT&quot; &quot;ND&quot; &quot;SD&quot; &quot;MN&quot; &quot;MS&quot; &quot;RI&quot; &quot;NV&quot; &quot;CA&quot;
+## [46] &quot;UT&quot; &quot;WA&quot; &quot;DC&quot; &quot;CO&quot; &quot;NH&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="filter-data-for-only-four-of-the-states." class="section level4">
+<h4>Filter data for only four of the states.</h4>
+<pre class="r"><code>elec_filt &lt;- electricity |&gt;
+  dplyr::filter(
+    state %in% c(&quot;AZ&quot;, &quot;MI&quot;, &quot;IA&quot;, &quot;VA&quot;)
+  )</code></pre>
+</div>
+</div>
+<div id="normality-test" class="section level3">
+<h3>2. Normality Test</h3>
+<pre class="r"><code># Perform the test directly for each states. 
+shapiro.test(elec_filt[elec_filt$state == &quot;AZ&quot;, &quot;comm_rate&quot;][[1]])</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  elec_filt[elec_filt$state == &quot;AZ&quot;, &quot;comm_rate&quot;][[1]]
+## W = 0.61595, p-value &lt; 2.2e-16</code></pre>
+<pre class="r"><code>shapiro.test(elec_filt[elec_filt$state == &quot;MI&quot;, &quot;comm_rate&quot;][[1]])</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  elec_filt[elec_filt$state == &quot;MI&quot;, &quot;comm_rate&quot;][[1]]
+## W = 0.77735, p-value &lt; 2.2e-16</code></pre>
+<pre class="r"><code>shapiro.test(elec_filt[elec_filt$state == &quot;IA&quot;, &quot;comm_rate&quot;][[1]])</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  elec_filt[elec_filt$state == &quot;IA&quot;, &quot;comm_rate&quot;][[1]]
+## W = 0.63302, p-value &lt; 2.2e-16</code></pre>
+<pre class="r"><code>shapiro.test(elec_filt[elec_filt$state == &quot;VA&quot;, &quot;comm_rate&quot;][[1]])</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  elec_filt[elec_filt$state == &quot;VA&quot;, &quot;comm_rate&quot;][[1]]
+## W = 0.71293, p-value &lt; 2.2e-16</code></pre>
+<p><br></p>
+<p>Since the distributions are not normal (p&lt;0.05), we proceed with
+the Non-Parametric Tests</p>
+</div>
+<div id="kruskal-wallis-test." class="section level3">
+<h3>3. Kruskal-Wallis test.</h3>
+<pre class="r"><code># Perform the Kruskal-Wallis test
+library(rstatix)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rstatix&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter</code></pre>
+<pre class="r"><code>elec_kruskal &lt;- kruskal_test(
+  data = elec_filt,
+  formula = comm_rate ~ state
+)
+
+elec_kruskal</code></pre>
+<pre><code>## # A tibble: 1 × 6
+##   .y.           n statistic    df     p method        
+## * &lt;chr&gt;     &lt;int&gt;     &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;         
+## 1 comm_rate  5897     1968.     3     0 Kruskal-Wallis</code></pre>
 <ul>
-<li>CRAN (Comprehensive R Archive Network): The main repository for R
-packages, offering a vast collection of user-contributed packages.</li>
-<li>Bioconductor: A repository specializing in bioinformatics packages,
-particularly for the analysis of genomic data.</li>
-<li>GitHub: A platform where developers can share R packages (sometimes
-in development or not yet officially published to CRAN).</li>
+<li>p-value &lt; 0.05: At least one group differs significantly.</li>
+<li>p-value ≥ 0.05: No significant difference among groups.</li>
 </ul>
 <p><br></p>
-<p>Examples of Popular R Packages:</p>
-<ul>
-<li>ggplot2: A powerful package for creating complex and customizable
-data visualizations.</li>
-<li>dplyr: A popular package for data manipulation, providing an
-intuitive set of tools for transforming and summarizing data.</li>
-<li>tidyr: A package designed to help tidy and reshape data, making it
-easier to work with in R.</li>
-<li>caret: A comprehensive package for building machine learning models,
-offering tools for data preprocessing, training, and model
-evaluation.</li>
-</ul>
-<p>To access any package in, it should be installed at firs (some of the
-packages are already loaded in R, but their number is quite less) To
-install the packages, the funtion, install.packages() is used. You only
-need to install a package once on your system.</p>
-<p>To exemplify, if we want to install ggplot2 package we write it as
-install.packages(“ggplot2”) (Remove the # before installing the package
-as # converts anything written behind it into a comment. )To use a
-package in R, it first needs to be installed. While R comes with a few
-pre-installed packages, the number of these is relatively small. Most
-packages need to be installed from external repositories like CRAN,
-Bioconductor, or GitHub.</p>
-<p>To install a package, you use the install.packages() function. Here’s
-how you would install the ggplot2 package:</p>
-<pre class="r"><code>#install.packages(&quot;ggplot2&quot;)</code></pre>
 </div>
-<div id="r-libraries" class="section level3">
-<h3>R libraries</h3>
-<p>In R, a library refers to the directory or location on your computer
-where installed packages are stored. It’s where R looks to find the
-packages you want to use. When you install a package, it is saved in
-your library, and you can then load it into your R session for use.</p>
-<p>To access the functions and datasets within a package, you need to
-load it into your R environment using the library() function. For
-example:</p>
-<pre class="r"><code>library(ggplot2)</code></pre>
+<div id="post-hoc-analysis-pairwise-comparision-mann-whittney-u-test." class="section level3">
+<h3>4. Post Hoc Analysis (Pairwise Comparision): Mann Whittney U
+Test.</h3>
+<p>When the Kruskal-Wallis test indicates significant differences, a
+pairwise Wilcoxon test (also known as the Mann-Whitney U test) is used
+to identify which groups differ. Wilcoxn test is also an alternative to
+t-test. Therefore, if we have to compare two datasets and either one of
+them is non-normally distributed, we can use wilcoxon test (or U
+test).</p>
+<pre class="r"><code>pairwise_results &lt;- wilcox_test(
+  data = elec_filt,
+  formula = comm_rate ~ state
+)
+pairwise_results</code></pre>
+<pre><code>## # A tibble: 6 × 9
+##   .y.       group1 group2    n1    n2 statistic         p     p.adj p.adj.signif
+## * &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;       
+## 1 comm_rate AZ     IA       389  1154    237617 6.6 e-  2 1.32e-  1 ns          
+## 2 comm_rate AZ     MI       389  2257    461718 9.6 e-  2 1.32e-  1 ns          
+## 3 comm_rate AZ     VA       389  2097    814126 1.13e-227 5.65e-227 ****        
+## 4 comm_rate IA     MI      1154  2257   1560869 6.28e- 22 1.88e- 21 ****        
+## 5 comm_rate IA     VA      1154  2097   2262768 0         0         ****        
+## 6 comm_rate MI     VA      2257  2097   3548967 2.45e-182 9.80e-182 ****</code></pre>
+<p><br></p>
+</div>
+<div id="visualizing-significant-differences" class="section level3">
+<h3>5. Visualizing Significant Differences</h3>
+<p>To visually display the results, we can annotate boxplots or violin
+plots with significance markers.</p>
+<pre class="r"><code># ggsignif package is used as previous. 
+library(ggsignif)
+library(ggplot2)</code></pre>
 <pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
-<p>This command makes all of the functions and datasets from the ggplot2
-package available for use in your current session. But if you start the
-other session, you need to fetch the package again.</p>
+<pre class="r"><code>ggplot(
+  data = elec_filt,
+  aes(x = state, y = comm_rate, fill = state)
+) +
+  geom_violin() +
+  geom_boxplot(width = 0.15) +
+  geom_signif(
+    comparisons = list(
+                       c(&quot;IA&quot;, &quot;MI&quot;),
+                        c(&quot;MI&quot;, &quot;VA&quot;),
+                       c(&quot;IA&quot;, &quot;VA&quot;),
+                      
+                       c(&quot;AZ&quot;, &quot;VA&quot;)
+                       ),
+    annotations = c(&quot;****&quot;, &quot;****&quot;, &quot;****&quot;, &quot;****&quot;),
+    y_position = c(0.18, 0.2, 0.22, 0.24)
+  ) +
+  theme_classic() +
+  labs(
+    title = &quot;Significant Differences in Commercial Rates by State&quot;,
+    x = &quot;State&quot;,
+    y = &quot;Commercial Rate&quot;
+  )</code></pre>
+<p><img role="img" src="data:image/png;base64,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" width="672" /></p>
+<p><br></p>
 </div>
+<div id="section" class="section level1">
+<h1>…</h1>
 </div>
 
 
