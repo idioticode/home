@@ -334,22 +334,29 @@ code {}
   Up arrow
   ------------------*/
 
-  .up-arrow-button {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    bottom: 35px;
-    right: 40px; /* Adjusted to the bottom-right corner */
-    z-index: 1000;
-    display: none; /* Initially hidden */
-    opacity: 0; /* Fully transparent */
-	visibility: hidden; /* Hide the element completely when not visible */
-    transition: opacity 3s ease-in-out, visibility 3s ease-in-out; /* Smooth fade effect */
+.up-arrow-button {
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	bottom: 35px;
+	right: 40px;
+	/* Adjusted to the bottom-right corner */
+	z-index: 1000;
+	display: none;
+	/* Initially hidden */
+	opacity: 0;
+	/* Fully transparent */
+	visibility: hidden;
+	/* Hide the element completely when not visible */
+	transition: opacity 3s ease-in-out, visibility 3s ease-in-out;
+	/* Smooth fade effect */
 }
 
 .up-arrow-button.visible {
-    display: block; /* Display when visible */
-    opacity: 1; /* Fully visible */
+	display: block;
+	/* Display when visible */
+	opacity: 1;
+	/* Fully visible */
 }
 
 .up-arrow-button svg {
@@ -1149,6 +1156,11 @@ Download cv button:
 	Abstract
 =====================	 
 ----------------------*/
+.link-section {
+	background-color: var(--base-color);
+
+}
+
 .abstract-section {
 	background-color: var(--base-color);
 }
