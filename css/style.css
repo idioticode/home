@@ -533,6 +533,8 @@ Download cv button:
 	background-color: var(--base-color);
 }
 
+
+
 /* Icon color */
 .svg-icon {
 	color: var(--text-color);
@@ -1061,6 +1063,83 @@ Download cv button:
 	}
 }
 
+/*---------------------
+=====================
+	Research Description
+=====================	 
+----------------------*/
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-card {
+    flex: 0 0 100%;
+    background: var(--base-color);
+    text-align: center;
+}
+
+
+.carousel-card p {
+    text-align: left; /* Left-align the text */
+}
+
+.carousel-card img {
+    margin-top: 20px;
+	width: 80%;
+}
+
+
+.carousel-navigation {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Allow content behind the buttons to be clickable */
+    z-index: 10;
+}
+
+.carousel-navigation button {
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    pointer-events: auto; /* Re-enable pointer events for the buttons */
+}
+
+.carousel-navigation .prev {
+    margin-left: 20px;  
+}
+
+.carousel-navigation .next {
+    margin-right: 20px;
+}
+
+.carousel-navigation button {
+    outline: none; /* Removes the focus outline */
+}
+
+.carousel-navigation button:focus {
+    outline: none; /* Ensures focus outline is disabled */
+    box-shadow: none; /* Removes any default focus shadow */
+}
+
+
 
 /*---------------------
 =====================
@@ -1140,6 +1219,111 @@ Download cv button:
 	R-Tutorials
 =====================	 
 ----------------------*/
+.tutorial-section {
+	background-color: var(--base-color);
+}
+
+
+.topics-grid {
+	display: flex;
+	flex-wrap: wrap;
+	/* Allows items to wrap onto the next row */
+	gap: 40px;
+	/* Space between cards */
+	justify-content: space-between;
+	/* Distribute cards evenly */
+}
+
+.topic-item {
+	border-radius: 8px;
+	/* Rounded corners */
+	padding: 20px;
+	background-color: var(--text-color);
+	/* Light background */
+	flex: 1 1 calc(48% - 10px);
+	/* Cards take half the row width minus the gap */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* Center-align the content */
+	text-decoration: none;
+	/* Remove underline from the link */
+	color: inherit;
+	/* Inherit text color */
+	transition: transform 0.3s;
+	/* Smooth hover effect */
+	min-height: 150px;
+	/* Ensures uniform height for cards */
+	box-sizing: border-box;
+	/* Prevents padding from affecting width */
+}
+
+.topic-item:hover {
+	transform: scale(1.1);
+	/* Slight zoom on hover */
+	text-decoration: none;
+	/* Ensure no underline appears on hover */
+}
+
+.topics-grid h3 {
+	color: var(--base-color);
+}
+
+.nested-card {
+	flex: 1 1 calc(48% - 10px);
+	/* Same size as other cards */
+	position: relative;
+}
+
+.nested-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	/* Arrange buttons properly */
+	gap: 10px;
+	/* Add spacing between nested buttons */
+	margin-top: 10px;
+}
+
+.nested-buttons .site-btn {
+	color: var(--text-color);
+}
+
+.nested-buttons .nested {
+	flex: 1 1 calc(45% - 10px);
+	/* Two buttons per row with spacing */
+	font-size: 12px;
+	/* Smaller nested button font */
+	text-align: center;
+	padding: 6px 10px;
+	background-color: var(--base-color);
+	/* Secondary button color */
+	border-radius: 4px;
+	transition: transform 0.3s;
+	/* Smooth hover effect */
+
+}
+
+.nested-buttons .nested:hover {
+	text-decoration: none;
+	/* Ensure no underline appears on hover */
+	transform: scale(1.15);
+	/* Slight zoom on hover */
+
+
+}
+
+@media (max-width: 768px) {
+	.topic-item {
+		flex: 1 1 calc(100% - 20px);
+		/* Stacks cards to full width on smaller screens */
+	}
+
+	.nested-buttons .nested {
+		flex: 1 1 100%;
+		/* Stacks nested buttons on smaller screens */
+	}
+}
+
 
 /*---------------------
 =====================

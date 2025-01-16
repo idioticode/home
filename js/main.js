@@ -129,6 +129,7 @@ for (let link of links) {
 		window.addEventListener("hashchange", updateVisibility);
 	});
 
+	
 
 
 })(jQuery);
