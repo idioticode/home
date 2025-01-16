@@ -331,6 +331,100 @@
 </div>
 
 
+<style>
+
+:root {
+	--base-color: black;
+	--text-color: white;
+	--accent-color: #222222;
+	--navbar-bg: rgba(0, 0, 0, 0.6);
+
+}
+
+.lightmode {
+	--base-color: white;
+	--text-color: black;
+	--accent-color: #cecece;
+	--navbar-bg: rgba(255, 255, 255, 0.6);
+
+}
+
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-card {
+    flex: 0 0 100%;
+    background: var(--base-color);
+    text-align: center;
+}
+
+
+.carousel-card p {
+    text-align: left; /* Left-align the text */
+}
+
+.carousel-card img {
+    margin-top: 20px;
+	width: 80%;
+}
+
+
+.carousel-navigation {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Allow content behind the buttons to be clickable */
+    z-index: 10;
+}
+
+.carousel-navigation button {
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    pointer-events: auto; /* Re-enable pointer events for the buttons */
+}
+
+.carousel-navigation .prev {
+    margin-left: 20px;  
+}
+
+.carousel-navigation .next {
+    margin-right: 20px;
+}
+
+.carousel-navigation button {
+    outline: none; /* Removes the focus outline */
+}
+
+.carousel-navigation button:focus {
+    outline: none; /* Ensures focus outline is disabled */
+    box-shadow: none; /* Removes any default focus shadow */
+}
+
+
+
+</style>
+
+
 <script>
     let currentIndex = 0;
 
