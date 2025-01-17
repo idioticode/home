@@ -421,6 +421,30 @@
 }
 
 
+/* Mobile screens (up to 600px wide) */
+@media (max-width: 575px) {
+
+.carousel-container {
+   max-width: 90%;
+}
+
+
+.carousel-navigation .prev {
+    margin-left: -10px;  
+}
+
+.carousel-navigation .next {
+    margin-right: -10px;
+}
+
+
+.carousel-navigation button {
+    font-size: 30px;
+}
+
+
+
+}
 
 </style>
 
@@ -445,6 +469,37 @@ function moveCarousel(direction) {
     const offset = -currentIndex * 100; // Move by 100% width for each card
     carousel.style.transform = `translateX(${offset}%)`;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".carousel-container");
+    let startX = 0;
+    let endX = 0;
+
+    // Touch start event
+    carousel.addEventListener("touchstart", function (event) {
+        startX = event.touches[0].clientX; // Record the starting X position
+    });
+
+    // Touch end event
+    carousel.addEventListener("touchend", function (event) {
+        endX = event.changedTouches[0].clientX; // Record the ending X position
+        handleSwipe(); // Call the swipe handler
+    });
+
+    // Swipe handler
+    function handleSwipe() {
+        const swipeThreshold = 50; // Minimum distance for a swipe to be registered
+        if (startX - endX > swipeThreshold) {
+            // Swipe left
+            document.querySelector(".next").click();
+        } else if (endX - startX > swipeThreshold) {
+            // Swipe right
+            document.querySelector(".prev").click();
+        }
+    }
+});
+
+
 
 </script>
 
