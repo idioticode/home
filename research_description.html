@@ -470,18 +470,39 @@ function moveCarousel(direction) {
     carousel.style.transform = `translateX(${offset}%)`;
 }
 
+// Sliding
+
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel-container");
     let startX = 0;
     let endX = 0;
+    let isZooming = false;
 
     // Touch start event
     carousel.addEventListener("touchstart", function (event) {
+        if (event.touches.length > 1) {
+            // More than one finger indicates zooming
+            isZooming = true;
+            return;
+        }
+        isZooming = false; // Reset zooming state for single-touch
         startX = event.touches[0].clientX; // Record the starting X position
+    });
+
+    // Touch move event
+    carousel.addEventListener("touchmove", function (event) {
+        if (event.touches.length > 1) {
+            // Update zooming state if multiple fingers are detected
+            isZooming = true;
+        }
     });
 
     // Touch end event
     carousel.addEventListener("touchend", function (event) {
+        if (isZooming) {
+            // Do not process swipe if zooming was detected
+            return;
+        }
         endX = event.changedTouches[0].clientX; // Record the ending X position
         handleSwipe(); // Call the swipe handler
     });
