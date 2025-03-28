@@ -264,7 +264,7 @@ img {
 	  top: auto;       /* Remove top positioning */
 	  bottom: 0;       /* Stick to bottom */
 	  backdrop-filter: none; /* Optional: Remove blur for performance */
-	  border-top: 1px solid var(--accent-color); /* Optional: Add a top border */
+	  border-top: 1px solid var(--text-color); /* Optional: Add a top border */
 	  backdrop-filter: blur(100px); /* Apply blur to the background */
 		-webkit-backdrop-filter: blur(100px);	/* For Safari */
 	}
@@ -290,25 +290,60 @@ img {
 	  flex: 1;        /* Each item takes equal width */
 	  text-align: center;
 	}
-  
-	.nav-link {
-	  padding: 0.5rem; /* Smaller padding for mobile */
-	  font-size: 0.7rem; /* Smaller font */
-
-	}
-  
+    
 	/* Theme button adjustments */
 	.theme-button {
 	  display: none;   /* Hide theme switcher on mobile (or keep it if you want) */
 	}
   
-	/* Optional: Shrink active link size */
+	  }
+
+
+
+
+	  @media (max-width: 400px) {
+		.nav-link {
+		  padding: 0.5rem;
+		  font-size: 0.7rem; /* Smaller font for tiny screens */
+		}
+	  
+		/* Optional: Shrink active link size */
+		.nav-link.active {
+		  font-size: 0.9rem;
+		}
+	  }
+
+
+	  @media (max-width: 475px) and (max-width: 575px){
+		.nav-link {
+			padding: 0.5rem; /* Smaller padding for mobile */
+			font-size: 0.76rem; /* Smaller font */
+	  
+		  }
+	
+		/* Optional: Shrink active link size */
+		.nav-link.active {
+		  font-size: 0.9rem;
+		}
+	
+	  }
+
+
+  /* Tablet */
+	@media (min-width: 575px) and (max-width: 768px) {
+	.nav-link {
+	  font-size: 1rem; /* Slightly larger than mobile */
+	  padding: 1rem 1rem; /* Adjust padding if needed */
+	}
+	
+	/* Active link scaling */
 	.nav-link.active {
-	  font-size: 0.9rem;
+	  font-size: 1.5rem; /* Emphasize active tab */
 	}
   }
 
 
+  
 /*----------------
   Up arrow
   ------------------*/
@@ -318,7 +353,7 @@ img {
 	height: 30px;
 	position: fixed;
 	bottom: 35px;
-	right: 40px;
+	right: 10px;
 	/* Adjusted to the bottom-right corner */
 	z-index: 1000;
 	display: none;
@@ -348,8 +383,8 @@ img {
 @media (max-width: 768px) {
 	.up-arrow-button {
 		position: fixed;
-		bottom: 60px;
-		right: 5px;
+		bottom: 70px;
+		right: 10px;
 	}
 
   }
