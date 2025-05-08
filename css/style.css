@@ -3,13 +3,14 @@ body {
 	font-family: "Rubik", sans-serif;
 	font-weight: 500;
 	font-style: normal;
-	
+
 }
 
 :root {
 	--base-color: black;
 	--text-color: white;
-	--accent-color: #222222;
+	--accent-color: #4b4545;
+	--dark-accent: #a7a2a2;
 	--navbar-bg: rgba(0, 0, 0, 0.6);
 
 }
@@ -18,11 +19,12 @@ body {
 	--base-color: white;
 	--text-color: black;
 	--accent-color: #cecece;
+	--dark-accent: #a7a2a2;
 	--navbar-bg: rgba(255, 255, 255, 0.6);
 
 }
 
-body{
+body {
 	background-color: var(--base-color);
 }
 
@@ -126,9 +128,11 @@ img {
 
 .nav-container {
 	display: flex;
-	justify-content: center; /* Center the nav items */
-	position: relative; /* Needed for absolute positioning */
-	  align-items: center;
+	justify-content: center;
+	/* Center the nav items */
+	position: relative;
+	/* Needed for absolute positioning */
+	align-items: center;
 	height: 3rem;
 	/* Explicitly set the height for consistent spacing */
 }
@@ -213,11 +217,13 @@ img {
 
 .theme-button {
 	position: absolute;
-	right: 0.1rem; /* Adjust spacing from right edge */
+	right: 0.1rem;
+	/* Adjust spacing from right edge */
 	top: 50%;
-	transform: translateY(-50%); /* Vertical centering */
-  }
-  
+	transform: translateY(-50%);
+	/* Vertical centering */
+}
+
 
 #theme-switch svg:last-child {
 	display: none;
@@ -252,98 +258,117 @@ img {
 @media (max-width: 768px) {
 
 	body {
-		padding-bottom: 65px; /* Match navbar height */
-	  }
+		padding-bottom: 65px;
+		/* Match navbar height */
+	}
 
-	  .theme-text {
+	.theme-text {
 		display: none;
-	  }
-	  
+	}
+
 
 	.horizontal-nav {
-	  top: auto;       /* Remove top positioning */
-	  bottom: 0;       /* Stick to bottom */
-	  backdrop-filter: none; /* Optional: Remove blur for performance */
-	  border-top: 1px solid var(--text-color); /* Optional: Add a top border */
-	  backdrop-filter: blur(100px); /* Apply blur to the background */
-		-webkit-backdrop-filter: blur(100px);	/* For Safari */
+		top: auto;
+		/* Remove top positioning */
+		bottom: 0;
+		/* Stick to bottom */
+		backdrop-filter: none;
+		/* Optional: Remove blur for performance */
+		border-top: 1px solid var(--text-color);
+		/* Optional: Add a top border */
+		backdrop-filter: blur(100px);
+		/* Apply blur to the background */
+		-webkit-backdrop-filter: blur(100px);
+		/* For Safari */
 	}
 
 
 	.nav-container {
-	  height: 65px;    /* Allow flexible height */
-	  padding: 0rem; /* Add some padding */
+		height: 65px;
+		/* Allow flexible height */
+		padding: 0rem;
+		/* Add some padding */
 	}
-  
+
 
 	.navbar-nav {
-	  display: flex;   /* Always show nav (no hide/show) */
-	  flex-direction: row;
-	  gap: 0.66rem;          /* Remove gap (use padding instead) */
-	  padding: 0;
-	  list-style: none;
-	  margin: 0 auto;
+		display: flex;
+		/* Always show nav (no hide/show) */
+		flex-direction: row;
+		gap: 0.66rem;
+		/* Remove gap (use padding instead) */
+		padding: 0;
+		list-style: none;
+		margin: 0 auto;
 
 	}
-  
+
 	.nav-item {
-	  flex: 1;        /* Each item takes equal width */
-	  text-align: center;
+		flex: 1;
+		/* Each item takes equal width */
+		text-align: center;
 	}
-    
+
 	/* Theme button adjustments */
 	.theme-button {
-	  display: none;   /* Hide theme switcher on mobile (or keep it if you want) */
+		display: none;
+		/* Hide theme switcher on mobile (or keep it if you want) */
 	}
-  
-	  }
+
+}
 
 
 
 
-	  @media (max-width: 400px) {
-		.nav-link {
-		  padding: 0.5rem;
-		  font-size: 0.7rem; /* Smaller font for tiny screens */
-		}
-	  
-		/* Optional: Shrink active link size */
-		.nav-link.active {
-		  font-size: 0.9rem;
-		}
-	  }
-
-
-	  @media (max-width: 475px) and (max-width: 575px){
-		.nav-link {
-			padding: 0.5rem; /* Smaller padding for mobile */
-			font-size: 0.76rem; /* Smaller font */
-	  
-		  }
-	
-		/* Optional: Shrink active link size */
-		.nav-link.active {
-		  font-size: 0.9rem;
-		}
-	
-	  }
-
-
-  /* Tablet */
-	@media (min-width: 575px) and (max-width: 768px) {
+@media (max-width: 400px) {
 	.nav-link {
-	  font-size: 1rem; /* Slightly larger than mobile */
-	  padding: 1rem 1rem; /* Adjust padding if needed */
+		padding: 0.5rem;
+		font-size: 0.7rem;
+		/* Smaller font for tiny screens */
 	}
-	
+
+	/* Optional: Shrink active link size */
+	.nav-link.active {
+		font-size: 0.9rem;
+	}
+}
+
+
+@media (max-width: 475px) and (max-width: 575px) {
+	.nav-link {
+		padding: 0.5rem;
+		/* Smaller padding for mobile */
+		font-size: 0.76rem;
+		/* Smaller font */
+
+	}
+
+	/* Optional: Shrink active link size */
+	.nav-link.active {
+		font-size: 0.9rem;
+	}
+
+}
+
+
+/* Tablet */
+@media (min-width: 575px) and (max-width: 768px) {
+	.nav-link {
+		font-size: 1rem;
+		/* Slightly larger than mobile */
+		padding: 1rem 1rem;
+		/* Adjust padding if needed */
+	}
+
 	/* Active link scaling */
 	.nav-link.active {
-	  font-size: 1.5rem; /* Emphasize active tab */
+		font-size: 1.5rem;
+		/* Emphasize active tab */
 	}
-  }
+}
 
 
-  
+
 /*----------------
   Up arrow
   ------------------*/
@@ -387,8 +412,8 @@ img {
 		right: 10px;
 	}
 
-  }
-  
+}
+
 
 
 /*---------------------
@@ -560,17 +585,13 @@ Download cv button:
 	background-color: var(--base-color);
 }
 
-
-
 /* Icon color */
 .svg-icon {
 	color: var(--text-color);
-	width: 100%;
-	/* Make sure the SVG scales with the container size */
-	height: 100%;
-	/* Prevent cropping by ensuring full height */
-	object-fit: contain;
-	/* Ensure the SVG maintains its aspect ratio */
+	width: 69%;
+	height: 69%; 
+	display: block;
+
 }
 
 /* Container for skill icons */
@@ -589,23 +610,12 @@ Download cv button:
 	/* Ensures the grid takes full width */
 }
 
-/* Individual skill-icon styling */
 .skill-icon {
-	width: 80px;
-	/* Size of the icon container */
-	height: 80px;
-	/* Ensures enough space for the SVG */
 	display: flex;
-	/* Centers content inside each icon */
 	justify-content: center;
 	align-items: center;
-	background-color: transparent;
-	margin-top: 9px;
-	/* Transparent background */
-	border-radius: 10px;
-	/* Optional rounded corners */
 	overflow: hidden;
-	/* Prevents overflow of content */
+	
 }
 
 /* Styling for the name that appears on hover */
@@ -1097,73 +1107,79 @@ Download cv button:
 ----------------------*/
 
 .carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	width: 100%;
 }
 
 .carousel-card {
-    flex: 0 0 100%;
-    background: var(--base-color);
-    text-align: center;
+	flex: 0 0 100%;
+	background: var(--base-color);
+	text-align: center;
 }
 
 
 .carousel-card p {
-    text-align: left; /* Left-align the text */
+	text-align: left;
+	/* Left-align the text */
 }
 
 .carousel-card img {
-    margin-top: 20px;
+	margin-top: 20px;
 	width: 80%;
 }
 
 
 .carousel-navigation {
-    position: fixed;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none; /* Allow content behind the buttons to be clickable */
-    z-index: 10;
+	position: fixed;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+	pointer-events: none;
+	/* Allow content behind the buttons to be clickable */
+	z-index: 10;
 }
 
 .carousel-navigation button {
-    background: transparent;
-    color: var(--text-color);
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 50%;
-    pointer-events: auto; /* Re-enable pointer events for the buttons */
+	background: transparent;
+	color: var(--text-color);
+	border: none;
+	font-size: 40px;
+	cursor: pointer;
+	padding: 10px 15px;
+	border-radius: 50%;
+	pointer-events: auto;
+	/* Re-enable pointer events for the buttons */
 }
 
 .carousel-navigation .prev {
-    margin-left: 20px;  
+	margin-left: 20px;
 }
 
 .carousel-navigation .next {
-    margin-right: 20px;
+	margin-right: 20px;
 }
 
 .carousel-navigation button {
-    outline: none; /* Removes the focus outline */
+	outline: none;
+	/* Removes the focus outline */
 }
 
 .carousel-navigation button:focus {
-    outline: none; /* Ensures focus outline is disabled */
-    box-shadow: none; /* Removes any default focus shadow */
+	outline: none;
+	/* Ensures focus outline is disabled */
+	box-shadow: none;
+	/* Removes any default focus shadow */
 }
 
 
