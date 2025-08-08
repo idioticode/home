@@ -184,7 +184,7 @@
 								
 								</p>
 								<div class="research-links">
-              <a href="research_description.html#lcluc"><i class="research-link"></i> Details</a>
+             					  <a href="research_description.html#lcluc" class="research-link">Read More</a>
             </div>
 							</li>
 
@@ -279,6 +279,145 @@
 
 <style>
 
+/*---------------------
+ Research Publications 
+-----------------------*/
+
+
+:root {
+	--base-color: black;
+	--text-color: white;
+	--accent-color: #4b4545;
+	--dark-accent: #a7a2a2;
+	--navbar-bg: rgba(0, 0, 0, 0.6);
+	--green-color: rgb(0, 255, 0);
+	--orange-color: orange;
+	--card-bg: rgb(7, 7, 7); /* Dark card background */
+
+}
+
+.lightmode {
+	--base-color: white;
+	--text-color: black;
+	--accent-color: #cecece;
+	--dark-accent: #a7a2a2;
+	--navbar-bg: rgba(255, 255, 255, 0.6);
+	--green-color: rgb(10, 218, 10);
+	--orange-color: rgb(226, 148, 3);
+	--card-bg: rgb(240, 240, 240); /*card background research */
+
+
+}
+
+
+/* Research Publications */
+.research-publications {
+  padding: 60px 0;
+}
+
+.research-publications h2 {
+
+  margin-bottom: 40px;
+}
+
+
+.research-item {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.research-year {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 15px;
+  background: var(--green-color);
+  color: var(--base-color);
+}
+
+.research-item h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 10px 0 5px;
+}
+
+.research-authors, .research-journal {
+  color: var(--text-color);
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.research-journal{
+font-style: italic;
+
+}
+.research-journal i {
+  margin-right: 5px;
+}
+
+.research-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.research-links a {
+  background-color: var(--text-color);
+  color: var(--base-color);
+  font-size: 14px;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid var(--base-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+   text-decoration: none; /* This removes underline */
+
+}
+
+.research-links a:hover {
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {  
+  .research-year{
+	font-size: 12px;
+  }
+
+
+	.research-item h3 {
+    font-size: 18px;
+  }
+
+
+  .research-authors, .research-journal {
+  font-size: 12px;
+}
+
+.research-links a {
+  font-size: 11px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------
+=====================
+	Research Description
+=====================	 
+----------------------*/
+
 
 .research-experience {
   background-color: var(--base-color);
@@ -313,7 +452,7 @@
   left: 0;
   width: 7px;
   height: 100%;
-  background: orange;
+  background: var(--orange-color);
 }
 
 .research-card:hover {
@@ -331,7 +470,7 @@
 .research-card h4 {
   font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--accent-green);
+  color: var(--orange-color);
   margin: 15px 0;
   letter-spacing: 1px;
 }
@@ -347,10 +486,6 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-}
-
-.research-link {
-
 }
 
 .research-link {
@@ -376,6 +511,11 @@
     font-size: 2rem;
   }
 }
+
+
+
+
+
 </style>
 
 
