@@ -234,6 +234,8 @@
                         and incidents of forest fires were considered dependent variables.
                         The changes in these dependent factors before and during the pandemic were utilized in the
                         modeling.
+                        <br><br>
+                        The study is currently in reviewing process in the journal <i>Forest Ecology and Management</i>
 
                     </p>
 
@@ -281,203 +283,66 @@
 
 
 
-<!-- Navigation Buttons -->
-<div class="carousel-navigation">
-    <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-    <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-</div>
-
-
 <style>
 
-:root {
-	--base-color: black;
-	--text-color: white;
-	--accent-color: #222222;
-	--navbar-bg: rgba(0, 0, 0, 0.6);
-
-}
-
-.lightmode {
-	--base-color: white;
-	--text-color: black;
-	--accent-color: #cecece;
-	--navbar-bg: rgba(255, 255, 255, 0.6);
-
-}
-
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
+/* Hide all carousel cards by default */
 .carousel-card {
-    flex: 0 0 100%;
-    background: var(--base-color);
-    text-align: center;
+  display: none;
 }
 
-
-.carousel-card p {
-    text-align: left; /* Left-align the text */
+/* Show only the active card based on URL hash */
+.carousel-card:target {
+  display: block;
 }
 
-.carousel-card img {
-    margin-top: 20px;
-	width: 80%;
-}
-
-
-.carousel-navigation {
-    position: fixed;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none; /* Allow content behind the buttons to be clickable */
-    z-index: 10;
-}
-
-.carousel-navigation button {
-    background: transparent;
-    color: var(--text-color);
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 50%;
-    pointer-events: auto; /* Re-enable pointer events for the buttons */
-}
-
-.carousel-navigation .prev {
-    margin-left: 20px;  
-}
-
-.carousel-navigation .next {
-    margin-right: 20px;
-}
-
-.carousel-navigation button {
-    outline: none; /* Removes the focus outline */
-}
-
-.carousel-navigation button:focus {
-    outline: none; /* Ensures focus outline is disabled */
-    box-shadow: none; /* Removes any default focus shadow */
-}
-
-
-/* Mobile screens (up to 600px wide) */
-@media (max-width: 575px) {
-
+/* Optional: Add smooth transition */
 .carousel-container {
-   max-width: 90%;
-}
-
-
-.carousel-navigation .prev {
-    margin-left: -10px;  
-}
-
-.carousel-navigation .next {
-    margin-right: -10px;
-}
-
-
-.carousel-navigation button {
-    font-size: 30px;
-}
-
-
-
+  transition: all 0.3s ease;
 }
 
 </style>
-
-
 <script>
-    let currentIndex = 0;
-
-function moveCarousel(direction) {
-    const carousel = document.querySelector(".carousel");
-    const cards = document.querySelectorAll(".carousel-card");
-    const totalCards = cards.length;
-
-    currentIndex += direction;
-
-    // Ensure the index loops around
-    if (currentIndex < 0) {
-        currentIndex = totalCards - 1;
-    } else if (currentIndex >= totalCards) {
-        currentIndex = 0;
-    }
-
-    const offset = -currentIndex * 100; // Move by 100% width for each card
-    carousel.style.transform = `translateX(${offset}%)`;
+// Function to handle hash changes and scroll to top
+function handleHashChange() {
+  // Scroll to top of page first
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  
+  // Then handle the card display (your existing functionality)
+  if (!window.location.hash) {
+    window.location.hash = '#lcluc';
+    return;
+  }
+  
+  const activeCard = document.querySelector('.carousel-card:target');
+  if (activeCard) {
+    // Optional: Scroll to card after a tiny delay (remove if not needed)
+    setTimeout(() => {
+      activeCard.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  }
 }
 
-// Sliding
-
-document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel-container");
-    let startX = 0;
-    let endX = 0;
-    let isZooming = false;
-
-    // Touch start event
-    carousel.addEventListener("touchstart", function (event) {
-        if (event.touches.length > 1) {
-            // More than one finger indicates zooming
-            isZooming = true;
-            return;
-        }
-        isZooming = false; // Reset zooming state for single-touch
-        startX = event.touches[0].clientX; // Record the starting X position
-    });
-
-    // Touch move event
-    carousel.addEventListener("touchmove", function (event) {
-        if (event.touches.length > 1) {
-            // Update zooming state if multiple fingers are detected
-            isZooming = true;
-        }
-    });
-
-    // Touch end event
-    carousel.addEventListener("touchend", function (event) {
-        if (isZooming) {
-            // Do not process swipe if zooming was detected
-            return;
-        }
-        endX = event.changedTouches[0].clientX; // Record the ending X position
-        handleSwipe(); // Call the swipe handler
-    });
-
-    // Swipe handler
-    function handleSwipe() {
-        const swipeThreshold = 50; // Minimum distance for a swipe to be registered
-        if (startX - endX > swipeThreshold) {
-            // Swipe left
-            document.querySelector(".next").click();
-        } else if (endX - startX > swipeThreshold) {
-            // Swipe right
-            document.querySelector(".prev").click();
-        }
-    }
+// Initial load
+document.addEventListener('DOMContentLoaded', function() {
+  // Scroll to top immediately on load
+  window.scrollTo(0, 0);
+  handleHashChange();
 });
 
+// Hash change listener
+window.addEventListener('hashchange', handleHashChange);
 
+// Optional: Reset scroll when clicking nav links
+document.querySelectorAll('.research-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  });
+});
+
+// More aggressive top-scrolling if needed
+setTimeout(() => {
+  window.scrollTo(0, 0);
+}, 100);
 
 </script>
 
