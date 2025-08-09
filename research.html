@@ -64,7 +64,7 @@
           <article class="research-item">
             <header>
               <span class="research-year">2025</span>
-              <h3>How Will Climate Change Shift the Suitable Area of Seven Woody Bamboo Species in Nepal?</h3>
+              <h3>How Will Climate Change Shift the Suitable Area of Seven Woody Bamboo Species in Nepal? Evidences from Ensemble Species Distribution Modeling.</h3>
               <p class="research-authors">Pokhrel, S., Neupane, P., Paudel, N., Dhakal, M., Lamichhane, P., Khadka. A.</p>
               <p class="research-journal"><i class="bi bi-journal"></i>Authorea (Pre-print)</p>
             </header>
@@ -120,14 +120,15 @@
           <article class="research-item">
             <header>
               <span class="research-year">2023</span>
-              <h3>Diversity and Distribution of 100 Plant Species of a Community Managed Forest</h3>
+              <h3>Diversity and Distribution of 100 Plant Species of a Community Managed Forest from the Mid- Hills of Nepal: A Phytosociological Approach
+</h3>
               <p class="research-authors">Pokhrel, S.</p>
               <p class="research-journal"><i class="bi bi-journal"></i>Forestry: Journal of Institute of Forestry</p>
             </header>
             <div class="research-links">
               <a href="abstracts.html#abstract1"><i class="bi bi-file-text"></i> Abstract</a>
               <a href="https://www.nepjol.info/index.php/forestry/article/view/64339/48782" target="_blank"><i class="bi bi-file-text"></i> Full Text</a>
-              <a href="https://github.com/example/plant-species-code" target="_blank"><i class="bi bi-git"></i> Code</a>
+              
             </div>
           </article>
         </div>
@@ -267,254 +268,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 
 
-
-
-
-
-
-
-
-
-
-
 <style>
-
-/*---------------------
- Research Publications 
------------------------*/
-
-
-:root {
-	--base-color: black;
-	--text-color: white;
-	--accent-color: #4b4545;
-	--dark-accent: #a7a2a2;
-	--navbar-bg: rgba(0, 0, 0, 0.6);
-	--green-color: rgb(0, 255, 0);
-	--orange-color: orange;
-	--card-bg: rgb(7, 7, 7); /* Dark card background */
-
-}
-
-.lightmode {
-	--base-color: white;
-	--text-color: black;
-	--accent-color: #cecece;
-	--dark-accent: #a7a2a2;
-	--navbar-bg: rgba(255, 255, 255, 0.6);
-	--green-color: rgb(10, 218, 10);
-	--orange-color: rgb(226, 148, 3);
-	--card-bg: rgb(240, 240, 240); /*card background research */
-
-
-}
-
-
-/* Research Publications */
-.research-publications {
-  padding: 60px 0;
-}
-
-.research-publications h2 {
-
-  margin-bottom: 40px;
-}
-
-
-.research-item {
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.research-year {
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 15px;
-  background: var(--green-color);
-  color: var(--base-color);
-}
-
-.research-item h3 {
-  font-size: 20px;
-  color: var(--text-color);
-  margin: 10px 0 5px;
-}
-
-.research-authors, .research-journal {
-  color: var(--text-color);
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-.research-journal{
-font-style: italic;
-
-}
-.research-journal i {
-  margin-right: 5px;
-}
-
-.research-links {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.research-links a {
-  background-color: var(--text-color);
-  color: var(--base-color);
-  font-size: 14px;
-  align-items: center;
-  padding: 5px 10px;
-  border: 1px solid var(--base-color);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-   text-decoration: none; /* This removes underline */
-
-}
-
-.research-links a:hover {
-  transform: scale(1.2);
-}
-
-
-@media (max-width: 768px) {  
-  .research-year{
-	font-size: 12px;
-  }
-
-
-	.research-item h3 {
-    font-size: 18px;
-  }
-
-
-  .research-authors, .research-journal {
-  font-size: 12px;
-}
-
-.research-links a {
-  font-size: 11px;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*---------------------
-=====================
-	Research Description
-=====================	 
-----------------------*/
-
-
-.research-experience {
-  background-color: var(--base-color);
-  padding: 80px 0;
-}
-
-
-
-.research-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-}
-
-.research-card {
-  padding: 30px;
-  background-color: var(--card-bg);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
- 
-}
-
-
-.research-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 7px;
-  height: 100%;
-  background: var(--orange-color);
-}
-
-.research-card:hover {
-  box-shadow: 1.5px 1.5px 10px 0px var(--text-color);
-}
-
-.research-card h3 {
-  font-size: 20px;
-  color: var(--text-color);
-  margin-bottom: 15px;
-  line-height: 1.3;
-  margin-top: 10px;
-}
-
-.research-card h4 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: var(--orange-color);
-  margin: 15px 0;
-  letter-spacing: 1px;
-}
-
-.research-card p {
-  color: var(--text-color);
-  line-height: 1.6;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.description-link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.research-link {
-  position: relative;
-  left: 70%;
-}
-
-.site-btn {
-  /* Keep your existing button styles */
-  position: static; /* Remove any previous absolute positioning */
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .research-list {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .research-experience h2 {
-    font-size: 2rem;
-  }
-}
-
-
-
-
 
 </style>
 

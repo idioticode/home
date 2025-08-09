@@ -598,10 +598,6 @@ Download cv button:
 		Skills
 -------------------*/
 
-.skills-section {
-	background-color: var(--base-color);
-}
-
 /* Icon color */
 .svg-icon {
 	color: var(--text-color);
@@ -636,8 +632,19 @@ Download cv button:
 }
 
 /* Styling for the name that appears on hover */
+
+/* Modified CSS for skill boxes */
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  text-align: center; /* Centers text */
+  padding: 20px; /* Adjust as needed */
+}
+
+
 .skill-name {
-	margin-top: 10px;
+margin-top: 10px;
 }
 
 
@@ -712,21 +719,6 @@ Download cv button:
 --------------------*/
 
 
-
-
-.timeline-section {
-	background-color: black;
-}
-
-/*
-    .timeline {
-      position: relative;
-      margin: 0 auto;
-	  border-radius: 10px;
-	  background-color: black;
-    }
-*/
-
 /* Title alignment */
 .timeline-title h2 {
 	text-align: center;
@@ -766,21 +758,16 @@ Download cv button:
 /* Remove bullets for all lists */
 /* General styles for the timeline list */
 .timeline-entry ul {
-	list-style: none;
-	/* Remove default bullets */
-	padding: 0;
-	/* Reset padding */
-	margin: 0;
-	/* Reset margin */
+	list-style: none; /* Remove default bullets */
+	padding: 0; /* Reset padding */
+	margin: 0; /* Reset margin */
 }
 
 
 /* Adjustments for right-aligned entries */
 .timeline-entry.right ul.timeline-right li {
-	text-align: left;
-	/* Align text to the left */
-	padding-left: 0;
-	/* No padding on the left */
+	text-align: left; /* Align text to the left */
+	padding-left: 0; /* No padding on the left */
 }
 
 
@@ -800,11 +787,13 @@ Download cv button:
 	position: relative;
 	width: 50%;
 	padding: 20px;
-	border: 2px solid var(--text-color);
-	border-radius: 10px;
-	background: var(--base-color);
-	margin-bottom: 20px;
-	z-index: 1;
+	border: none;
+	border-radius:8px;
+  background: var(--card-bg); /* Changed to card background variable */
+  margin-bottom: 20px;
+  z-index: 1;
+    transition: all 0.3s ease;
+
 	/* Ensure the entry is above the line */
 }
 
@@ -823,6 +812,78 @@ Download cv button:
 	right: 0px;
 	transform: translateX(42px);
 	/* Push it slightly to the right */
+}
+
+
+
+/* Left entry orange line */
+.timeline-entry.left::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-color: var(--orange-color);
+  right: 98.5%;
+  top: 0;
+border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+}
+
+.timeline-entry .research-year {
+  display: inline-block;
+  margin-bottom: 20px; /* Increased bottom margin */
+}
+
+/* Right entry orange line */
+.timeline-entry.right::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-color: var(--orange-color);
+  left: 98.5%;
+  top: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+}
+
+.research-card {
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0); /* Optimize animations */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 100%;
+  background: var(--orange-color);
+  transition: all 0.4s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 14px 24px -8px rgba(0,0,0,0.2),
+    0 6px 20px var(--text-color);
+}
+
+.research-card:hover::before {
+  width: 8px;
+  background: linear-gradient(to bottom, var(--orange-color), #ff8c00);
+}
+.timeline-entry:hover {
+  box-shadow: 1.5px 1.5px 10px 0px var(--text-color);
 }
 
 
@@ -858,7 +919,7 @@ Download cv button:
 
 
 
-/* Triangles */
+/* Triangles 
 .timeline-entry.left::before,
 .timeline-entry.right::before {
 	content: '';
@@ -867,23 +928,8 @@ Download cv button:
 	height: 0;
 	border-style: solid;
 	top: 20px;
-	/* Align with the circle */
 }
-
-
-.timeline-entry.left::before {
-	border-width: 10px 0 10px 10px;
-	border-color: transparent transparent transparent var(--text-color);
-	right: -10px;
-	/* Align with box border */
-}
-
-.timeline-entry.right::before {
-	border-width: 10px 10px 10px 0;
-	border-color: transparent var(--text-color) transparent transparent;
-	left: -10px;
-	/* Align with box border */
-}
+*/
 
 
 /* Responsive adjustments for smaller screens */
@@ -972,6 +1018,198 @@ Download cv button:
 -----------------------*/
 
 
+/* Research Publications */
+.research-publications {
+  padding: 60px 0;
+}
+
+.research-publications h2 {
+
+  margin-bottom: 40px;
+}
+
+
+.research-item {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.research-year {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 15px;
+  background: var(--green-color);
+  color: var(--base-color);
+}
+
+.research-item h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 10px 0 5px;
+}
+
+.research-authors, .research-journal {
+  color: var(--text-color);
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.research-journal{
+font-style: italic;
+
+}
+.research-journal i {
+  margin-right: 5px;
+}
+
+.research-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.research-links a {
+  background-color: var(--text-color);
+  color: var(--base-color);
+  font-size: 14px;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid var(--base-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+   text-decoration: none; /* This removes underline */
+
+}
+
+.research-links a:hover {
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {  
+  .research-year{
+	font-size: 12px;
+  }
+
+
+	.research-item h3 {
+    font-size: 18px;
+  }
+
+
+  .research-authors, .research-journal {
+  font-size: 12px;
+}
+
+.research-links a {
+  font-size: 11px;
+}
+
+}
+
+
+
+/*---------------------
+=====================
+	Research Description
+=====================	 
+----------------------*/
+
+
+.research-experience {
+  background-color: var(--base-color);
+  padding: 80px 0;
+}
+
+
+
+.research-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.research-card {
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 100%;
+  background: var(--orange-color);
+}
+
+.research-card:hover {
+  box-shadow: 1.5px 1.5px 10px 0px var(--text-color);
+}
+
+.research-card h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+.research-card h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--orange-color);
+  margin: 15px 0;
+  letter-spacing: 1px;
+}
+
+.research-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.description-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.research-link {
+  position: relative;
+  left: 70%;
+}
+
+.site-btn {
+  /* Keep your existing button styles */
+  position: static; /* Remove any previous absolute positioning */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .research-list {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .research-experience h2 {
+    font-size: 2rem;
+  }
+}
 
 
 
