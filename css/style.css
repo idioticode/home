@@ -607,7 +607,33 @@ Download cv button:
 
 }
 
-/* Container for skill icons */
+/* Conta<article class="research-item">
+            <header>
+              <span class="research-year">2025</span>
+              <h3>How Will Climate Change Shift the Suitable Area of Seven Woody Bamboo Species in Nepal? Evidences from Ensemble Species Distribution Modeling.</h3>
+              <p class="research-authors">Pokhrel, S., Neupane, P., Paudel, N., Dhakal, M., Lamichhane, P., Khadka. A.</p>
+              <p class="research-journal"><i class="bi bi-journal"></i>Authorea (Pre-print)</p>
+            </header>
+            <div class="research-links">
+              <a href="abstracts.html#abstract2"><i class="bi bi-file-text"></i> Abstract</a>
+              <a href="https://www.authorea.com/doi/pdf/10.22541/au.173697608.88721540/v1" target="_blank"><i class="bi bi-file-text"></i> Full Text</a>
+              <a href="https://github.com/idioticode/bamboo_sdm" target="_blank"><i class="bi bi-git"></i> Code</a>
+            </div>
+          </article>
+<article class="research-item">
+            <header>
+              <span class="research-year">2025</span>
+              <h3>How Will Climate Change Shift the Suitable Area of Seven Woody Bamboo Species in Nepal? Evidences from Ensemble Species Distribution Modeling.</h3>
+              <p class="research-authors">Pokhrel, S., Neupane, P., Paudel, N., Dhakal, M., Lamichhane, P., Khadka. A.</p>
+              <p class="research-journal"><i class="bi bi-journal"></i>Authorea (Pre-print)</p>
+            </header>
+            <div class="research-links">
+              <a href="abstracts.html#abstract2"><i class="bi bi-file-text"></i> Abstract</a>
+              <a href="https://www.authorea.com/doi/pdf/10.22541/au.173697608.88721540/v1" target="_blank"><i class="bi bi-file-text"></i> Full Text</a>
+              <a href="https://github.com/idioticode/bamboo_sdm" target="_blank"><i class="bi bi-git"></i> Code</a>
+            </div>
+          </article>
+iner for skill icons */
 .skill-container {
 	display: grid;
 	/* Enables Grid layout */
